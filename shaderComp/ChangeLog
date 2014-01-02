@@ -1,0 +1,21 @@
+06/11/2013 :
+	- Separation des fichiers en modules: Core, shaders (et printers deja present)
+	- Idee: Ajouter un parametre facultatif 'description' au constructeur de vars, permettant d'inserer un commentaire dans le fichier de shader genere
+	- TODO : Ajouter un moyen de lier les entrees/sorties des box aux variables du pipeline
+	- TODO : Fournir des informations de debugs lors de la compilation
+	- TODO : Enlever les declarations des variables de sorties dans le code de generation du fog et du celshading
+		-> Ces declarations ont ete mis car le lien entre sortie du shader et sortie de la box la fait generer en varying, ce ne devrait pas etre le cas
+
+07/11/2013
+	- Commentaires doxygen sur tous les shaders et toutes les fonctions de la classe Project
+	- TODO Fonctions d'accès aux boxs : on pourrait pas utiliser un entier plutot qu'une string ? Si on fait beaucoup d'appels à la fonction, ça peut ralentir
+	- TODO AddLink : On ne peut pas stoquer le noeud correspondant à une variable pour éviter de devoir le filer à la fonction ?
+	- get[Vertex|Pixel][OutVar|InVar|Uniform] : il manquait les returns !
+	- TODO Fonctions de chargement et de sauvegarde des box : on peut les utiliser comme des noeuds pour les inclures dans une box d'un autre projet ?
+
+08/11/2013
+	- TODO Supporter un type de shader 'math func' qui peut etre aussi bien un vertex shader qu'un pixel shader
+	- Permettre de creer un lien value sur l'entree d'une box !
+
+02/01/2014
+	- TODO générer les shaders dans un dossier spécifique (pas dans la racine du projet)

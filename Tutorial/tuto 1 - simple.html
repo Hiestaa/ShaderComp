@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            User Tutorial Part 1
+        </title>
+        <meta name="description" content="">
+        <meta name="author" content="ink, cookbook, recipes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="ink-2.2.1/img/ink-favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="ink-2.2.1/img/touch-icon.57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ink-2.2.1/img/touch-icon.72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ink-2.2.1/img/touch-icon.114.png">
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.320x460.png"
+        media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.768x1004.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.1024x748.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/ink.css">
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/docs.css">
+        <link rel="stylesheet" type="text/css" href="treeview/jquery.treeview.css">
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+
+        <!--[if IE 7 ]>
+            <link rel="stylesheet" href="ink-2.2.1/css/ink-ie7.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="ink-2.2.1/js/holder.js"></script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink.min.js"></script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink-ui.min.js"></script>
+        <script type="text/javascript" src="ink-2.2.1/js/autoload.js"></script>
+        <script type="text/javascript" src="ink-2.2.1/js/html5shiv.js"></script>
+        <script type="text/javascript" src="treeview/jquery.treeview.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js"></script>
+
+
+        <style type="text/css">
+            header {
+                padding: 2em 0;
+                margin-bottom: 2em;
+                text-align: left;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            header .ink-navigation {
+                margin-top: 2em;
+            }
+            footer {
+                background: #ccc;
+                color: #0003;
+            }
+            footer p {
+                padding: 0.5em 1em 0.5em 0;
+                margin: 0;
+            }
+
+            .unstyled li {
+                padding: 0.4em 0;
+                text-align: right;
+            }
+            .content {
+                padding-top: 2em;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="topbar">
+            <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
+                <ul class="menu horizontal flat black shadowed">
+                    <li>
+                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="#">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="#">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
+                <ul class="menu vertical flat black">
+                    <li class="title">
+                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
+                    </li>
+                </ul>
+                <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutouser">
+                            <li>
+                                <a href="#">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="#">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="#">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutoprog">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="ink-grid" style="margin-top: 45px;">
+            <div class="whatIs">
+                <h1>User tutorial <small>Part 1: Your first project</small></h1>
+                <p>In this tutorial, you have an overview of how the library is working, and you will learn how to use it to create
+                a bootstrap project using the API.</p>
+            </div>
+            <div class="column-group gutters">
+                <div class="large-25 medium-33 small-100">
+
+                    <nav class="ink-navigation sticky" data-offset-top="70px" data-offset-bottom="350px" id="nav_menu">
+                        <ul class="menu vertical rounded black">
+                            <li><a class="scrollableLink" href="#topbar"><span class="icon-chevron-up"></span> Back to Top</a></li>
+                            <li class="active"><a class="scrollableLink" href="#nav-overview">Library overview</a></li>
+                            <li><a class="scrollableLink" href="#nav-installation">Installation</a></li>
+                            <li><a class="scrollableLink" href="#nav-node">First project</a></li>
+                            <li><a class="scrollableLink" href="#nav-interface">Defining shaders interfaces</a></li>
+                            <li><a class="scrollableLink" href="#nav-links">Variables linking</a></li>
+                            <li><a class="scrollableLink" href="#nav-generation">Project generation</a></li>
+                            <li><a class="scrollableLink" href="#nav-rendering">Project rendering</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="large-75 medium-66 small-100">
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Library overview</h2>
+                        <p>This part's aim is to give a global overview of how the library is working. This is needed to understand the power of the library to design shaders without having to target any particular plateform architecture. This will also let you have in mind all the possibilties the API can give to you</p>
+                        <h3>What is a shader ?</h3>
+                        <p>A shader is basically consisting of two programs called the vertex shader and the pixel shader (also called fragment shader), allowing the rendering pipeline of a scene to be dynamically programmable. Each program is used for a specific purpose: the vertex shader is used to execute operations on each vertex of the rendered scene, whereas the pixel shader is used to execute operations on each pixel of the resulting rendered image</p>
+                        <p>As you may understand, the vertex datas (position, color, textures data...) of a vertice will be given as input to your vertex shader program, and the pixel data (color, position, ...) of a pixel will be given as input to your pixel shader. The <abbr title="Graphical Process Unit">GPU</abbr> will execute theses programs on each vertex and each pixel of the rendered scene/image. The trick is, each program will be executed in parallel on many computing units on your <abbr title="Graphical Process Unit">GPU</abbr>, doing the work far more quickly than the <abbr title="Computing Process Unit">CPU</abbr> could do.</p>
+                        <div class="ink-alert basic info">
+                            <p><b>Note:</b> You do <b>not</b> need to learn any of the GPU programming languages (<abbr title="High Level Shading Language">HLSL</abbr>, <abbr title="openGL Shading Language">GLSL</abbr>) to learn how to design shaders with ShaderComp. This is the abstraction level ShaderComp gives to you</p>
+                        </div>
+                        <h3>A nodal representation</h3>
+                        <p>A shader (should it be a vertex or a pixel one), as explained before, is a chain of simple instructions doing modifications on positions, color, texture datas. This can also be seen as a graph, with output of some nodes linked to the input of some other nodes. The node is then a simple operation (like a '+' or a function call), the input of the node will get a set of values needed for the computation of the operation, and the output are the result or the operation.</p>
+                        <p>Using this vision of the shader, you can easily imagine the possibility of building a complex network of instructions, resulting on a beautiful rendered scene beeing the combination of multiple shaders programs, without writing any line of code!</p>
+                        <p>As a shader is always consisting of two part (ie: the vertex and the pixel shader) any <span class="ink-label success invert">project</span> that you may design will always contains two <span class="ink-label success invert">boxes</span> of nodes: the vertex box and the pixel box. Each box having it's own input and output interface.</p>
+                        <p>Now, let's get started!</p>
+                    </section>
+                    <section id="nav-installation" data-target="#nav_menu" data-spy="true">
+                        <h2>Installation & starting guide</h2>
+                        <p>To teach you how to use the library, we are going to tell you step by step what you need to do. This is very simple, but to avoid misconfiguration you're advised to follow exactly the steps described below</p>
+                        <h3>Installing python</h3>
+                        <p>The library is programmed using the very simple-to-use python language. If you don't have it, download it from the <a href="http://www.python.org/download/releases/2.7.6/">Python official website</a>. Make sure to download the 2.7.6 version.</p>
+                        <h4>Good-to-have libraries</h4>
+                        <p>The following libraries are not mandatory because the library does not have any dependency for the shader compilation. However, they are mandatory for the rendering of an overview of the shader built</p>
+                        <ul>
+                            <li>PyOpenGL: <a href="http://pyopengl.sourceforge.net/">Official website</a>, <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopengl">Windows installer</a></li>
+                            <li>PyGame: <a href="http://www.pygame.org/news.html">Official website</a>, <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame">Windows installer</a></li>
+                        </ul>
+                        <h3>Installing the library</h3>
+                        <p>Make sure that you get the last version of the library available on the <a href="https://github.com/Hiestaa/ShaderComp">Romain G's github</a>. Once done, create a new folder that will be the root of your project and name it <span class="ink-label info invert">tutorial_1</span>, then simply extract the folder <span class="ink-label info invert">shaderComp</span> in that folder. You can also add a file named <span class="ink-label info invert">proj.py</span> at the root of your project. This file will be the in wich we will create our first shader in the next section.</p>
+                        <div class="ink-alert basic success">
+                            <p><b>Well done!</b> You now have all the tools needed to build shaders from scratch installed. Let's create our first project!</p>
+                        </div>
+                    </section>
+                    <section id="nav-node" data-target="#nav_menu" data-spy="true">
+                        <h2>First project</h2>
+                        <p>Here is a detailed view of the architecture of the files you should have in your project directory, let it be named <span class="ink-label info invert">tutorial_1</span>, at this point of the tutorial:</p>
+                        <div class="box">
+                            <ul id="browser" class="filetree treeview">
+                                <li><span class="folder">tutorial_1</span>
+                                    <ul>
+                                        <li><span class="folder">shaderComp</span>
+                                            <ul>
+                                                <li><span class="folder">core</span>
+                                                    <ul>
+                                                        <li><span class="file">Box.py</span></li>
+                                                        <li><span class="file">Link.py</span></li>
+                                                        <li><span class="file">LinkManager.py</span></li>
+                                                        <li><span class="file">Node.py</span></li>
+                                                        <li><span class="file">Pipeline.py</span></li>
+                                                        <li><span class="file">PixelBox.py</span></li>
+                                                        <li><span class="file">Printer.py</span></li>
+                                                        <li><span class="file" style="background-color: #FFFFAA">Project.py</span></li>
+                                                        <li><span class="file">Render.py</span></li>
+                                                        <li><span class="file">Shader.py</span></li>
+                                                        <li><span class="file">ValuedLink.py</span></li>
+                                                        <li><span class="file">Var.py</span></li>
+                                                        <li><span class="file">VertexBox.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">examples</span></li>
+                                                <li><span class="folder">printer</span></li>
+                                                <li><span class="folder">shaders</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="file">proj.py</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ink-alert basic info">
+                            <p><b>Note: </b>All the files of the library are note listed here. Please refer to the documentation for of full list of the included features</p>
+                        </div>
+                        <h3>The Project class</h3>
+                        <p>One file is highlighted below: <span class="ink-label info invert">Project.py</span>. It contains the class <span class="label-info success invert">Project</span> that provide the main interface of the library.</p>
+                        <p>To create a new project, open the <span class="ink-label info invert">proj.py</span> file you created and write the following lines of code: </p>
+                        <pre class="brush: python; toolbar: false">
+                            from shaderComp.core import *
+                            from shaderComp.shaders import *
+
+                            myProj = Project.Project('firstProject')
+                        </pre>
+                        <p>As you may understand, the two first lines allows to import the core functionnality and all the plug-in shaders of the library. Then, on the fourth line, our first project is created. The string given is the name of the project, and will be used as name for the shader file that will finally be generated.</p>
+                        <h3>Our first nodes</h3>
+                        <p>Now that we have our first project created, let's add some nodes to it ! To keep things simple, we will begin by adding two nodes: a vertex shader and a pixel one. But before doing that, we need to define precisely what the shader in goind to do. <br>
+                        The aim here is to only set a fixed color to our models. Let's start by creating the nodes:</p>
+                        <pre class="brush: python; first-line: 6; toolbar: false">
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+                            myColor = Color.Color()
+                        </pre>
+                        <p>The <span class="ink-label success invert">DefaultVertexShader</span> here is used to do the necessary operation needed in any vertex shader you're going to build. It transforms world coordinates in the camera-view coordinate. Without this steps, you won't be able to see anything on the sceen.</p>
+                        <p>The <span class="ink-label success invert">Color</span> class is used to simply define a color value. This class has a member function that allows us to set the color the node will output: </p>
+                        <pre class="brush: python; toolbar: false; first-line: 9">
+                            myColor.setParams(0, 0.3, 0.6, 1.0);
+                        </pre>
+                        <div class="ink-alert basic info">
+                            <p>A node does not actually have parameters. This function is just a simplyfied way to set constant values to the input interface of the node. This tutorial will teach later the notions of <span class="ink-label success">Variable</span> and <span class="ink-label success">Link</span>, this other way will so be seen in the second part of the tutorial: <a href="#">Advanded nodes linking</a>.</p>
+                        </div>
+                        <p>Now that we have our nodes created, we need to give them to the project. This can be achieve with the following lines of code:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 11">
+                            myProj.appendNode(myColor)
+                            myProj.appendNode(myDefaultVertexShader)
+                        </pre>
+                        <p>This is very simple, but remind something that has already been told sooner: a node can be a vertex or a pixel one, and a project has a box for each type of node. As each node has a default shader type properties, the <span class="ink-label success invert">Project</span> can know in wich box it should place the given node. In our case: </p>
+                        <div class="column-group">
+                            <div class="large-50 medium-50 small-100">
+                                <blockquote>
+                                    <p><b>Type of this shader:</b></p>
+                                    <p style="padding-left: 4em">Vertex Shader</p>
+                                    <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">DefaultVertexShader</span></p>
+                                </blockqute>
+                            </div>
+                            <div class="large-50 medium-50 small-100">
+                                <blockquote>
+                                    <p><b>Type of this shader:</b></p>
+                                    <p style="padding-left: 4em">Fragment Shader</p>
+                                    <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">Color</span></p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <p>This is it ! We now have a project with two nodes added in. Let's move to next step: the definition of the box interfaces</p>
+                    </section>
+                    <section id="nav-interface" data-target="#nav_menu" data-spy="true">
+                        <h2>Defining shaders interfaces</h2>
+                        <p>As we saw before, a project holds a <span class="ink-label success invert">vertex box</span> and a <span class="ink-label success invert">pixel box</span>. What we need to do after adding some nodes to our project is creating the interface of our two boxes.</p>
+                        <p>An interface is consisting of a list of input variables and output variables. A <span class="ink-label success invert">variable</span>, as it is in most programming languages, is represented by a name and a type. You can take a look at the <span class="ink-label info invert">Var.py</span> file to see how a variable is managed in the library.</p>
+                        <p>In the case of our project, the interface is very simple. Here is what we need:
+                            <ul>
+                                <li>An input variable in the vertex box to get the vertex position (in world coordinates)</li>
+                                <li>An output variable in the vertex box to return the resulting vertex position (in eye view coordinates)</li>
+                                <li>An output variable in the pixel box to return the pixel color (remind that the color set will be constant)</li>
+                            </ul>
+                        </p>
+                        <pre class="brush: python; toolbar: false; first-line: 14">
+                            vertexInVertVar = myProj.addVertexInVar('vertex', 'vec4')       # input of the vertex box
+                            vertexOutFinalPositionVar = \
+                                myProj.addVertexOutVar('final_position', 'vec4')            # output of the vertex box
+                            pixelOutFinalColor = \
+                                myProj.addPixelOutVar('final_color', 'vec4')                # output of the pixel box
+                        </pre>
+                        <p>As you can see, we do not need to instanciate the <span class="ink-label success invert">Var</span> class in this case. The <span class="ink-label success invert">Project</span> will do that for us. We only need to ask him to add a variable input or output to the vertex or the pixel box. Note that the scope of the name of the interface variables is local to this interface. You can not create two variables of the same name in the same (output or input) interface, but you can without any risk of overriding give the same name of two variables in two different interfaces.</p>
+                        <p>We now have all the interface created (the nodes interface variables are built-in), the last step before project generation is to do all the linking between variables !</p>
+                        <div class="ink-alert basic info">
+                            <p>Notice that we did not created the interface of the nodes ! The interface is build-in, so we only have to access it</p>
+                        </div>
+                    </section>
+                    <section id="nav-links" data-target="#nav_menu" data-spy="true">
+                        <h2>Variables linking</h2>
+                        <h3>The link notion</h3>
+                        <p>The notion of a <span class="ink-label success invert">link</span> is easy to understand. It's quite like a pipe between two variables, allowing the variable at the input of the pipe the give it's value to the variable at the output of the pipe. This means that the links are directed, and must link the output of a node to the input of another, the input of a box to the input of a node or the output of a node to the output of a box.</p>
+                        <p>This may be confusing, but a very simple diagram can explain this easily</p>
+                        <img src="img/forbidden_links.png">
+                        <p>In this example, the <span class="ink-label success">green arrows</span> show the allowed links, while the <span class="ink-label error">red arrows</span> show the forbidden links.</p>
+                        <h3>Linking boxes to nodes</h3>
+                        <p>We created three variables as interface for our vertex and our pixel box. Let's link them to our nodes ! Here is the code that will do that:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 18">
+                            myProj.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myProj.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+                            myProj.addLink(myColor.getOutVar('color'), pixelOutFinalColor)
+                        </pre>
+                        <p>Again, the <span class="ink-label success invert">Project</span> class is used here to create the link between two variables. Note that the first argument of the function is the input of the link, and the second one is the output of the link.</p>
+                        <h3>Linking boxes to the pipeline</h3>
+                        <p>When program shaders, you need to have an access to read and write the current vertex or pixel data. This data is stored in what we call the <span class="ink-label success invert">Pipeline</span>. It can be seen as an array of pairs key/value, where the key is the name of the pipeline variable, and the value is the variable itself.</p>
+                        <p>As the <span class="ink-label success invert">Pipeline</span> is storing <span class="ink-label success invert">variables</span>, you can create a link using them ! Let's add some links between the pipeline and the boxes we created before:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 22">
+                            myProj.addLink(myProj.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myProj.addLink(vertexOutFinalPositionVar, myProj.getVertexPipelineVar('Position'))
+                            myProj.addLink(pixelOutFinalColor, myProj.getPixelPipelineVar('FragColor'))
+                        </pre>
+                        <p>The <span class="ink-label success invert">Pipeline</span> is divided in two parts: the pipeline of the vertex shader and the pipeline of the pixel shader. What we do below is getting the pipeline variable named <span class="ink-label info invert">Vertex</span> (a vec4 storing the position of the vertex) to the input of the vertex box created before. Then, we do the same with the pipeline var named <span class="ink-label info invert">Position</span> (a vec4 that will store the resulting position in eye view coordinates) and the pipeline var named <span class="ink-label info invert">FragColor</span> (a vec4 that will store the resulting color of the pixel). The full set of supported pipeline variables can be found in the documentation.</p>
+                        <div class="ink-alert basic success">
+                            <p><b>Here we are!</b> All the project is build: the nodes are created and added, the interfaces are linked, our project is now ready to be generated !</p>
+                        </div>
+                    </section>
+                    <section id="nav-generation" data-target="#nav_menu" data-spy="true">
+                        <h2>Project generation</h2>
+                        <p>The hardest part of the script is done ! Now, only one line is needed to generate the shader code corresponding to the <span class="ink-label success invert">nodes</span>, <span class="ink-label success invert">variables</span> and <span class="ink-label success invert">links</span> defined before. Here it is:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 27">
+                            myProj.compute('GLSLPrinter')
+                        </pre>
+                    </section>
+                    <section id="nav-rendering" data-target="#nav_menu" data-spy="true">
+                        <h2>Project rendering</h2>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script type="text/javascript">
+    $(function () {
+        $(".treeview").treeview({
+            animated: "fast",
+        });
+    });
+    </script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</html>
