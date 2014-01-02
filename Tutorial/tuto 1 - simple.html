@@ -41,6 +41,7 @@
         <script type="text/javascript" src="treeview/jquery.treeview.js"></script>
         <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
         <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
 
 
         <style type="text/css">
@@ -274,13 +275,7 @@
                             myColor = Color.Color()
                         </pre>
                         <p>The <span class="ink-label success invert">DefaultVertexShader</span> here is used to do the necessary operation needed in any vertex shader you're going to build. It transforms world coordinates in the camera-view coordinate. Without this steps, you won't be able to see anything on the sceen.</p>
-                        <p>The <span class="ink-label success invert">Color</span> class is used to simply define a color value. This class has a member function that allows us to set the color the node will output: </p>
-                        <pre class="brush: python; toolbar: false; first-line: 9">
-                            myColor.setParams(0, 0.3, 0.6, 1.0);
-                        </pre>
-                        <div class="ink-alert basic info">
-                            <p>A node does not actually have parameters. This function is just a simplyfied way to set constant values to the input interface of the node. This tutorial will teach later the notions of <span class="ink-label success">Variable</span> and <span class="ink-label success">Link</span>, this other way will so be seen in the second part of the tutorial: <a href="#">Advanded nodes linking</a>.</p>
-                        </div>
+                        <p>The <span class="ink-label success invert">Color</span> class is used to simply define a color value.</p>
                         <p>Now that we have our nodes created, we need to give them to the project. This can be achieve with the following lines of code:</p>
                         <pre class="brush: python; toolbar: false; first-line: 11">
                             myProj.appendNode(myColor)
@@ -303,6 +298,14 @@
                                 </blockquote>
                             </div>
                         </div>
+                        <p>Before moving to the next steps, we need to set the parameters of the color node. The Color class has a member function that allows us to set the color the node will output: </p>
+                        <pre class="brush: python; toolbar: false; first-line: 9">
+                            myColor.setParams(0, 0.3, 0.6, 1.0);
+                        </pre>
+                        <div class="ink-alert basic info">
+                            <p>A node does not actually have parameters. This function is just a simplyfied way to set constant values to the input interface of the node. This tutorial will teach later the notions of <span class="ink-label success">Variable</span> and <span class="ink-label success">Link</span>, this other way will so be seen in the second part of the tutorial: <a href="#">Advanded nodes linking</a>.</p>
+                        </div>
+
                         <p>This is it ! We now have a project with two nodes added in. Let's move to next step: the definition of the box interfaces</p>
                     </section>
                     <section id="nav-interface" data-target="#nav_menu" data-spy="true">
@@ -359,13 +362,84 @@
                     </section>
                     <section id="nav-generation" data-target="#nav_menu" data-spy="true">
                         <h2>Project generation</h2>
+                        <h3>The last step</h3>
                         <p>The hardest part of the script is done ! Now, only one line is needed to generate the shader code corresponding to the <span class="ink-label success invert">nodes</span>, <span class="ink-label success invert">variables</span> and <span class="ink-label success invert">links</span> defined before. Here it is:</p>
                         <pre class="brush: python; toolbar: false; first-line: 27">
                             myProj.compute('GLSLPrinter')
                         </pre>
+                        <p>As the shaderComp project attempt is to add a generic layer to the shader development, all we have done for now is to define <i>What</i>. What are the shaders ? What are the links between them ? When the description of the shader has been well done, the compute method of the <span class="ink-label success invert">Project</span> class will only need to know wich generator to use to compute the shader code. In our exemple, we use the <span class="ink-label info invert">GLSLPrinter</span> that will generate GLSL source code.</p>
+                        <p>At this point of the tutorial, you should be able to run your script without any error. If any error occurs, take a look at the given <a href="implementation/tutorial_1/proj.py">implementation</a> and see if you miss anything. If everything goes well, a folder named <span class="ink-label info invert">Tutorial_1</span> should have been created containing two files: <span class="ink-label info invert">vertexShader.glsl</span> and <span class="ink-label info invert">fragmentShader.glsl</span>. Let's take a look on the code that have been generated in theses files.</p>
+                        <h3>Generated vertex shader</h3>
+                        <p>Remember what we have done in the vertex box: whe only added one node, the default one, then we linked it to the pipeline using variables. Here is the generated code for that</p>
+                        <pre class="brush: cpp; toolbar: false; first-line: 0">
+                            void main(void) {
+                                gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+                            }
+                        </pre>
+                        <p>You can see that the pipeline variable gl_Vertex wich is linked to the input of the default vertex shader (as defined in your script) is used in the operation done by the shader. The result is stored in the pipeline variable gl_Position wich is linked to the output of the shader (also as defined in your script)</p>
+                        <h3>Generated pixel shader</h3>
+                        <p>In the pixel box, we did a simple color setting using the <span class="ink-label success invert">Color shader</span>. Here is the generated code for that:</p>
+                        <pre class="brush: cpp; toolbar: false; first-line: 0">
+                            void main(void) {
+                                gl_FragColor = vec4(0, 0.3, 0.6, 1.0);
+                            }
+                        </pre>
+                        <p>In this shader, we only set the pipeline variable gl_FragColor, wich have been linked to the output variable of the color shader. The value set is defined by the foud parameters given as input to the color shader (variables r, g, b and a)</p>
                     </section>
                     <section id="nav-rendering" data-target="#nav_menu" data-spy="true">
                         <h2>Project rendering</h2>
+                        <p>Now that you understand the effect of our script, you may want to see how to have an overview of the shader that you generated. Don't you ?</p>
+                        <p>Simply add the following line at the end of your script:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 28">
+                            myProj.render()
+                        </pre>
+                        <p>Run your script, and here is the result !</p>
+                        <img src="img/tuto_1_result.png">
+                    </section>
+                    <section id="nav-outro" data-target="#nav_menu" data-spy="true">
+                        <p>If your script do not produce that window, or if an error occured, check that you did not forgot any step. To remind you everything, here is the steps that you need to follow for every project using the ShaderComp API:</p>
+                        <ol>
+                            <li>Draw a schema of your project, with pipelines, nodes, variables and links</li>
+                            <li>Instanciate the project class and the shader classes </li>
+                            <li>Add nodes (instanciated shaders) to the project</li>
+                            <li>Create the input and output variables of the boxes</li>
+                            <li>Create the links between variables</li>
+                            <li>Compute the project source code using the right printer</li>
+                            <li>Eventually, render your project to see the effect of the generated shader.</li>
+                        </ol>
+                        <p>Here is the complete script of this tutorial:</p>
+
+                        <pre class="brush: python; toolbar: false; first-line: 0">
+                            from shaderComp.core import *
+                            from shaderComp.shaders import *
+
+                            myProj = Project.Project('tutorial 1')
+
+                            myColor = Color.Color()
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+
+
+                            myProj.appendNode(myColor)
+                            myProj.appendNode(myDefaultVertexShader)
+
+                            myColor.setParams(0, 0.3, 0.6, 1.0);
+
+                            vertexInVertVar = myProj.addVertexInVar('vertex', 'vec4')
+                            vertexOutFinalPositionVar = myProj.addVertexOutVar('final_position', 'vec4')
+                            pixelOutFinalColor = myProj.addPixelOutVar('final_color', 'vec4')
+
+
+                            myProj.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myProj.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+                            myProj.addLink(myColor.getOutVar('color'), pixelOutFinalColor)
+
+                            myProj.addLink(myProj.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myProj.addLink(vertexOutFinalPositionVar, myProj.getVertexPipelineVar('Position'))
+                            myProj.addLink(pixelOutFinalColor, myProj.getPixelPipelineVar('FragColor'))
+
+                            myProj.compute('GLSLPrinter')
+                            myProj.render()
+                        </pre>
                     </section>
                 </div>
             </div>
