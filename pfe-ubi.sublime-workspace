@@ -1,0 +1,2354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"pre	Tag"
+			],
+			[
+				"h3",
+				"h3	Tag"
+			],
+			[
+				"maked",
+				"makedirs  (function)"
+			],
+			[
+				"myF",
+				"myFloatDiv2"
+			],
+			[
+				"myFi",
+				"myFloatDiv1"
+			],
+			[
+				"my",
+				"myDispatchVect4"
+			],
+			[
+				"pixelIn",
+				"pixelInFragCoordVar"
+			],
+			[
+				"pixel",
+				"pixelInFragCoordVar"
+			],
+			[
+				"mod_",
+				"mod_var2"
+			],
+			[
+				"mod",
+				"mod_var1"
+			],
+			[
+				"count",
+				"count  (function)"
+			],
+			[
+				"fra",
+				"fragment_source"
+			],
+			[
+				"pr",
+				"program"
+			],
+			[
+				"glGe",
+				"glGetShaderInfoLog"
+			],
+			[
+				"ver",
+				"vertex_shader"
+			],
+			[
+				"out",
+				"out_color"
+			],
+			[
+				"rig",
+				"rights"
+			],
+			[
+				"jq",
+				"jqXHR"
+			],
+			[
+				"ajax_s",
+				"ajax_search_lists"
+			],
+			[
+				"ajax_sear",
+				"ajax_search_domains"
+			],
+			[
+				"displa",
+				"displayMatrix  (function)"
+			],
+			[
+				"array",
+				"arrayOfDomains"
+			],
+			[
+				"substr",
+				"substr_replace"
+			],
+			[
+				"php",
+				"php	<?php … ?>"
+			],
+			[
+				"echo",
+				"echo	<?php echo … ?>"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"html",
+				"htmlspecialchars  (function)"
+			],
+			[
+				"row",
+				"row_count"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"unrel",
+				"unrelated_domains"
+			],
+			[
+				"doa",
+				"domain_id"
+			],
+			[
+				"but",
+				"buttonstatus"
+			],
+			[
+				"Ac",
+				"acquisition"
+			],
+			[
+				"acu",
+				"acquisition"
+			],
+			[
+				"whois",
+				"whois_nic"
+			],
+			[
+				"call",
+				"callBrotherAction"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Tutorial/tuto 1 - simple.html",
+			"settings":
+			{
+				"buffer_size": 38124,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Tutorial/tuto 2 - advanced.html",
+			"settings":
+			{
+				"buffer_size": 13779,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "fog_gen.py",
+			"settings":
+			{
+				"buffer_size": 4448,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 324 files for \"ShaderType\"\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\doxyconfig.txt:\n  219  # newlines.\n  220  \n  221: ALIASES                = shadertype=\"\\par Type of this shader:\\n\" \n  222  \n  223  # This tag can be used to specify a number of word-keyword mappings (TCL only).\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\Box.py:\n   14  class Box(Node):\n   15  \n   16: 	def __init__(self, name, linkManager, shaderType) :\n   17: 		Node.__init__(self, 0, shaderType)\n   18  		self.nodeList = []\n   19  		self.name = name\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\LinkManager.py:\n   31  			if nodeTo != nodeFrom :\n   32  				nodeFrom.getLinkList().append(link)\n   33: 			if nodeTo.getShaderType() == 0 and nodeTo != self.project.getVertexBox() and nodeFrom != self.project.getVertexBox():\n   34  				self.project.getVertexBox().getLinkList().append(link)\n   35: 			elif nodeTo.getShaderType() == 1 and nodeTo != self.project.getPixelBox() and nodeFrom != self.project.getPixelBox():\n   36  				self.project.getPixelBox().getLinkList().append(link)\n   37  		else :\n   ..\n   67  			# nodeFrom.getLinkList().append(link)\n   68  			# if nodeTo.getType() == 1 and nodeFrom.getType() == 1:\n   69: 				# if nodeTo.getShaderType() == 0 :\n   70  					# self.project.getVertexBox().getLinkList().append(link)\n   71: 				# elif nodeTo.getShaderType() == 1 :\n   72  					# self.project.getPixelBox().getLinkList().append(link)\n   73  		# else :\n   ..\n   91  			link = ValuedLink(nodeTo, varTo, str(value))\n   92  			nodeTo.getLinkList().append(link)\n   93: 			if nodeTo.getShaderType() == 0 and nodeTo != self.project.getVertexBox() :\n   94  				self.project.getVertexBox().getLinkList().append(link)\n   95: 			elif nodeTo.getShaderType() == 1 and nodeTo != self.project.getPixelBox() :\n   96  				self.project.getPixelBox().getLinkList().append(link)\n   97  		else :\n   ..\n  108  			link = ValuedLink(nodeTo, varTo, str(value))\n  109  			nodeTo.getLinkList().append(link)\n  110: 			if nodeTo.getShaderType() == 0 and nodeTo != self.project.getVertexBox() :\n  111  				self.project.getVertexBox().getLinkList().append(link)\n  112: 			elif nodeTo.getShaderType() == 1 and nodeTo != self.project.getPixelBox() :\n  113  				self.project.getPixelBox().getLinkList().append(link)\n  114  		else :\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\Node.py:\n   12  class Node:\n   13  \n   14: 	def __init__(self, type, shaderType):\n   15  		self.type = type\n   16  		self.name = 'None'\n   17  		self.linkList = []\n   18  		self.linkManager = None\n   19: 		self.shaderType = shaderType\n   20  		self.inVars = {}\n   21  		self.outVars = {}\n   ..\n   30  		return self.type\n   31  		\n   32: 	def getShaderType(self) :\n   33: 		return self.shaderType\n   34  	\n   35  	def setLinkManager(self, linkManager) :\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\PixelBox.py:\n    3  class PixelBox(Box):\n    4  \n    5: 	def __init__(self, name, linkManager, shaderType):\n    6: 		Box.__init__(self, name, linkManager, shaderType)\n    7  	\n    8: 	def getShaderType(self) :\n    9  		return 1\n   10  		\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\Printer.py:\n  138  				link.varTo.val = None\n  139  		\n  140: 	def addDeclaration(self, shaderType, declaration, name) :\n  141: 		if shaderType == 0 :\n  142  			if name not in self.vertexDeclaration :\n  143  				self.vertexDeclaration[name] = declaration\n  144  			elif declaration[0] != None :\n  145  				self.vertexDeclaration[name] = declaration\n  146: 		elif shaderType == 1 :\n  147  			if name not in self.fragmentDeclaration :\n  148  				self.fragmentDeclaration[name] = declaration\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\Project.py:\n  103  	# @param pos The position where to add this node. Be careful that the position is relative to the box in which the shader will be added.\n  104  	def addNode(self, node, pos) :\n  105: 		if node.getShaderType() == 0 :\n  106  			self.vertexBox.addNode(node, pos)\n  107: 		elif node.getShaderType() == 1 :\n  108  			self.pixelBox.addNode(node, pos)\n  109  		\n  ...\n  113  	# @param node A reference to an object of type `Node` or any of its children. This could be a Box as well as a Shader child.\n  114  	def appendNode(self, node) :\n  115: 		if node.getShaderType() == 0 :\n  116  			self.vertexBox.appendNode(node)\n  117: 		elif node.getShaderType() == 1 :\n  118  			self.pixelBox.appendNode(node)\n  119  	\n  ...\n  123  	# @param node A reference to an object of type `Node` or any of its children. This could be a Box as well as a Shader child.\n  124  	def removeNode(self, node) :\n  125: 		if node.getShaderType() == 0 :\n  126  			self.vertexBox.removeNode(node)\n  127: 		elif node.getShaderType() == 1 :\n  128  			self.pixelBox.removeNode(node)\n  129  		\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\Shader.py:\n   10  from Node import *\n   11  \n   12: class ShaderType:\n   13  \n   14  \n   15  class Shader(Node):\n   16  \n   17: 	def __init__(self, shaderType):\n   18: 		Node.__init__(self, 1, shaderType)\n   19: 		self.shaderType = shaderType\n   20  \n   21  	def getParams(self) :\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\core\\VertexBox.py:\n    3  class VertexBox(Box):\n    4  \n    5: 	def __init__(self, name, linkManager, shaderType):\n    6: 		Box.__init__(self, name, linkManager, shaderType)\n    7  		\n    8: 	def getShaderType(self) :\n    9  		return 0\n   10  		\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\printers\\GLSLPrinter.py:\n   44  			else:\n   45  				# if vextex shader\n   46: 				if node.getShaderType() == 0 :\n   47  					if self.vertexShaderBuffer == '' :\n   48  						self.vertexShaderBuffer = self.writeHead(self.vertexShaderBuffer)\n   ..\n   88  				self.fragmentShaderBuffer = declaration[0] + ' '  + declaration[1] + ' '  + name + ';' + '\\n' + self.fragmentShaderBuffer\n   89  \n   90: 	# def addDeclaration(self, shaderType, declaration) :\n   91  		# name = ' dec' + str(self.nbDec) + '_' + str(int(time.time()))\n   92  		# self.nbDec += 1\n   93: 		# if shaderType == 0 :\n   94  			# if self.vertexDeclaration.count(name) == 0 :\n   95  				# self.vertexShaderBuffer = declaration + name + ';' + '\\n' + self.vertexShaderBuffer\n   96  				# self.vertexDeclaration.append(name)\n   97: 		# elif shaderType == 1 :\n   98  			# if self.fragmentDeclaration.count(name) == 0 :\n   99  				# self.fragmentShaderBuffer = declaration + name + ';' + '\\n' + self.fragmentShaderBuffer\n  ...\n  101  		# return name\n  102  \n  103: 	# def addDeclaration(self, shaderType, declaration, name) :\n  104: 		# if shaderType == 0 :\n  105  			# self.vertexShaderBuffer = declaration + ' ' + name + ';' + '\\n' + self.vertexShaderBuffer\n  106: 		# elif shaderType == 1 :\n  107  			# self.fragmentShaderBuffer = declaration + ' ' + name + ';' + '\\n' + self.fragmentShaderBuffer\n  108  		# return name\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\CelShadingFragment.py:\n    8  # @version 0.1\n    9  # @date 2013-11-07\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `normal: vec3` is the interpolated normal of the surface displayed by the current pixel\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\CelShadingVertex.py:\n    7  # @version 0.1\n    8  # @date 2013-11-07\n    9: # @shadertype Vertex Shader\n   10  # @details __Input variables:__\n   11  # - `normal: vec3` is the normal of the current pixel, usually linked to the pipeline item `gl_Normal`\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\ChangeColor.py:\n    8  # @version 0.1\n    9  # @date 2013-11-07\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `color: vec4` is the input color that will be mixed\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\Color.py:\n    9  # @version 0.1\n   10  # @date 2013-11-07\n   11: # @shadertype Fragment Shader\n   12  # @details __Input variables:__\n   13  # - `r: float` is the r component of the mixing color\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\DefaultVertexShader.py:\n    9  # @version 0.1\n   10  # @date 2013-11-07\n   11: # @shadertype Vertex Shader\n   12  # details This shader is absolutely needed at the end of any vertex shader, or the position of the object may be unexpected, or rendered objects could even desapear\n   13  # @details __Input variables:__\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\Fog.py:\n    9  # @version 0.1\n   10  # @date 2013-11-07\n   11: # @shadertype Fragment Shader\n   12  # details It will use the fragment coordinates to evaluate the depth \n   13  # of the surface corresponding to this pixel, then modify the pixel color \n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\FragmenTestShader.py:\n    9  # @version 0.1\n   10  # @date 2013-11-07\n   11: # @shadertype Fragment Shader\n   12  class FragmenTestShader(Shader):\n   13  \n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\VertexTestShader.py:\n    8  # @version 0.1\n    9  # @date 2013-11-07\n   10: # @shadertype Vertex Shader\n   11  class VertexTestShader(Shader):\n   12  \n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\math\\Clamp.py:\n    8  # @version 0.1\n    9  # @date 2013-11-08\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `value: float` is the input value that will be limited\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\math\\DispatchVect4.py:\n    8  # @version 0.1\n    9  # @date 2013-11-08\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `myVec4: vec4` is the vector to dispatch\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\math\\FloatDiv.py:\n    8  # @version 0.1\n    9  # @date 2013-11-08\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `dividend: float` is the first input, that will be divided\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\math\\Log.py:\n    8  # @version 0.1\n    9  # @date 2013-11-08\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `input: float` is the input of the logarithm\n\nC:\\Users\\Romain\\Documents\\Projets\\Ubi\\ShaderComp\\shaderComp\\shaders\\math\\Mix.py:\n    8  # @version 0.1\n    9  # @date 2013-11-08\n   10: # @shadertype Fragment Shader\n   11  # @details __Input variables:__\n   12  # - `v1: vec4` is the first input vector\n\n56 matches across 23 files\n",
+			"settings":
+			{
+				"buffer_size": 10650,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "fog_load.py",
+			"settings":
+			{
+				"buffer_size": 3957,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tutorial_1.py",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"c",
+				"Toggle Comment"
+			],
+			[
+				"emmetex",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/fog_gen.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/ShaderType.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/Shader.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/math/DispatchVect4.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/math/Mix.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/math/Clamp.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/printers/math/Clamp/ClampGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/Color.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/math/Log.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/printers/math/Log/LogGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/LinkManager.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/shaders/math/FloatDiv.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/printers/math/FloatDiv/FloatDivGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/printers/math/DispatchVect4/DispatchVect4GLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/python/TARP-ODNL/Sujet 1/tabu.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/Tutorial/syntaxhighlighter/scripts/shBrushCpp.js",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/Tutorial/syntaxhighlighter/compass/shCoreEclipse.scss",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/Tutorial/syntaxhighlighter/compass/shCore.scss",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/test",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/fog",
+		"/C/Users/Romain/AppData/Local/Temp/Rar$DRa0.834/ShaderCompProj 1.3/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj old/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/Project.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/ChangeLog",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/printers/GLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/tutorial_1.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/first_project_example.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderComp/shaderComp/core/Pipeline.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/core/Node.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/printers/Color/ColorGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/shaders/Color.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/main.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/shaders/math/Mix.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/main3.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/core/LinkManager.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/Tutorial/implementation/tutorial_1/shaderComp/ChangeLog",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/printers/Color/ColorGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/ChangeLog",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/core/Node.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/core/Shader.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shadercomp.sublime-project",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/shaders/ChangeColor.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/vertexShaderTestProj.glsl",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/vertexShadermyFog.glsl",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/printers/VertexTestShader/VertexTestShaderGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/main.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/core/Project.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/core/Pipeline.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/OGLES20_Shaders/Media/Shaders/CombineShader27.fs",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/OGLES20_Shaders/build/android/AndroidManifest.xml",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/OGLES20_Shaders/Framework/Win32/FrmMath_Platform.inl",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/Mix.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/html/search/nomatches.html",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/html/namespaces.html",
+		"/C/Users/Romain/Documents/Projets/Ubi/ShaderCompProj 1.3/shaderComp/core/Render.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Render_bck.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/Clamp.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Mix/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Pipeline.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Mix/MixGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/DispatchVect4/DispatchVect4GLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/FloatDiv/FloatDivGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/ChangeLog",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Clamp/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/examples/shader_link_example.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/examples/first_project_example.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/main3.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Clamp/ClampGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Log/LogGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/Fog/FogGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/Log.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/Log/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Printer.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/Fog.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/GLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/DispatchVect4.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/DispatchVect4/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/FloatDiv/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/math/FloatDiv.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/math/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Render.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/VertexFog/VertexFogGLSLPrinter.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/gui/SCGuiApp.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/gui/SCGui.kv",
+		"/D/Kivy-1.7.2-w32/kivy/examples/demo/kivycatalog/container_kvs/SelectorsContainer.kv",
+		"/D/py.ini",
+		"/D/Kivy-1.7.2-w32/kivy/examples/demo/kivycatalog/main.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/gui/SCGui.py",
+		"/D/Kivy-1.7.2-w32/kivy/examples/canvas/bezier.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/shadertest.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/fragmentShaderTestProj.glsl",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/test/vertex_shader.glsl",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadertest/test/fragment_shader.glsl",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Project.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/VertexTestShader/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/VertexFog/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/Fog/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/DefaultVertexShader/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/Color/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/ChangeColor/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/CelShadingVertex/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/CelShadingFragment/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/printers/FragmenTestShader/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/FragmenTestShader.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/VertexTestShader.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/LinkManager.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/Box.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/doxyresult.txt",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/doxyconfig.txt",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/CelShadingFragment.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/CelShadingVertex.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/ChangeColor.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/DefaultVertexShader.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/core/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/shaders/Color.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shaderComp/__init__.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadercomp/main.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadercomp/main2.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadercomp/core/Render.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadercomp/core/Project.py",
+		"/C/Users/Romain/Documents/Projets/Ubi/shaderComp/shadercomp/conf.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(ShaderType",
+			", 1",
+			"ShaderType",
+			"inverte",
+			"\"></",
+			"head",
+			"style",
+			"first-line: 0",
+			"setParams",
+			"h2",
+			"myProj2",
+			"name",
+			"compute",
+			"Link(self, ",
+			"self, ",
+			"ink(self, ",
+			"(self, ",
+			"myFog",
+			"myCelShadingFragment",
+			"myChangeColor",
+			"addValuedLink",
+			"myProj.getVertexBox(), myProj.getPixelBox(), ",
+			"myProj.getPixelBox(), ",
+			"addLink",
+			"pixelInFogFactorVar",
+			"pixelInFragCoordVar",
+			"Vertex",
+			"pixelInColorVar",
+			"Clamp",
+			"MixGLSLPrinter",
+			"Clamp",
+			"max",
+			"['']",
+			"Clamp",
+			"self, ",
+			"i(",
+			"Log",
+			"g",
+			"G",
+			"g",
+			"Min",
+			"min",
+			"setR",
+			"myLog",
+			"myClamp",
+			"Log",
+			"ClampGLSLPrinter",
+			"FloatDivGLSLPrinter",
+			"output",
+			"FloatDiv",
+			"myFloatDiv2",
+			"FloatDiv2",
+			"LogGLSLPrinter",
+			"FloatDivGLSLPrinter",
+			"result",
+			"dividend",
+			"FloatDiv",
+			"myDispatchVect4",
+			"DispatchVect4",
+			"DispatchVect4GLSLPrinter",
+			"DispatchVect4",
+			"DefaultVertexShader",
+			"myVec4",
+			"w",
+			"[\"\"]",
+			"vec4",
+			"DispatchVect4",
+			"DefaultVertexShader",
+			"myDefaultVertexShader",
+			"x",
+			"/' + node.__class__.__name__  + '/'",
+			"ode.__class__.__name__ ",
+			"__name__ ",
+			"name",
+			"color",
+			"IN",
+			"inVars",
+			"\"r\"",
+			"r",
+			"x",
+			"DispatchVect",
+			"normal",
+			"ChangeColor",
+			"shader_link_example",
+			"first_project_example",
+			"pixelInColorVar",
+			"Position",
+			"myProj",
+			"KEYPRESSE",
+			"FragCoord",
+			"fragCoord",
+			"Controller",
+			"MyRootWidget",
+			"Controller",
+			"dec0_1383848683",
+			"dec7_1383744830",
+			"dec7_1383848683",
+			"program",
+			"Program",
+			"program",
+			"Program",
+			"program",
+			"FragmentTestShader",
+			"generators",
+			"VertexTestShade",
+			"VertexTestShader",
+			"CelShadingVertex",
+			"VertexTestShader",
+			"deleteLink",
+			"getVertexInVar",
+			"printProjectListName",
+			"printPixelNodeListName",
+			"printProjectListName",
+			"printVertexNodeListName",
+			"get",
+			"code",
+			"addLink",
+			"deleteValuedLink",
+			"This",
+			"name",
+			"the shader",
+			"configuration",
+			"details",
+			"Vertex",
+			"vertex",
+			"input",
+			"addNode",
+			"appendNode"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"option"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Tutorial/tuto 1 - simple.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33620,
+								33659
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8665.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Tutorial/tuto 2 - advanced.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10237,
+								10237
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3604.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "fog_gen.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1635,
+								1350
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1307.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10650,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										162,
+										172
+									],
+									[
+										451,
+										461
+									],
+									[
+										497,
+										507
+									],
+									[
+										749,
+										759
+									],
+									[
+										945,
+										955
+									],
+									[
+										1275,
+										1285
+									],
+									[
+										1392,
+										1402
+									],
+									[
+										1626,
+										1636
+									],
+									[
+										1779,
+										1789
+									],
+									[
+										2049,
+										2059
+									],
+									[
+										2202,
+										2212
+									],
+									[
+										2479,
+										2489
+									],
+									[
+										2621,
+										2631
+									],
+									[
+										2634,
+										2644
+									],
+									[
+										2755,
+										2765
+									],
+									[
+										2795,
+										2805
+									],
+									[
+										3024,
+										3034
+									],
+									[
+										3084,
+										3094
+									],
+									[
+										3120,
+										3130
+									],
+									[
+										3321,
+										3331
+									],
+									[
+										3366,
+										3376
+									],
+									[
+										3596,
+										3606
+									],
+									[
+										4004,
+										4014
+									],
+									[
+										4090,
+										4100
+									],
+									[
+										4359,
+										4369
+									],
+									[
+										4443,
+										4453
+									],
+									[
+										4709,
+										4719
+									],
+									[
+										4793,
+										4803
+									],
+									[
+										4988,
+										4998
+									],
+									[
+										5078,
+										5088
+									],
+									[
+										5123,
+										5133
+									],
+									[
+										5149,
+										5159
+									],
+									[
+										5162,
+										5172
+									],
+									[
+										5374,
+										5384
+									],
+									[
+										5434,
+										5444
+									],
+									[
+										5471,
+										5481
+									],
+									[
+										5672,
+										5682
+									],
+									[
+										6000,
+										6010
+									],
+									[
+										6141,
+										6151
+									],
+									[
+										6378,
+										6388
+									],
+									[
+										6628,
+										6638
+									],
+									[
+										6675,
+										6685
+									],
+									[
+										6811,
+										6821
+									],
+									[
+										7108,
+										7118
+									],
+									[
+										7421,
+										7431
+									],
+									[
+										7738,
+										7748
+									],
+									[
+										8004,
+										8014
+									],
+									[
+										8282,
+										8292
+									],
+									[
+										8653,
+										8663
+									],
+									[
+										8988,
+										8998
+									],
+									[
+										9211,
+										9221
+									],
+									[
+										9425,
+										9435
+									],
+									[
+										9707,
+										9717
+									],
+									[
+										9970,
+										9980
+									],
+									[
+										10246,
+										10256
+									],
+									[
+										10508,
+										10518
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								3542,
+								3542
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1377.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "fog_load.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2856,
+								2856
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tutorial_1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1007
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 304.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "pfe-ubi.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"shadert",
+				"shaderComp\\core\\ShaderType.py"
+			],
+			[
+				"mix",
+				"shaderComp\\shaders\\math\\Mix.py"
+			],
+			[
+				"clam",
+				"shaderComp\\shaders\\math\\Clamp.py"
+			],
+			[
+				"log",
+				"shaderComp\\shaders\\math\\Log.py"
+			],
+			[
+				"floatdiv",
+				"shaderComp\\shaders\\math\\FloatDiv.py"
+			],
+			[
+				"floatd",
+				"shaderComp\\printers\\math\\FloatDiv\\FloatDivGLSLPrinter.py"
+			],
+			[
+				"shader",
+				"shaderComp\\core\\Shader.py"
+			],
+			[
+				"dispatchvect",
+				"shaderComp\\shaders\\math\\DispatchVect4.py"
+			],
+			[
+				"project",
+				"shaderComp\\core\\Project.py"
+			],
+			[
+				"glslprint",
+				"shaderComp\\printers\\GLSLPrinter.py"
+			],
+			[
+				"tut",
+				"tutorial_1.py"
+			],
+			[
+				"colo",
+				"shaderComp\\shaders\\Color.py"
+			],
+			[
+				"sh",
+				"shaderComp\\core\\Shader.py"
+			],
+			[
+				"node",
+				"shaderComp\\core\\Node.py"
+			],
+			[
+				"ma",
+				"main.py"
+			],
+			[
+				"linkmana",
+				"shaderComp\\core\\LinkManager.py"
+			],
+			[
+				"color",
+				"shaderComp\\shaders\\Color.py"
+			],
+			[
+				"colorglslprinter",
+				"shaderComp\\printers\\Color\\ColorGLSLPrinter.py"
+			],
+			[
+				"colorglslpri",
+				"shaderComp\\printers\\Color\\ColorGLSLPrinter.py"
+			],
+			[
+				"shaderpy",
+				"shaderComp\\core\\Shader.py"
+			],
+			[
+				"sha",
+				"shadercomp.sublime-project"
+			],
+			[
+				"changecolo",
+				"shaderComp\\shaders\\ChangeColor.py"
+			],
+			[
+				"proj",
+				"shaderComp\\core\\Project.py"
+			],
+			[
+				"main",
+				"main.py"
+			],
+			[
+				"render",
+				"shaderComp\\core\\Render.py"
+			],
+			[
+				"chan",
+				"shaderComp\\ChangeLog"
+			],
+			[
+				"disgl",
+				"shaderComp\\printers\\math\\DispatchVect4\\DispatchVect4GLSLPrinter.py"
+			],
+			[
+				"mixl",
+				"shaderComp\\printers\\math\\Mix\\MixGLSLPrinter.py"
+			],
+			[
+				"clagls",
+				"shaderComp\\printers\\math\\Clamp\\ClampGLSLPrinter.py"
+			],
+			[
+				"floatdivgls",
+				"shaderComp\\printers\\math\\FloatDiv\\FloatDivGLSLPrinter.py"
+			],
+			[
+				"pipe",
+				"shaderComp\\core\\Pipeline.py"
+			],
+			[
+				"ogglsl",
+				"shaderComp\\printers\\Fog\\FogGLSLPrinter.py"
+			],
+			[
+				"printer",
+				"shaderComp\\core\\Printer.py"
+			],
+			[
+				"main2",
+				"main2.py"
+			],
+			[
+				"pip",
+				"shaderComp\\core\\Pipeline.py"
+			],
+			[
+				"rende",
+				"shaderComp\\core\\Render.py"
+			],
+			[
+				"renderb",
+				"shaderComp\\core\\Render_bck.py"
+			],
+			[
+				"pro",
+				"shaderComp\\core\\Project.py"
+			],
+			[
+				"pri",
+				"shaderComp\\core\\Printer.py"
+			],
+			[
+				"linkm",
+				"shaderComp\\core\\LinkManager.py"
+			],
+			[
+				"chang",
+				"shaderComp\\ChangeLog"
+			],
+			[
+				"box",
+				"shaderComp\\core\\Box.py"
+			],
+			[
+				"irst",
+				"shaderComp\\examples\\first_project_example.py"
+			],
+			[
+				"proje",
+				"shadercomp\\core\\Project.py"
+			],
+			[
+				"fog/f",
+				"fog\\fragment_shader.glsl"
+			],
+			[
+				"fog/",
+				"fog\\vertex_shader.glsl"
+			],
+			[
+				"vertex",
+				"vertex_shader.glsl"
+			],
+			[
+				"toon",
+				"glutglsl2_2.0\\toon.vert"
+			],
+			[
+				"vert",
+				"vertexShaderTestProj.glsl"
+			],
+			[
+				"frag",
+				"fragmentShaderTestProj.glsl"
+			],
+			[
+				"fr",
+				"fragment_shader.glsl"
+			],
+			[
+				"ver",
+				"vertex_shader.glsl"
+			],
+			[
+				"searchad",
+				"view\\pages\\search_admin.php"
+			],
+			[
+				"searchread",
+				"view\\pages\\search_result_domains_admin.php"
+			],
+			[
+				"domansmo",
+				"model\\DomainsModel.php"
+			],
+			[
+				"userdom",
+				"model\\User_domainsModel.php"
+			],
+			[
+				"domain",
+				"model\\DomainsModel.php"
+			],
+			[
+				"earcad",
+				"view\\pages\\search_admin.php"
+			],
+			[
+				"domainmode",
+				"model\\DomainsModel.php"
+			],
+			[
+				"domincon",
+				"controller\\DomainController.php"
+			],
+			[
+				"ajaxcontro",
+				"controller\\AjaxController.php"
+			],
+			[
+				"usersmo",
+				"model\\UsersModel.php"
+			],
+			[
+				"hom",
+				"controller\\HomeController.php"
+			],
+			[
+				"menu",
+				"view\\pages\\menu.php"
+			],
+			[
+				"autorisationcon",
+				"modules\\autorisation\\controller\\AutorisationController.php"
+			],
+			[
+				"domaincon",
+				"controller\\DomainController.php"
+			],
+			[
+				"cntroller",
+				"controller\\ListsController.php"
+			],
+			[
+				"sea",
+				"view\\pages\\search.php"
+			],
+			[
+				"sear",
+				"view\\pages\\search_result_domains.php"
+			],
+			[
+				"detail",
+				"view\\pages\\details_domain.php"
+			],
+			[
+				"ajax",
+				"controller\\AjaxController.php"
+			],
+			[
+				"userdomain",
+				"model\\User_domainsModel.php"
+			],
+			[
+				"domains",
+				"model\\DomainsModel.php"
+			],
+			[
+				"listpri",
+				"view\\pages\\list_private.php"
+			],
+			[
+				"dommode",
+				"model\\DomainsModel.php"
+			],
+			[
+				"domin",
+				"controller\\DomainController.php"
+			],
+			[
+				"listdom",
+				"model\\List_domainsModel.php"
+			],
+			[
+				"list_private",
+				"view\\pages\\list_private\\french.php"
+			],
+			[
+				"list",
+				"view\\pages\\list\\french.php"
+			],
+			[
+				"listpubli",
+				"view\\pages\\list_public.php"
+			],
+			[
+				"s",
+				"view\\pages\\search_result_domains.php"
+			],
+			[
+				"searre",
+				"view\\pages\\search_result_domains.php"
+			],
+			[
+				"resultse",
+				"view\\pages\\search_result_lists\\english.php"
+			],
+			[
+				"cust",
+				"webroot\\css\\custom.css"
+			],
+			[
+				"lstdom",
+				"model\\List_domainsModel.php"
+			],
+			[
+				"listcontr",
+				"controller\\ListsController.php"
+			],
+			[
+				"doan",
+				"controller\\DomainController.php"
+			],
+			[
+				"listu",
+				"view\\pages\\list_unrelated.php"
+			],
+			[
+				"listpub",
+				"view\\pages\\list_public.php"
+			],
+			[
+				"listunr",
+				"view\\pages\\list_unrelated.php"
+			],
+			[
+				"searchres",
+				"view\\pages\\search_result_domains.php"
+			],
+			[
+				"listcon",
+				"controller\\ListsController.php"
+			],
+			[
+				"listscon",
+				"controller\\ListsController.php"
+			],
+			[
+				"listsmode",
+				"model\\ListsModel.php"
+			],
+			[
+				"matrix",
+				"view\\pages\\matrix.php"
+			],
+			[
+				"search",
+				"view\\pages\\search.php"
+			],
+			[
+				"cu",
+				"webroot\\css\\custom.css"
+			],
+			[
+				"domainmodel",
+				"model\\DomainsModel.php"
+			],
+			[
+				"cus",
+				"webroot\\css\\custom.css"
+			],
+			[
+				"matri",
+				"view\\pages\\matrix.php"
+			],
+			[
+				"listpr",
+				"view\\pages\\list_private.php"
+			],
+			[
+				"conf",
+				"Conf.php"
+			],
+			[
+				"listdomain",
+				"model\\List_domainsModel.php"
+			],
+			[
+				"lsitcon",
+				"modules\\liste\\controller\\ListController.php"
+			],
+			[
+				"domainsmode",
+				"model\\DomainsModel.php"
+			],
+			[
+				"inputlist",
+				"view\\pages\\input_list.php"
+			],
+			[
+				"listsmo",
+				"model\\ListsModel.php"
+			],
+			[
+				"usersmodel",
+				"model\\UsersModel.php"
+			],
+			[
+				"usercon",
+				"controller\\UserController.php"
+			],
+			[
+				"deta",
+				"view\\pages\\details_domain.php"
+			],
+			[
+				"domaimode",
+				"model\\DomainsModel.php"
+			],
+			[
+				"fac",
+				"view\\pages\\authent\\factures.php"
+			],
+			[
+				"ho",
+				"controller\\HomeController.php"
+			],
+			[
+				"list_pri",
+				"view\\pages\\list_private.php"
+			],
+			[
+				"dom",
+				"controller\\DomainController.php"
+			],
+			[
+				"labels",
+				"model\\LabelsModel.php"
+			],
+			[
+				"alert",
+				"view\\pages\\alert.php"
+			],
+			[
+				"listdommo",
+				"model\\List_domainsModel.php"
+			],
+			[
+				"listmen",
+				"view\\pages\\list_menu.php"
+			],
+			[
+				"listsmodel",
+				"model\\ListsModel.php"
+			],
+			[
+				"matr",
+				"view\\pages\\matrix.php"
+			],
+			[
+				"listun",
+				"view\\pages\\list_unrelated.php"
+			],
+			[
+				"list_pu",
+				"view\\pages\\list_public.php"
+			],
+			[
+				"ajaxcn",
+				"controller\\AjaxController.php"
+			],
+			[
+				"domaincn",
+				"controller\\DomainController.php"
+			],
+			[
+				"domaincontr",
+				"controller\\DomainController.php"
+			],
+			[
+				"searc",
+				"view\\pages\\search.php"
+			],
+			[
+				"domainsmo",
+				"model\\DomainsModel.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\wamp\\www\\dev\\SQLD\\trunk\\domain-monitor\\domain-monitor.sublime-project"
+			],
+			[
+				"ops",
+				"C:\\wamp\\www\\dev\\SQLD\\trunk\\choeur-strasbourg.fr\\OPS\\OPS.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

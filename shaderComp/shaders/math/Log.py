@@ -10,16 +10,16 @@ from ...core.Shader import *
 # @shadertype Fragment Shader
 # @details __Input variables:__
 # - `input: float` is the input of the logarithm
-# @details __Output variables:__ 
+# @details __Output variables:__
 # - `output: float` is the result of the logarithm
 
 class Log(Shader):
 
 	## @fn __init__(self)
 	# @brief Initialize this shader
-	def __init__(self):
-		Shader.__init__(self, 1)
+	def __init__(self, shader_type):
+		Shader.__init__(self, shader_type)
 		self.name = 'Log'
 		self.inVars['input'] = Var("input", self, VarType.IN,'float')
 		self.outVars["output"] = Var("output", self, VarType.OUT,'float')
-	
+

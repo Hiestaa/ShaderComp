@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>
+            User Tutorial Part 2
+        </title>
+        <meta name="description" content=""/>
+        <meta name="author" content="ink, cookbook, recipes"/>
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <link rel="shortcut icon" href="ink-2.2.1/img/ink-favicon.ico"/>
+        <link rel="apple-touch-icon-precomposed" href="ink-2.2.1/img/touch-icon.57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ink-2.2.1/img/touch-icon.72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ink-2.2.1/img/touch-icon.114.png"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.320x460.png"
+        media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.768x1004.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.1024x748.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"/>
+
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/ink.css"/>
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/docs.css"/>
+        <link rel="stylesheet" type="text/css" href="treeview/jquery.treeview.css"/>
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+
+        <!--[if IE 7 ]>
+            <link rel="stylesheet" href="ink-2.2.1/css/ink-ie7.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <script type="text/javascript" src="jquery.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/holder.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink-ui.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/autoload.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/html5shiv.js">
+        </script>
+        <script type="text/javascript" src="treeview/jquery.treeview.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js">
+        </script>
+
+        <style type="text/css">
+            header {
+                padding: 2em 0;
+                margin-bottom: 2em;
+                text-align: left;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            header .ink-navigation {
+                margin-top: 2em;
+            }
+            footer {
+                background: #ccc;
+                color: #0003;
+            }
+            footer p {
+                padding: 0.5em 1em 0.5em 0;
+                margin: 0;
+            }
+
+            .unstyled li {
+                padding: 0.4em 0;
+                text-align: right;
+            }
+            .content {
+                padding-top: 2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="topbar">
+            <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
+                <ul class="menu horizontal flat black shadowed">
+                    <li>
+                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
+                <ul class="menu vertical flat black">
+                    <li class="title">
+                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
+                    </li>
+                </ul>
+                <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutouser">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutoprog">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="ink-grid" style="margin-top: 45px;">
+            <div class="whatIs">
+                <h1>User tutorial <small>Part 2: Advanded nodes linking</small></h1>
+                <p>In this tutorial, you will see the development of a more complicated project that will implement a fog effect. You will see a more advanced nodes linking, and some mathematical function that could be used to build complex shaders.</p>
+            </div>
+            <div class="column-group gutters">
+                <div class="large-25 medium-33 small-100">
+
+                    <nav class="ink-navigation sticky" data-offset-top="70px" data-offset-bottom="350px" id="nav_menu">
+                        <ul class="menu vertical rounded black">
+                            <li><a class="scrollableLink" href="#topbar"><span class="icon-chevron-up"></span> Back to Top</a></li>
+                            <li class="active"><a class="scrollableLink" href="#nav-overview">Overview of the project</a></li>
+                            <li><a class="scrollableLink" href="#nav-creation">Instantiation</a></li>
+                            <li><a class="scrollableLink" href="#nav-adv-link">Advanced Nodes linking</a></li>
+                            <li><a class="scrollableLink" href="#nav-recap">Recap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="large-75 medium-66 small-100">
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Project overview</h2>
+                        <p>A fog shader is some more complex than the previous one. As in the first tutorial, all the work needs to be done in the pixel (fragment) shader. We assume that all the shaders can be build using very small blocks called <span class="ink-label success invert">Math functions</span></p>
+                        <p>Here is the schema of the architecture of the shader we are going to create: <img src="img/fog.png"></p>
+                        <p>It mays look confusing, but using the steps mentionned at the end of the previous part of the tutorial wich first point is to draw a schema like the one presented above, you will see that it will be very simple. This only is a matter of links and interfaces. To make it clearer, let's have a look on the effect of each of theses math functions. When reading theses description, remind that the goal of a fog shader is to change the color of the current fragment (or pixel) according to the distance to the camera of the projected object.</p>
+                        <h4>DispatchVect4</h4>
+                        <blockquote>
+                            <p>This shader can be used to get the component of a vector.</p>
+                             <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">DispatchVect4</span></p>
+                        </blockquote>
+                        <p>The first step of the fog shader we are building is to get the z and w component of the coordinates of the current fragment (pixel) of the input image. The <span class="ink-label success invert">DispatchVect4</span> node will do this work for us.</p>
+                        <h4>Div</h4>
+                        <blockquote>
+                            <p>This shader can be used to divide an input ba another.</p>
+                             <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">FloatDiv</span></p>
+                        </blockquote>
+                        <p>The second and third step is consisting of two consecutive divisions: the z component of the input fragment coordinates by its w component. Then, the result of this division is again divided by a fog factor. We are here using a <span class="ink-label success invert">FloatDiv</span> node because we do not want the result to be truncated or rounded as an integer.</p>
+                        <h4>Log</h4>
+                        <blockquote>
+                            <p>This shader can be used to compute the logarithm of a value</p>
+                             <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">Log</span></p>
+                        </blockquote>
+                        <p>Next, a logarithm is applyied to the result of all these operations. This allows us to achieve a realistic look of the fog.</p>
+                        <h4>Clamp</h4>
+                        <blockquote>
+                            <p>This shader can be used to limit a value with a maximum and a minimum</p>
+                             <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">Clamp</span></p>
+                        </blockquote>
+                        <p>Remember that the goal of our fog shader is to modify the color of the current fragment. In the API as in many shader languages, the color are represented by a floating point number (<span class="ink-label info invert">float</span>) between 0.0 and 1.0. The resulting factor that have been computed for now can be far more than 1.0. To avoid that, we will use the <span class="ink-label success invert">clamp</span> node setting its minimum value to 0.0 and its maximum value to 1.0</p>
+                        <h4>Mix</h4>
+                        <blockquote>
+                            <p>This shader can be used to mix two vectors of type float4 within a given factor</p>
+                            <p><cite>ShaderComp documentation</cite>, class <span class="ink-label success invert">Mix</span></p>
+                        </blockquote>
+                        <p>The last step of the shader fog is to mix the color of the current fragment and the color of the fog. The mixing factor is the one computed by the chaining of all the previous shaders. As said before, the further the projected object is, the less visible it is. The mixing factor needs to be nearly equals to 1.0 beyond a certain distance. The output of this terminal node is the real resulting color of the fragment filtered by the fog.</p>
+                    </section>
+                    <section id="nav-creation" data-target="#nav_menu" data-spy="true">
+                        <h2>Project and nodes instantiation</h2>
+                        <p>The second step of the recipes given in the previous tutorial is to instantiate the project and the nodes needed. Then, theses nodes need to be added to the project. Remind that when adding a node to a project, the node is automatically added to the right bo corresponding to its type (a pixel shader is always added to the pixel box). </p>
+                        <p>Many shaders like the ones of the math module (shaderComp.shaders.math) are not specific to any particular type. For exemple, you can add a logarithm function to the vertex box as well as to the pixel box. For that kind of shaders, you need to specify the type (using the enumeration shaderComp.core.ShaderType) when instantiating the shader. Here is the code for the creation of the nodes of our project:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            from shaderComp.core import *
+                            from shaderComp.shaders import *
+                            # notice the import of the shaders of the math module
+                            from shaderComp.shaders.math import *
+
+                            # creation of the project 'myFog'
+                            myFogProject = Project.Project('myFog')
+
+                            # creation of the nodes
+                            # remember that the first one is mandatory in the vertex box
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+                            myDispatchVect4 = DispatchVect4.DispatchVect4(ShaderType.PIXEL_SHADER)
+                            myFloatDiv1 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myFloatDiv2 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myLog = Log.Log(ShaderType.PIXEL_SHADER)
+                            myClamp = Clamp.Clamp(ShaderType.PIXEL_SHADER)
+                            myMix = Mix.Mix(ShaderType.PIXEL_SHADER)
+
+                            # adding nodes to the project
+                            myFogProject.appendNode(myDefaultVertexShader)
+                            myFogProject.appendNode(myDispatchVect4)
+                            myFogProject.appendNode(myFloatDiv1)
+                            myFogProject.appendNode(myFloatDiv2)
+                            myFogProject.appendNode(myLog)
+                            myFogProject.appendNode(myClamp)
+                            myFogProject.appendNode(myMix)
+                        </pre>
+                        <p>The third step of the recipe is to add nodes to the project. It has been done in the code section above.</p>
+                    </section>
+                    <section id="nav-adv-link" data-target="#nav_menu" data-spy="true">
+                        <h2>Advanced nodes linking</h2>
+                        <h3>Valued links</h3>
+                        <p>As you can see in the schema of the project displayed above, some shaders need to be parameterized to fit our needs. For exemple, the <span class="ink-label success invert">Clamp</span> node needs a minimum and a maximum value. As you can see if you read the <a href="#">documentation</a>, Clamp class implements a <span class="ink-label info invert">setMin</span> and a <span class="ink-label info invert">setMax</span> function allowing to set a constant to theses parameters.</p>
+                        <p>As explained in the <a href="tuto 1 - simple.html#parameters">first part of the user tutorial</a>, a node does not actually hold any parameter. Theses can be seen as regular inputs as any other input of this shader. To make it clearer, instead of setting the value of <span class="ink-label info invert">min</span> to a constant using the corresponding function, you could link this input to any variable using the <span class="ink-label success invert">Project</span>.<span class="ink-label info invert">addLink(...)</span> method as explained in the <a href="tuto 1 - simple.html#nav-links">previous part of the tutorial</a>. As you may now understand, the functions like setMin(...) and setMax(...) are more like a sugar than a real need: there is a more generic way to set the input variables of any node to a constant even if the setters function are not written for that node: the <span class="ink-label success invert">ValuedLink</span>.</p>
+                        <p>The use of valued links looks very similar than the use of standart links. The only difference is, instead of linking a variable to another, you link a value to a variable. Do it that way:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 28">
+                            # setting the input variables to a constant
+                            myFogProject.addValuedLink(myClamp.getInVar('min'), 0.0)
+                            myFogProject.addValuedLink(myClamp.getInVar('max'), 1.0)
+                        </pre>
+                        <h3>Interface and other links</h3>
+                        <p>Now that you know how to set a valued link to a variable to make it constant, you have learn enough to finish this project ! Follow the fourth and the fifth step of the recipe given at the end of the previous tutorial: create the interface of the pixel and the vertex box (remember that the vertex box is the same as in the first part of the tutorial), and link all of theses variables together following the drawing above. Here is the code you should have at the end of theses steps:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 32">
+                            # creating input and output variables of the vertex box
+                            vertexOutFinalPositionVar = myFogProject.addVertexOutVar('final_position', 'vec4')
+                            vertexInVertVar = myFogProject.addVertexInVar('vertex', 'vec4')
+
+                            # creating input and output variables of the pixel box
+                            pixelInFragCoordVar = myFogProject.addPixelInVar('fragCoord', 'vec4')
+                            pixelInColorVar = myFogProject.addPixelInVar('color', 'vec4')
+                            pixelInFogFactorVar = myFogProject.addPixelInVar('fogFactor', 'float')
+                            pixelInFogColorVar = myFogProject.addPixelInVar('fogColor', 'vec4')
+                            pixelOutFinalColor = myFogProject.addPixelOutVar('color', 'vec4')
+
+                            #creating links between the pipeline and the input of the boxes
+                            myFogProject.addLink(myFogProject.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FragCoord'), pixelInFragCoordVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FogColor'), pixelInFogColorVar)
+
+                            # creating links between the output of the boxes and the pipeline
+                            myFogProject.addLink(vertexOutFinalPositionVar, myFogProject.getVertexPipelineVar('Position'))
+                            myFogProject.addLink(pixelOutFinalColor, myFogProject.getPixelPipelineVar('FragColor'))
+
+                            # creating links between input/output variables of the vertex box and the nodes it contains
+                            myFogProject.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myFogProject.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+
+                            # creating links between input/output variables of the pixel box and the nodes it contains
+                            myFogProject.addLink(pixelInFragCoordVar, myDispatchVect4.getInVar('myVec4'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('z'), myFloatDiv1.getInVar('dividend'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('w'), myFloatDiv1.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv1.getOutVar('result'), myFloatDiv2.getInVar('dividend'))
+                            myFogProject.addLink(pixelInFogFactorVar, myFloatDiv2.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv2.getOutVar('result'), myLog.getInVar('input'))
+                            myFogProject.addLink(myLog.getOutVar('output'), myClamp.getInVar('value'))
+                            myFogProject.addLink(myClamp.getOutVar('result'), myMix.getInVar('factor'))
+                            myFogProject.addLink(pixelInColorVar, myMix.getInVar('v1'))
+                            myFogProject.addLink(pixelInFogColorVar, myMix.getInVar('v2'))
+                            myFogProject.addLink(myMix.getOutVar('result'), pixelOutFinalColor)
+                        </pre>
+                        <div class="ink-alert block warning">
+                            <h4>Important note on the box interface</h4>
+                            <p>Did you notice the two input variables of the pixel box, <code>fogFactor</code> and <code>color</code>, that are still not linked ? If you move to the next part (rendering the demo scene) without linking them, you will face an horrible linking error when compiling the generated shader source code. To fix that, add the following lines to set theses variables to a constant using the <span class="ink-label success invert">ValuedLinks</span></p>
+                        </div>
+                        <pre class="brush: python; toolbar: false; first-line: 69">
+                            # adding valued link to the unlinked input variables of the pixel box
+                            myFogProject.addValuedLink(pixelInColorVar, 'vec4(0.5, 0.5, 1.0, 1.0)')
+                            myFogProject.addValuedLink(pixelInFogFactorVar, 25.0)
+                        </pre>
+                    </section>
+                    <section id="nav-recap" data-target="#nav_menu" data-spy="true">
+                        <h2>Rendering and recap</h2>
+                        <p>Well done ! All you just have to do now to see an overview of the shader you've created, is the same as in the previous tutorial: computing the source code using the chosen printer, then render it ! Here is the result of the rendering.
+                        </p>
+                        <img src="img/tuto_2_result.png">
+                        <p>If any error occurs, or if you do not see the same window as presented above, check that you did not do any mistake in your code. Here is the complete script that you should have written at the end of this part of the tutorial.</p>
+                        <pre class="brush: python; toolbar: false; first-line: 69">
+                            from shaderComp.core import *
+                            from shaderComp.shaders import *
+                            # notice the import of the shaders of the math module
+                            from shaderComp.shaders.math import *
+
+                            # creation of the project 'myFog'
+                            myFogProject = Project.Project('myFog')
+
+                            # creation of the nodes
+                            # remember that the first one is mandatory in the vertex box
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+                            myDispatchVect4 = DispatchVect4.DispatchVect4(ShaderType.PIXEL_SHADER)
+                            myFloatDiv1 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myFloatDiv2 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myLog = Log.Log(ShaderType.PIXEL_SHADER)
+                            myClamp = Clamp.Clamp(ShaderType.PIXEL_SHADER)
+                            myMix = Mix.Mix(ShaderType.PIXEL_SHADER)
+
+                            # adding nodes to the project
+                            myFogProject.appendNode(myDefaultVertexShader)
+                            myFogProject.appendNode(myDispatchVect4)
+                            myFogProject.appendNode(myFloatDiv1)
+                            myFogProject.appendNode(myFloatDiv2)
+                            myFogProject.appendNode(myLog)
+                            myFogProject.appendNode(myClamp)
+                            myFogProject.appendNode(myMix)
+
+                            # setting the input variables to a constant
+                            myFogProject.addValuedLink(myClamp.getInVar('min'), 0.0)
+                            myFogProject.addValuedLink(myClamp.getInVar('max'), 1.0)
+
+                            # creating input and output variables of the vertex box
+                            vertexOutFinalPositionVar = myFogProject.addVertexOutVar('final_position', 'vec4')
+                            vertexInVertVar = myFogProject.addVertexInVar('vertex', 'vec4')
+
+                            # creating input and output variables of the pixel box
+                            pixelInFragCoordVar = myFogProject.addPixelInVar('fragCoord', 'vec4')
+                            pixelInColorVar = myFogProject.addPixelInVar('color', 'vec4')
+                            pixelInFogFactorVar = myFogProject.addPixelInVar('fogFactor', 'float')
+                            pixelInFogColorVar = myFogProject.addPixelInVar('fogColor', 'vec4')
+                            pixelOutFinalColor = myFogProject.addPixelOutVar('color', 'vec4')
+
+                            #creating links between the pipeline and the input of the boxes
+                            myFogProject.addLink(myFogProject.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FragCoord'), pixelInFragCoordVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FogColor'), pixelInFogColorVar)
+
+                            # creating links between the output of the boxes and the pipeline
+                            myFogProject.addLink(vertexOutFinalPositionVar, myFogProject.getVertexPipelineVar('Position'))
+                            myFogProject.addLink(pixelOutFinalColor, myFogProject.getPixelPipelineVar('FragColor'))
+
+                            # creating links between input/output variables of the vertex box and the nodes it contains
+                            myFogProject.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myFogProject.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+
+                            # creating links between input/output variables of the pixel box and the nodes it contains
+                            myFogProject.addLink(pixelInFragCoordVar, myDispatchVect4.getInVar('myVec4'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('z'), myFloatDiv1.getInVar('dividend'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('w'), myFloatDiv1.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv1.getOutVar('result'), myFloatDiv2.getInVar('dividend'))
+                            myFogProject.addLink(pixelInFogFactorVar, myFloatDiv2.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv2.getOutVar('result'), myLog.getInVar('input'))
+                            myFogProject.addLink(myLog.getOutVar('output'), myClamp.getInVar('value'))
+                            myFogProject.addLink(myClamp.getOutVar('result'), myMix.getInVar('factor'))
+                            myFogProject.addLink(pixelInColorVar, myMix.getInVar('v1'))
+                            myFogProject.addLink(pixelInFogColorVar, myMix.getInVar('v2'))
+                            myFogProject.addLink(myMix.getOutVar('result'), pixelOutFinalColor)
+
+                            # adding valued link to the unlinked input variables of the pixel box
+                            myFogProject.addValuedLink(pixelInColorVar, 'vec4(0.5, 0.5, 1.0, 1.0)')
+                            myFogProject.addValuedLink(pixelInFogFactorVar, 25.0)
+
+                            # computing using GLSL printer and rendering overview
+                            myFogProject.compute('GLSLPrinter')
+                            myFogProject.render()
+                        </pre>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</html>

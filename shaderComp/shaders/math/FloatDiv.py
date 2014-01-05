@@ -11,17 +11,17 @@ from ...core.Shader import *
 # @details __Input variables:__
 # - `dividend: float` is the first input, that will be divided
 # - `divider: float` is the second input, that will divide dividend
-# @details __Output variables:__ 
+# @details __Output variables:__
 # - `result: float` is the result of the division
 
 class FloatDiv(Shader):
 
 	## @fn __init__(self)
 	# @brief Initialize this shader
-	def __init__(self):
-		Shader.__init__(self, 1)
+	def __init__(self, shader_type):
+		Shader.__init__(self, shader_type)
 		self.name = 'FloatDiv'
 		self.inVars['dividend'] = Var("dividend", self, VarType.IN,'float')
 		self.inVars['divider'] = Var("divider", self, VarType.IN,'float')
 		self.outVars["result"] = Var("result", self, VarType.OUT,'float')
-	
+

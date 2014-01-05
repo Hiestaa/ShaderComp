@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>
+            User Tutorial Part 2
+        </title>
+        <meta name="description" content=""/>
+        <meta name="author" content="ink, cookbook, recipes"/>
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <link rel="shortcut icon" href="ink-2.2.1/img/ink-favicon.ico"/>
+        <link rel="apple-touch-icon-precomposed" href="ink-2.2.1/img/touch-icon.57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ink-2.2.1/img/touch-icon.72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ink-2.2.1/img/touch-icon.114.png"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.320x460.png"
+        media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.768x1004.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.1024x748.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"/>
+
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/ink.css"/>
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/docs.css"/>
+        <link rel="stylesheet" type="text/css" href="treeview/jquery.treeview.css"/>
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+
+        <!--[if IE 7 ]>
+            <link rel="stylesheet" href="ink-2.2.1/css/ink-ie7.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <script type="text/javascript" src="jquery.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/holder.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink-ui.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/autoload.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/html5shiv.js">
+        </script>
+        <script type="text/javascript" src="treeview/jquery.treeview.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js">
+        </script>
+
+        <style type="text/css">
+            header {
+                padding: 2em 0;
+                margin-bottom: 2em;
+                text-align: left;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            header .ink-navigation {
+                margin-top: 2em;
+            }
+            footer {
+                background: #ccc;
+                color: #0003;
+            }
+            footer p {
+                padding: 0.5em 1em 0.5em 0;
+                margin: 0;
+            }
+
+            .unstyled li {
+                padding: 0.4em 0;
+                text-align: right;
+            }
+            .content {
+                padding-top: 2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="topbar">
+            <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
+                <ul class="menu horizontal flat black shadowed">
+                    <li>
+                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
+                <ul class="menu vertical flat black">
+                    <li class="title">
+                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
+                    </li>
+                </ul>
+                <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutouser">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutoprog">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="ink-grid" style="margin-top: 45px;">
+            <div class="whatIs">
+                <h1>User tutorial <small>Part 3: The power of recursivity</small></h1>
+                <p>In this tutorial, you will see why you won't be able to develop shaders without using the shaderComp API. The recursivity will allows you to build more and more complex shaders by reusing shader you've already build without knowing more than the interface of this shader. It will grant you encapsulation just as you have when programming object. Take a look !</p>
+            </div>
+            <div class="column-group gutters">
+                <div class="large-25 medium-33 small-100">
+
+                    <nav class="ink-navigation sticky" data-offset-top="70px" data-offset-bottom="350px" id="nav_menu">
+                        <ul class="menu vertical rounded black">
+                            <li><a class="scrollableLink" href="#topbar"><span class="icon-chevron-up"></span> Back to Top</a></li>
+                            <li class="active"><a class="scrollableLink" href="#nav-overview">Overview of the project</a></li>
+                            <li><a class="scrollableLink" href="#nav-box-is-node">A box is a node !</a></li>
+                            <li><a class="scrollableLink" href="#nav-export">Exporting boxes</a></li>
+                            <li><a class="scrollableLink" href="#nav-fog">Reusing the fog</a></li>
+                            <li><a class="scrollableLink" href="#nav-recap">Recap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="large-75 medium-66 small-100">
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Project overview</h2>
+                        <p>For the last part of this tutorial, we are going to reuse the fog shader you have created on the previous part to show you the way the recursivity is working. To show you again the recipe of a good ShaderComp script, we will start with the drawing of the project we are going to create:</p>
+                        <img src="img/tuto_3_schema.png">
+                        <p>As you can see here, we are using in our project a node called <span class="ink-label info invert">Fog</span>, wich is not a builtin node but the pixel box of the shader we created before. Moreover, we are going to present a new builtin shader (a couple of vertex/pixel node): the <span class="ink-label success invert">CelShading</span>. Its aim is to provide a cartoon-looking of the colors of the rendered scene. Thanks to the encapsulation of the shaders provided by the shaderComp API, you don't need to understant how this shader is working, only what is its interface. Let's move on !</p>
+                        <h2>Modifications of the code</h2>
+                        <p>Remember that, for the rendering of our fog shader, we needed to set the input color to a constant with a valued links. If you do not want to render the fog shader alone, you need to remove theses links as the shader will take this color as an input variable. Here is the complete code of the fog shader, wich is the starting point of this project and quite the same code givent at the end of the previous part: </p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            from shaderComp.core import *
+                            from shaderComp.shaders import *
+                            # notice the import of the shaders of the math module
+                            from shaderComp.shaders.math import *
+
+                            # creation of the project 'myFog'
+                            myFogProject = Project.Project('fogProject')
+
+                            # creation of the nodes
+                            # remember that the first one is mandatory in the vertex box
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+                            myDispatchVect4 = DispatchVect4.DispatchVect4(ShaderType.PIXEL_SHADER)
+                            myFloatDiv1 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myFloatDiv2 = FloatDiv.FloatDiv(ShaderType.PIXEL_SHADER)
+                            myLog = Log.Log(ShaderType.PIXEL_SHADER)
+                            myClamp = Clamp.Clamp(ShaderType.PIXEL_SHADER)
+                            myMix = Mix.Mix(ShaderType.PIXEL_SHADER)
+
+                            # adding nodes to the project
+                            myFogProject.appendNode(myDefaultVertexShader)
+                            myFogProject.appendNode(myDispatchVect4)
+                            myFogProject.appendNode(myFloatDiv1)
+                            myFogProject.appendNode(myFloatDiv2)
+                            myFogProject.appendNode(myLog)
+                            myFogProject.appendNode(myClamp)
+                            myFogProject.appendNode(myMix)
+
+                            # setting the input variables to a constant
+                            myFogProject.addValuedLink(myClamp.getInVar('min'), 0.0)
+                            myFogProject.addValuedLink(myClamp.getInVar('max'), 1.0)
+
+                            # creating input and output variables of the vertex box
+                            vertexOutFinalPositionVar = myFogProject.addVertexOutVar('final_position', 'vec4')
+                            vertexInVertVar = myFogProject.addVertexInVar('vertex', 'vec4')
+
+                            # creating input and output variables of the pixel box
+                            pixelInFragCoordVar = myFogProject.addPixelInVar('fragCoord', 'vec4')
+                            pixelInColorVar = myFogProject.addPixelInVar('color', 'vec4')
+                            pixelInFogFactorVar = myFogProject.addPixelInVar('fogFactor', 'float')
+                            pixelInFogColorVar = myFogProject.addPixelInVar('fogColor', 'vec4')
+                            pixelOutFinalColor = myFogProject.addPixelOutVar('color', 'vec4')
+
+                            #creating links between the pipeline and the input of the boxes
+                            myFogProject.addLink(myFogProject.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FragCoord'), pixelInFragCoordVar)
+                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FogColor'), pixelInFogColorVar)
+
+                            # creating links between the output of the boxes and the pipeline
+                            myFogProject.addLink(vertexOutFinalPositionVar, myFogProject.getVertexPipelineVar('Position'))
+                            myFogProject.addLink(pixelOutFinalColor, myFogProject.getPixelPipelineVar('FragColor'))
+
+                            # creating links between input/output variables of the vertex box and the nodes it contains
+                            myFogProject.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myFogProject.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+
+                            # creating links between input/output variables of the pixel box and the nodes it contains
+                            myFogProject.addLink(pixelInFragCoordVar, myDispatchVect4.getInVar('myVec4'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('z'), myFloatDiv1.getInVar('dividend'))
+                            myFogProject.addLink(myDispatchVect4.getOutVar('w'), myFloatDiv1.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv1.getOutVar('result'), myFloatDiv2.getInVar('dividend'))
+                            myFogProject.addLink(pixelInFogFactorVar, myFloatDiv2.getInVar('divider'))
+                            myFogProject.addLink(myFloatDiv2.getOutVar('result'), myLog.getInVar('input'))
+                            myFogProject.addLink(myLog.getOutVar('output'), myClamp.getInVar('value'))
+                            myFogProject.addLink(myClamp.getOutVar('result'), myMix.getInVar('factor'))
+                            myFogProject.addLink(pixelInColorVar, myMix.getInVar('v1'))
+                            myFogProject.addLink(pixelInFogColorVar, myMix.getInVar('v2'))
+                            myFogProject.addLink(myMix.getOutVar('result'), pixelOutFinalColor)
+
+                            # adding valued link to the unlinked input variables of the pixel box
+                            #   the pixelInColorVar will be linked later to the output of another shader
+                            #       myFogProject.addValuedLink(pixelInColorVar, 'vec4(0.5, 0.5, 1.0, 1.0)')
+                            myFogProject.addValuedLink(pixelInFogFactorVar, 25.0)
+
+                            # computing using GLSL printer and rendering overview
+                            #   We will not compute anything for now.
+                            #myFogProject.compute('GLSLPrinter')
+                            #myFogProject.render()
+                        </pre>
+                        <p>Our fog shader is build. As said above, this is exactly the same as the shader built in the previous tutorial, only the line 71, 76 and 77 has been commented. Let's learn now how this fog shader can be used in another shader.</p>
+                    </section>
+                    <section id="nav-box-is-node" data-target="#nav_menu" data-spy="true">
+                        <h2>A box is a node !</h2>
+                        <p>Yes. Thanks to the power of inheritance, you can use a box exactly the same as you use a node. That means that you can get the variables of its interface as well as adding it to another project !</p>
+                        <p>But before doing anything with our fog shader, remember that we need to follow the recipe. The drawing has been done, we need to create the project and instanciate all the nodes needed:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 79">
+                            myProj = Project.Project('tutorial_3')
+
+                            myColor = Color.Color()
+                            myChangeColor = ChangeColor.ChangeColor()
+                            myCelShadingVertex = CelShadingVertex.CelShadingVertex()
+                            myCelShadingFragment = CelShadingFragment.CelShadingFragment()
+                            myDefaultVertexShader = DefaultVertexShader.DefaultVertexShader()
+                        </pre>
+                        <p>The fog node is the only one needed. As a box is a node, and because the fog shader has already been created before, we do not need to instanciated, we just need to get it:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 86">
+                            myFog = myFogProject.getPixelBox()
+                        </pre>
+                        <p>Next steps of the recipe: add the nodes to the project (the fog node is a pixel box, is automatically detected as a pixel shader and added to the pixel box of the parent project), create the interface of the box and link all of this together. Theses steps will not be detailed here. If anything seems strange, please refer to the previous tutorial where everything has been clearly detailed.</p>
+                        <pre class="brush: python; toolbar: false; first-line: 96">
+                            # creating input and output variables of the vertex box
+                            vertexOutNormalVar = myProj.addVertexOutVar('normal', 'vec3')
+                            vertexOutFinalPositionVar = myProj.addVertexOutVar('final_position', 'vec4')
+                            vertexInVertVar = myProj.addVertexInVar('vertex', 'vec4')
+                            vertexInNormalVar = myProj.addVertexInVar('normal', 'vec3')
+
+                            # creating input and output variables of the pixel box
+                            pixelInNormalVar = myProj.addPixelInVar('normal', 'vec3')
+                            pixelInFragCoordVar = myProj.addPixelInVar('fragCoord', 'vec4')
+                            pixelOutFinalColor = myProj.addPixelOutVar('final_color', 'vec4')
+
+                            # creating links between input and output variables of the boxes and the pipeline variables
+                            myProj.addLink(myProj.getVertexPipelineVar('Vertex'), vertexInVertVar)
+                            myProj.addLink(myProj.getVertexPipelineVar('Normal'), vertexInNormalVar)
+                            myProj.addLink(myProj.getVertexPipelineVar('FragCoord'), pixelInFragCoordVar)
+
+                            myProj.addLink(vertexOutFinalPositionVar, myProj.getVertexPipelineVar('Position'))
+                            myProj.addLink(pixelOutFinalColor, myProj.getPixelPipelineVar('FragColor'))
+
+                            # creating links between input/output variables of the vertex and the pixel box and the nodes it contains
+                            myProj.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
+                            myProj.addLink(vertexInNormalVar, myCelShadingVertex.getInVar('normal'))
+                            myProj.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+                            myProj.addLink(myCelShadingVertex.getOutVar('normal'), vertexOutNormalVar)
+
+                            # creating valued links (it shows you again how to do it without builtin setters functions)
+                            myProj.addValuedLink(myColor.getInVar('r'), 0.5)
+                            myProj.addValuedLink(myColor.getInVar('g'), 1.0)
+                            myProj.addValuedLink(myColor.getInVar('b'), 1.0)
+                            myProj.addValuedLink(myColor.getInVar('a'), 1.0)
+
+                            myProj.addValuedLink(myChangeColor.getInVar('r'), 1.0)
+                            myProj.addValuedLink(myChangeColor.getInVar('g'), 1.0)
+                            myProj.addValuedLink(myChangeColor.getInVar('b'), 0.5)
+                            myProj.addValuedLink(myChangeColor.getInVar('a'), 1.0)
+
+                            # creating every other links
+                            myProj.addLink(myColor.getOutVar('color'), myChangeColor.getInVar('color'))
+                            myProj.addLink(pixelInNormalVar, myCelShadingFragment.getInVar('normal'))
+                            myProj.addLink(pixelInFragCoordVar, myFog.getInVar('fragCoord'))
+                            myProj.addLink(myChangeColor.getOutVar('color'), myCelShadingFragment.getInVar('color'))
+
+                            # NOTE : that's where we link the 'color' input of the fog node and the 'color' output of the celshading node
+                            # and that's why we needed to delete the valued link
+                            myProj.addLink(myCelShadingFragment.getOutVar('color'), myFog.getInVar('color'))
+                            myProj.addLink(myFog.getOutVar('color'), pixelOutFinalColor)
+
+                            # creating a link between the vertex box and the pixel box
+                            myProj.addLink(vertexOutNormalVar, pixelInNormalVar)
+                        </pre>
+                        <p>Last step: computing and rendering ! Here are the two last lines that you already know:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 146">
+                            myProj.compute('GLSLPrinter')
+                            myProj.render()
+                        </pre>
+                        <p>And here is the result !</p>
+                        <img src="img/tuto_3_result.png">
+                    </section>
+                    <section id="nav-export" data-target="#nav_menu" data-spy="true">
+                        <h2>Exporting boxes</h2>
+                    </section>
+                    <section id="nav-fog" data-target="#nav_menu" data-spy="true">
+                        <h2>Reusing the fog</h2>
+                    </section>
+                    <section id="nav-recap" data-target="#nav_menu" data-spy="true">
+                        <h2>Recap</h2>
+                    </section>
+                    <section id="nav-recap" data-target="#nav_menu" data-spy="true">
+                        <h2>Exercise</h2>
+                        <p>The user-side of the ShaderComp tutorial is finished. If you did not miss anything up to now, you should be able to write your own implementation of the celshading shader ! Give a try !</p>
+                        <p>If this sound a little too difficult for you, take a look at the code of the generator of the celshading node (<span class="ink-label success invert">shaderComp.printers.CelShadingFragment.CelShadingFragment</span> and <span class="ink-label success invert">shaderComp.printers.CelShadingVertex.CelShadingVertex</span>), it may be useful. And don't forget to use the <a href="tuto 1 - simple.html#recipe">recipe</a> given at the end of the first part of the user tutorial !</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</html>

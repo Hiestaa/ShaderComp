@@ -12,15 +12,15 @@ from ...core.Shader import *
 # - `value: float` is the input value that will be limited
 # - `min: float` is the minimum the value can take
 # - `max: float` is the maximum the value can take
-# @details __Output variables:__ 
+# @details __Output variables:__
 # - `result: float` is the result of the operation
 
 class Clamp(Shader):
 
 	## @fn __init__(self)
 	# @brief Initialize this shader
-	def __init__(self):
-		Shader.__init__(self, 1)
+	def __init__(self, shader_type):
+		Shader.__init__(self, shader_type)
 		self.name = 'Clamp'
 		self.inVars['value'] = Var("value", self, VarType.IN,'float')
 		self.inVars['min'] = Var("min", self, VarType.IN,'float')
@@ -29,22 +29,22 @@ class Clamp(Shader):
 
 	## @fn setMin(mini)
 	# @brief Allows to link the `min` input variable to a constant
-	# @details This function will build the valuedLink needed for you.	
+	# @details This function will build the valuedLink needed for you.
 	# @param mini The constant value of this input variable
 	def setMin(self, mini) :
 		if self.linkManager == None :
 			print 'Add Node on Project Before'
 		else :
 			self.linkManager.addValuedLink(self.inVars["min"], mini)
-		
+
 	## @fn setG(self,maxi)
 	# @brief Allows to link the `maxi` input variable to a constant
-	# @details This function will build the valuedLink needed for you.	
+	# @details This function will build the valuedLink needed for you.
 	# @param maxi The constant value of this input variable
 	def setMax(self, maxi) :
 		if self.linkManager == None :
 			print 'Add Node on Project Before'
 		else :
 			self.linkManager.addValuedLink(self.inVars["max"], maxi)
-		
-	
+
+

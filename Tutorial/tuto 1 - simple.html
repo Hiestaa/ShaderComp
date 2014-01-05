@@ -97,13 +97,13 @@
                         <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu">
                             <li>
-                                <a href="#">Part 1: Your first project</a>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
                             </li>
                             <li>
-                                <a href="#">Part 2: Advanded nodes linking</a>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
                             </li>
                             <li>
-                                <a href="#">Part 3: The power of recursivity</a>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
                             </li>
                         </ul>
                     </li>
@@ -137,13 +137,13 @@
                         <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu hide" id="tutouser">
                             <li>
-                                <a href="#">Part 1: Your first project</a>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
                             </li>
                             <li>
-                                <a href="#">Part 2: Advanded nodes linking</a>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
                             </li>
                             <li>
-                                <a href="#">Part 3: The power of recursivity</a>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
                             </li>
                         </ul>
                     </li>
@@ -181,6 +181,7 @@
                             <li><a class="scrollableLink" href="#nav-links">Variables linking</a></li>
                             <li><a class="scrollableLink" href="#nav-generation">Project generation</a></li>
                             <li><a class="scrollableLink" href="#nav-rendering">Project rendering</a></li>
+                            <li><a class="scrollableLink" href="#nav-outro">Recap</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -298,7 +299,7 @@
                                 </blockquote>
                             </div>
                         </div>
-                        <p>Before moving to the next steps, we need to set the parameters of the color node. The Color class has a member function that allows us to set the color the node will output: </p>
+                        <p id="parameters">Before moving to the next steps, we need to set the parameters of the color node. The Color class has a member function that allows us to set the color the node will output: </p>
                         <pre class="brush: python; toolbar: false; first-line: 9">
                             myColor.setParams(0, 0.3, 0.6, 1.0);
                         </pre>
@@ -371,7 +372,7 @@
                         <p>At this point of the tutorial, you should be able to run your script without any error. If any error occurs, take a look at the given <a href="implementation/tutorial_1/proj.py">implementation</a> and see if you miss anything. If everything goes well, a folder named <span class="ink-label info invert">Tutorial_1</span> should have been created containing two files: <span class="ink-label info invert">vertexShader.glsl</span> and <span class="ink-label info invert">fragmentShader.glsl</span>. Let's take a look on the code that have been generated in theses files.</p>
                         <h3>Generated vertex shader</h3>
                         <p>Remember what we have done in the vertex box: whe only added one node, the default one, then we linked it to the pipeline using variables. Here is the generated code for that</p>
-                        <pre class="brush: cpp; toolbar: false; first-line: 0">
+                        <pre class="brush: cpp; toolbar: false; first-line: 1">
                             void main(void) {
                                 gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
                             }
@@ -379,7 +380,7 @@
                         <p>You can see that the pipeline variable gl_Vertex wich is linked to the input of the default vertex shader (as defined in your script) is used in the operation done by the shader. The result is stored in the pipeline variable gl_Position wich is linked to the output of the shader (also as defined in your script)</p>
                         <h3>Generated pixel shader</h3>
                         <p>In the pixel box, we did a simple color setting using the <span class="ink-label success invert">Color shader</span>. Here is the generated code for that:</p>
-                        <pre class="brush: cpp; toolbar: false; first-line: 0">
+                        <pre class="brush: cpp; toolbar: false; first-line: 1">
                             void main(void) {
                                 gl_FragColor = vec4(0, 0.3, 0.6, 1.0);
                             }
@@ -397,7 +398,7 @@
                         <img src="img/tuto_1_result.png">
                     </section>
                     <section id="nav-outro" data-target="#nav_menu" data-spy="true">
-                        <p>If your script do not produce that window, or if an error occured, check that you did not forgot any step. To remind you everything, here is the steps that you need to follow for every project using the ShaderComp API:</p>
+                        <p id="recipe">If your script do not produce that window, or if an error occured, check that you did not forgot any step. To remind you everything, here is the steps that you need to follow for every project using the ShaderComp API:</p>
                         <ol>
                             <li>Draw a schema of your project, with pipelines, nodes, variables and links</li>
                             <li>Instanciate the project class and the shader classes </li>
@@ -409,7 +410,7 @@
                         </ol>
                         <p>Here is the complete script of this tutorial:</p>
 
-                        <pre class="brush: python; toolbar: false; first-line: 0">
+                        <pre class="brush: python; toolbar: false; first-line: 1">
                             from shaderComp.core import *
                             from shaderComp.shaders import *
 
