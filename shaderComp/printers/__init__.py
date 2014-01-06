@@ -11,5 +11,5 @@
 # 	 the right generator to append the source code of the shader to the buffer that will be written in the resulting files
 # \details By convention, it is assumed that for each shader and for each language, a generator can be found in this module
 #  	in the folder that has the name of the shader. In this folder the generator is a class named `[ShaderName][PrinterName]`.
-# \details For example, the generator of the shader `CelShading`, for the printer `GLSLPrinter` must be called `CelShadingGLSLPrinter`. 
-__all__ = ["GLSLPrinter"]
+# \details For example, the generator of the shader `CelShading`, for the printer `GLSLPrinter` must be called `CelShadingGLSLPrinter`.
+__all__ = ["GLSLPrinter", "JSONPrinter"]

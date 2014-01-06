@@ -76,6 +76,7 @@ myFogProject.addValuedLink(pixelInFogFactorVar, 25.0)
 #myFogProject.compute('GLSLPrinter')
 #myFogProject.render()
 
+
 myProj = Project.Project('tutorial_3')
 
 myColor = Color.Color()
@@ -142,6 +143,9 @@ myProj.addLink(myFog.getOutVar('color'), pixelOutFinalColor)
 
 # creating a link between the vertex box and the pixel box
 myProj.addLink(vertexOutNormalVar, pixelInNormalVar)
+
+
+myProj.compute('JSONPrinter') # export to the human readable format
 
 myProj.compute('GLSLPrinter')
 myProj.render()

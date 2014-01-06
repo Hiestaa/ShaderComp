@@ -11,7 +11,7 @@ import imp
 # @brief This class is the main entry point of the library
 # @version 0.1
 # @date 2013-11-07
-# @details Instanciation of a Project object will give an access to 
+# @details Instanciation of a Project object will give an access to
 # all the core features of the library, like adding nodes and variables and creating links between the variables
 
 class Project():
@@ -23,7 +23,7 @@ class Project():
 		self.linkManager = LinkManager(self)
 		self.vertexBox = VertexBox('Vertex' + self.name, self.linkManager, 0)
 		self.pixelBox = PixelBox('Pixel' + self.name, self.linkManager, 1)
-	
+
 	## @fn getVertexBox()
 	# @brief Give an access to the VertexBox specific features
 	# @details The VertexBox is the box wich stores the nodes of type _vertex shader_.
@@ -31,7 +31,7 @@ class Project():
 	# @see class shaderComp.core.Box, class shaderComp.core.VertexBox
 	def getVertexBox(self) :
 		return self.vertexBox
-		
+
 	## @fn getPixelBox()
 	# @brief Give an access to the PixelBox specific features
 	# @details The PixelBox is the box wich stores the nodes of type _vertex shader_.
@@ -39,10 +39,10 @@ class Project():
 	# @see class shaderComp.core.Box, class shaderComp.core.PixelBox
 	def getPixelBox(self) :
 		return self.pixelBox
-	
+
 	## @fn getBox(box)
 	# @brief give an access to one of the box of the project
-	# @details This is not advised to use this function as it uses a string comparison. 
+	# @details This is not advised to use this function as it uses a string comparison.
 	# Prefer using the getVertexBox or the getPixelBox function
 	# @param box A string specifying which box the box to get. Supported values are:
 	# - `"Vertex|vertex"`: get the vertex box
@@ -72,7 +72,7 @@ class Project():
 			return self.pixelBox.getLinkList()
 		else :
 			print 'Error: Box No Exist'
-	
+
 	## @fn clearBox(box)
 	# @brief Clear the box by deleting all the node it contains
 	# @param box a string specifying wich box to clear. Supported values are:
@@ -89,13 +89,13 @@ class Project():
 			self.pixelBox.clear()
 		else :
 			print 'Error: Box No Exist'
-	
+
 	## @fn clear()
 	# @brief Delete all the nodes of this project (both boxes)
 	def clear(self) :
 		self.vertexBox.clear()
 		self.pixelBox.clear()
-		
+
 	## @fn addNode(node, pos)
 	# @brief Add a new node to this project at the given position
 	# @details The node will be added in the right box according to the type of the shader it represents
@@ -106,7 +106,7 @@ class Project():
 			self.vertexBox.addNode(node, pos)
 		elif node.getShaderType() == 1 :
 			self.pixelBox.addNode(node, pos)
-		
+
 	## @fn appendNode(node)
 	# @brief Add a new node to this project at the end of the right box
 	# @details The node will be appended to the list of nodes in the right box according to the type of the shader it represents
@@ -116,7 +116,7 @@ class Project():
 			self.vertexBox.appendNode(node)
 		elif node.getShaderType() == 1 :
 			self.pixelBox.appendNode(node)
-	
+
 	## @fn removeNode(node)
 	# @brief Remove the given node from the project
 	# @details The node will be removed from the list of nodes in the right box according to the type of the shader it represents
@@ -126,7 +126,7 @@ class Project():
 			self.vertexBox.removeNode(node)
 		elif node.getShaderType() == 1 :
 			self.pixelBox.removeNode(node)
-		
+
 	## @fn removeNodeAt(pos, box)
 	# @brief Remove the node at the given position from the given box
 	# @details The node will be removed from the list of nodes in the specified box
@@ -141,12 +141,12 @@ class Project():
 			self.pixelBox.removeNodeAt(pos)
 		else :
 			print 'Error: Box No Exist'
-	
+
 	## @fn addVertexInVar(name, type)
 	# @brief Create a new input variable for the vertex box
 	# @details Adding an input variable to a box allows to link this variable to the input variable of one of the node that the box contains
 	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same input variable name.
 	# There can even not be any conflict between the input variable names and the output variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -154,12 +154,12 @@ class Project():
 	# @see shaderComp.core.Var
 	def addVertexInVar(self, name, type) :
 		return self.vertexBox.addInVar(name, type)
-		
+
 	## @fn addVertexOutVar(name, type)
 	# @brief Create a new output variable for the vertex box
 	# @details Adding an output variable to a box allows to link this variable to the output variable of one of the node that the box contains
 	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same output variable name.
 	# There can even not be any conflict between the output variable names and the output variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -167,11 +167,11 @@ class Project():
 	# @see shaderComp.core.Var
 	def addVertexOutVar(self, name, type) :
 		return self.vertexBox.addOutVar(name, type)
-	
+
 	## @fn addVertexUniform(name, value, type)
 	# @brief Create a new uniform variable for the vertex box
 	# @details Adding a uniform to a box can be needed to allow dynamic configuration of the resulting shader from the program that will execute it.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the uniform created will be available in all the shaders of the box
 	# @param value The value to give to this uniform.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -179,12 +179,12 @@ class Project():
 	# @see shaderComp.core.Var
 	def addVertexUniform(self, name, value, type) :
 		return self.vertexBox.addUniform(name, value, type)
-	
+
 	## @fn addPixelInVar(name, type)
 	# @brief Create a new output variable for the pixel box
 	# @details Adding an output variable to a box allows to link this variable to the output variable of one of the node that the box contains
 	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same output variable name.
 	# There can even not be any conflict between the output variable names and the output variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -192,12 +192,12 @@ class Project():
 	# @see shaderComp.core.Var
 	def addPixelInVar(self, name, type) :
 		return self.pixelBox.addInVar(name, type)
-	
+
 	## @fn addPixelOutVar(name, type)
 	# @brief Create a new output variable for the pixel box
 	# @details Adding an output variable to a box allows to link this variable to the output variable of one of the node that the box contains
 	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same output variable name.
 	# There can even not be any conflict between the output variable names and the output variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -205,11 +205,11 @@ class Project():
 	# @see shaderComp.core.Var
 	def addPixelOutVar(self, name, type) :
 		return self.pixelBox.addOutVar(name, type)
-			
+
 	## @fn addPixelUniform(name, value, type)
 	# @brief Create a new uniform variable for the pixel box
 	# @details Adding a uniform to a box can be needed to allow dynamic configuration of the resulting shader from the program that will execute it.
-	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost. 
+	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the uniform created will be available in all the shaders of the box
 	# @param value The value to give to this uniform.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
@@ -217,14 +217,14 @@ class Project():
 	# @see shaderComp.core.Var
 	def addPixelUniform(self, name, value, type) :
 		return self.pixelBox.addUniform(name, value, type)
-	
+
 	## @fn getVertexInVar(name)
 	# @brief Retrieve an input variable of the vertex box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getVertexInVar(self, name) :
 		return self.vertexBox.getInVar(name)
-		
+
 	## @fn getVertexOutVar(name)
 	# @brief Retrieve an output variable of the vertex box using its name
 	# @details nothing
@@ -232,53 +232,53 @@ class Project():
 	# @return A reference on the corresponding variable
 	def getVertexOutVar(self, name) :
 		return self.vertexBox.getOutVar(name)
-		
+
 	## @fn getVertexUniform(name)
 	# @brief Retrieve a uniform variable of the vertex box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getVertexUniform(self, name) :
 		return self.vertexBox.getUniform(name)
-		
+
 	## @fn getVertexPipelineVar(name)
 	# @brief Retrieve a pipeline variable of the vertex box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getVertexPipelineVar(self, name) :
 		return self.vertexBox.getPipelineVar(name)
-		
+
 	## @fn getPixelInVar(name)
 	# @brief Retrieve an input variable of the pixel box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getPixelInVar(self, name) :
 		return self.pixelBox.getInVar(name)
-		
+
 	## @fn getPixelOutVar(name)
 	# @brief Retrieve an output variable of the pixel box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getPixelOutVar(self, name) :
 		return self.pixelBox.getOutVar(name)
-		
+
 	## @fn getPixelUniform(name)
 	# @brief Retrieve a uniform variable of the pixel box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getPixelUniform(self, name) :
 		return self.pixelBox.getUniform(name)
-		
+
 	## @fn getPixelPipelineVar(name)
 	# @brief Retrieve a pipeline variable of the pixel box using its name
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getPixelPipelineVar(self, name) :
 		return self.pixelBox.getPipelineVar(name)
-	
+
 	## @fn addLinkNode(nodeFrom, varFrom, nodeTo, varTo)
 	# @brief Create a link between two variables
 	# @details Creating a link between two variables of two node will result in the copying the resulting value of the varFrom output
-	# to the varTo input. 
+	# to the varTo input.
 	# It is possible to create multiple links going from the same output variable: the value will be copied in each of the destinations of the link.
 	# However, it is not possible to create multiple links going to the same input variable as this input cannot take more than one value, this could bring unexpected results.
 	# @param nodeFrom A reference on the node where to find the output variable that will be linked
@@ -287,18 +287,18 @@ class Project():
 	# @param varTo A reference on the output variable where the link goes to
 	def addLinkNode(self, nodeFrom, varFrom, nodeTo, varTo) :
 		self.linkManager.addLinkNode(nodeFrom, varFrom, nodeTo, varTo)
-	
+
 	## @fn addLink(varFrom, varTo)
 	# @brief Create a link between two variables
 	# @details Creating a link between two variables will result in the copying the resulting value of the varFrom output
-	# to the varTo input. 
+	# to the varTo input.
 	# It is possible to create multiple links going from the same output variable: the value will be copied in each of the destinations of the link.
 	# However, it is not possible to create multiple links going to the same input variable as this input cannot take more than one value, this could bring unexpected results.
 	# @param varFrom A reference on the output variable where the link comes from
 	# @param varTo A reference on the output variable where the link goes to
 	def addLink(self, varFrom, varTo) :
 		self.linkManager.addLink(varFrom, varTo)
-	
+
 	## @fn addValuedLinkNode(nodeTo, varTo, value)
 	# @brief Create a link between a constant (a value) and an input variable
 	# @details Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant.
@@ -308,7 +308,7 @@ class Project():
 	# @param value The value to set
 	def addValuedLinkNode(self, nodeTo, varTo, value) :
 		self.linkManager.addValuedLinkNode(nodeTo, varTo, value)
-		
+
 	## @fn addValuedLink(varTo, value)
 	# @brief Create a link between a constant (a value) and an input variable
 	# @details Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant.
@@ -316,8 +316,8 @@ class Project():
 	# @param varTo A reference on the output variable where the link goes to
 	# @param value The value to set
 	def addValuedLink(self, varTo, value) :
-		self.linkManager.addValuedLink(varTo, value)	
-		
+		self.linkManager.addValuedLink(varTo, value)
+
 	## @fn addValuedLinkByName(nodeTo, nameVarTo, value)
 	# @brief Create a link between a constant (a value) and an input variable
 	# @details Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant.
@@ -333,7 +333,7 @@ class Project():
 	# @param link A reference on the link to delete
 	def deleteLink(self, link) :
 		self.linkManager.deleteLink(link)
-	
+
 	## @fn deleteLink(nodeFrom, nodeTo, varFrom, varTo)
 	# @brief Delete a link between two variables of two nodes
 	# @param nodeFrom A reference on the node where to find the output variable that is linked
@@ -342,22 +342,22 @@ class Project():
 	# @param varTo A reference on the output variable where the link goes to
 	def deleteLink(self, nodeFrom, nodeTo, varFrom, varTo) :
 		self.linkManager.deleteLink(nodeFrom, nodeTo, varFrom, varTo)
-	
+
 	## @fn deleteValuedLink(nodeTo, varTo)
 	# @brief Delete a link between a constant and a variable
 	# @param nodeTo A reference on the node where to find the input variable
 	# @param varTo A reference on the output variable where the link goes to
 	def deleteValuedLink(self, nodeTo, varTo) :
 		self.linkManager.deleteValuedLink(nodeTo, varTo)
-	
+
 	## @fn compute(printerName)
 	# @brief Compute the generation of the source code of the vertex shader and the pixel shader.
-	# @details Before the generation of the source code, the links are used to set the name of the variable randomly, 
+	# @details Before the generation of the source code, the links are used to set the name of the variable randomly,
 	# with the insurance that two different variables will have two different names
 	# The source code will be generated in two distinct file which name is generated as described below:
-	# 1. `fragmentShader[ProjName].[ext]`: will contain the surce code of the fragment shader. The [ProjName] is the 
+	# 1. `fragmentShader[ProjName].[ext]`: will contain the surce code of the fragment shader. The [ProjName] is the
 	#	name of the project specified when creating it, the [ext] depends on the printer used for the generation.
-	# 2. `fragmentShader[ProjName].[ext]`: will contain the surce code of the vertex shader. The [ProjName] is the 
+	# 2. `fragmentShader[ProjName].[ext]`: will contain the surce code of the vertex shader. The [ProjName] is the
 	#	name of the project specified when creating it, the [ext] depends on the printer used for the generation.
 	# @param printerName A string used to know wich printer to use. Up now, supported values are:
 	# - `"GLSLPrinter"`: Generate the source code for an OpenGL program using GLSL. Extension of the generated files will be `.glsl`.
@@ -366,11 +366,11 @@ class Project():
 			mod = imp.load_source(printerName, 'shaderComp/printers/' +printerName + '.py')
 			printer = mod.Printers(self.name, self.vertexBox.getNodeList(), self.pixelBox.getNodeList())
 			printer.applyVarNameSelection(self)
-			printer.compute()
+			printer.compute(self)
 			printer.removeAllVarName(self)
 		except IOError:
 			print "Error: Printer " + printerName + " Not Found "
-	
+
 	## @fn render()
 	# @brief Display an overview of the result of the shader built in this project.
 	# @details This will generate a GLSL version of the shader, compile it and display it in
@@ -385,7 +385,7 @@ class Project():
 			printer.removeAllVarName(self)
 		except IOError:
 			print "Error: Printer " + printerName + " Not Found "
-	
+
 	## @fn save(name)
 	# @brief Save the project to the given file
 	# @param name A string specifying the name of the file to which to save the project.
@@ -393,7 +393,7 @@ class Project():
 		outfile = open(name, "wb")
 		pickle.dump(self, outfile)
 		outfile.close()
-	
+
 	## @fn load(name)
 	# @brief Load the project from the given file
 	# @param name A string specifying the name of the file in which the project has been previously saved.
@@ -421,7 +421,7 @@ class Project():
 			self.linkManager.addLinkListOnBox(self.pixelBox, tmpList)
 		else :
 			print 'Error: Box No Exist'
-	
+
 	## @fn loadBox(name, box)
 	# @brief Load the content of one of the box from the given file
 	# @param name A string specifying the name of the file in which the box has been previously saved
@@ -437,14 +437,14 @@ class Project():
 			self.pixelBox = self.pixelBox.load(name)
 		else :
 			print 'Error: Box No Exist'
-	
+
 	## @fn loadBoxAsNode(name, box)
 	# @brief Load the content of one of the box from the given file
 	# @param name A string specifying the name of the file in which the box has been previously saved
 	# @return A reference on the loaded box.
 	def loadBoxAsNode(self, name) :
 		return self.vertexBox.load(name)
-	
+
 	## @fn printProjectListName()
 	# @brief Print the list of nodes (using their names) added to each box of the project
 	# @details This function can be used for debug purposes
@@ -452,13 +452,13 @@ class Project():
 		print self.name
 		self.printVertexNodeListName()
 		self.printPixelNodeListName()
-	
+
 	## @fn printVertexNodeListName()
 	# @brief Print the list of nodes (using their names) of type `vertex shader` added to the project
 	# @details This function can be used for debug purposes
 	def printVertexNodeListName(self) :
 		self.vertexBox.printListName()
-		
+
 	## @fn printPixelNodeListName()
 	# @brief Print the list of nodes (using their names) of type `pixel shader` added to the project
 	# @details This function can be used for debug purposes

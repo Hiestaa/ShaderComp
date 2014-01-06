@@ -83,7 +83,6 @@ myFogProject.addLink(myMix.getOutVar('result'), pixelOutFinalColor)
 
 
 # creation des liens values = assignation des valeurs constantes aux entrees de la pixel box
-# todo: supprimer ces liens values lors de l'enregistrement de la box
 #myFogProject.addValuedLink(pixelInColorVar, 'vec4(0.5, 0.5, 1.0, 1.0)') #relink dans main2 alors que supprime pas les linkedLink, a commenter pour creer un fog viable
 myFogProject.addValuedLink(pixelInFogFactorVar, 25.0)
 
