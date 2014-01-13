@@ -1,0 +1,6 @@
+digraph "shaderComp.core.Printer.Printer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.Printer.\lPrinter\n|+ projName\l+ vertexNodeList\l+ pixelNodeList\l+ vertexShaderBuffer\l+ fragmentShaderBuffer\l+ nbDec\l+ vertexDeclaration\l+ fragmentDeclaration\l+ language_types\l|+ __init__()\l+ compute()\l+ getRandomName()\l+ applyVarNameSelection()\l+ removeAllVarName()\l+ addDeclaration()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+}

@@ -1,0 +1,33 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Shader",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shaderComp.shaders.CelShading\lFragment.CelShadingFragment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_cel_shading_fragment_1_1_cel_shading_fragment.html",tooltip="This shader is the fragment part of the celshading. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shaderComp.shaders.CelShading\lVertex.CelShadingVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_cel_shading_vertex_1_1_cel_shading_vertex.html",tooltip="This shader is the vertex part of the celshading. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shaderComp.shaders.Change\lColor.ChangeColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html",tooltip="This shader can be used to mix an input color and a predefined second color. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shaderComp.shaders.Color.\lColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_color_1_1_color.html",tooltip="This shader can be used to create a new color. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="shaderComp.shaders.Default\lVertexShader.DefaultVertexShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_default_vertex_shader_1_1_default_vertex_shader.html",tooltip="This shader will transform the absolute coordinates in eye-view coordinates. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="shaderComp.shaders.Fog.Fog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_fog_1_1_fog.html",tooltip="This shader will create a fog on the scene. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="shaderComp.shaders.Fragmen\lTestShader.FragmenTestShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_fragmen_test_shader_1_1_fragmen_test_shader.html",tooltip="This shader is a test of opacity. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="shaderComp.shaders.math.\lClamp.Clamp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1math_1_1_clamp_1_1_clamp.html",tooltip="This shader can be used to limit a value with a maximum and a minimum. "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="shaderComp.shaders.math.\lDispatchVect4.DispatchVect4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1math_1_1_dispatch_vect4_1_1_dispatch_vect4.html",tooltip="This shader can be used to get the component of a vector. "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="shaderComp.shaders.math.\lFloatDiv.FloatDiv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1math_1_1_float_div_1_1_float_div.html",tooltip="This shader can be used to divide an input ba another. "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="shaderComp.shaders.math.\lLog.Log",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1math_1_1_log_1_1_log.html",tooltip="This shader can be used to compute the log of a value. "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="shaderComp.shaders.math.\lMix.Mix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1math_1_1_mix_1_1_mix.html",tooltip="This shader can be used to mix two vectors of type float4 within a given factor. "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="shaderComp.shaders.Vertex\lTestShader.VertexTestShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1shaders_1_1_vertex_test_shader_1_1_vertex_test_shader.html",tooltip="This shader is a test of opacity. "];
+}

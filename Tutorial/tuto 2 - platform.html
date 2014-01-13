@@ -95,10 +95,7 @@
             <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
                 <ul class="menu horizontal flat black shadowed">
                     <li>
-                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
-                    </li>
-                    <li>
-                        <a href="#">Getting started</a>
+                        <a class="logoPlaceholder" href="shaderComp - welcome.html" title="Shadercomp - tutorials">ShaderComp</a>
                     </li>
                     <li>
                         <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
@@ -114,14 +111,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu">
                             <li>
-                                <a href="#">Tuto 1: Create your own shader!</a>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
                             </li>
                             <li>
-                                <a href="#">Tuto 2: What about a new platform ?</a>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
                             </li>
                         </ul>
                     </li>
@@ -132,14 +129,11 @@
             <nav class="ink-navigation ink-grid hide-all show-medium show-small">
                 <ul class="menu vertical flat black">
                     <li class="title">
-                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <a class="logoPlaceholder push-left" href="shaderComp - welcome.html" title="Site Title">ShaderComp</a>
                         <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
                     </li>
                 </ul>
                 <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
-                    <li>
-                        <a href="#">Getting started</a>
-                    </li>
                     <li>
                         <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu hide" id="tutouser">
@@ -154,14 +148,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu hide" id="tutoprog">
                             <li>
                                 <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
                             </li>
                             <li>
-                                <a href="#">Tuto 2: What about a new platform ?</a>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
                             </li>
                         </ul>
                     </li>
@@ -172,7 +166,7 @@
         <div class="ink-grid" style="margin-top: 45px;">
             <div class="whatIs">
                 <h1>Programmer Tutorial <small>Part 2: What about a new platform ?!</small></h1>
-                <p>The ShaderComp API is created to allow shaders programmer to create their shaders independently of the platform the shader will be executed on. That's why, when computing a project, you need to specify the printer to use. In this part of the tutorial, you will see how to create new printers, wich is the second way to exend the features of the library.</p>
+                <p>The ShaderComp API is created to allow shader programmer to create their shaders independently of the platform the shader will be executed on. That's why, when computing a project, you need to specify the printer to use. In this part of the tutorial, you will see how to create new printers, wich is the second way to exend the features of the library.</p>
             </div>
             <div class="column-group gutters">
                 <div class="large-25 medium-33 small-100">
@@ -257,7 +251,8 @@
                     <section id="nav-implementation" data-target="#nav_menu" data-spy="true">
                         <h2>GLSLPrinter implementation</h2>
                         <p>In this part, we are trying to explain the way the GLSLPrinter is implementing its compute function.</p>
-                        <p>From the <span class="ink-label success inter">Printer</span> class, we get an access to the <code>self.vertexNodeList</code> and the <code>self.pixelNodeList</code>, wich is a list of node that will be to printed. we also have an access to the <code>self.vertexDeclaration</code> and the <code>self.pixelDeclaration</code> dictionary, holding all the declarations of the generated variables that will be used in the shader generator.</p>
+                        <p>From the <span class="ink-label success invert">Printer</span> class, we get an access to the <code>self.vertexNodeList</code> and the <code>self.pixelNodeList</code>, wich is a list of node that will be to printed. we also have an access to the <code>self.vertexDeclaration</code> and the <code>self.pixelDeclaration</code> dictionary, holding all the declarations of the generated variables that will be used in the shader generator.</p>
+                        <h4>applyCompute(self, notelist)</h4>
                         <p>With theses informations, we are going to visit every node of the graph and call the generator's compute function corresponding to the node we are visiting. We need to be careful when visiting a node: int can be a shader node as well as a box ! If so, we recursively call the compute function on the list of nodes of the box.</p>
                         <pre class="brush: python; toolbar: false; first-line: 1">
                         def applyCompute(self, nodeList) :
@@ -268,7 +263,7 @@
                                 #if shader
                                 else:
                                     # if vextex shader
-                                    if node.getShaderType() == 0 :
+                                    if node.getShaderType() == ShaderType.VERTEX_SHADER :
                                         if self.vertexShaderBuffer == '' :
                                             self.vertexShaderBuffer = self.writeHead(self.vertexShaderBuffer)
                                         try:
@@ -295,12 +290,61 @@
                                         except IOError:
                                             print "fichier manquant: " + name
                         </pre>
+                        <div class="ink-alert block info">
+                            <h4>This is not the compute function</h4>
+                            <p>The compute function is like a hat-function that will call this one on the list of all the nodes of the project</p>
+                        </div>
+                        <p>Let's explaine the code above line-to-line.</p>
+                        <ul>
+                            <li><code>l. 2</code>: As said above, we are visiting all the nodes of the list</li>
+                            <li><code>l. 4-5</code>: If the node has the type 'Box' (an integer with value 0), we recursively call the <code>applyCompute</code> function on the node list of this box</li>
+                            <li><code>l. 9</code>: In the code we have written, both vertexNodes and pixelNodes are merged into a single list. So, we need to check on what type of shader we are.</li>
+                            <li><code>l. 10-11/24-25</code>: Before any writing in the buffer, we need to write its head that is the declaration of the main function.</li>
+                            <li><code>l. 13-16/27-31</code>: In theses lines, we are dynamically loading the generator of the shader of the current node. To do that, we are using the <code>imp</code> module.</li>
+                            <li><code>l. 17-18/31-32</code>: That is where the generator of the shader of the current node is actually used. As mentionned in the previous part of the tutorial, the generators will return a buffer that the printer needs to append to its current global buffer.</li>
+                        </ul>
+                        <h4>addDeclaration(self)</h4>
+                        <p>The <code>applyDeclaration</code> function is used, independently of the <code>applyCompute</code>, to write the declarations of the variables (meaning: <span class="ink-label info invert">uniforms</span>, <span class="ink-label info invert">and varying</span> variables) at the very beginning of the buffer.</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            def applyDeclaration(self) :
+                                for name, declaration in self.vertexDeclaration.items() :
+                                    if declaration[0] == None :
+                                        self.vertexShaderBuffer = declaration[1] + ' '  + name + ';' + '\n' + self.vertexShaderBuffer
+                                    else :
+                                        self.vertexShaderBuffer = declaration[0] + ' '  + declaration[1] + ' '  + name + ';' + '\n' + self.vertexShaderBuffer
+                                for name, declaration in self.fragmentDeclaration.items() :
+                                    if declaration[0] == None :
+                                        self.fragmentShaderBuffer = declaration[1] + ' '  + name + ';' + '\n' + self.fragmentShaderBuffer
+                                    else :
+                                        self.fragmentShaderBuffer = declaration[0] + ' '  + declaration[1] + ' '  + name + ';' + '\n' + self.fragmentShaderBuffer
+                        </pre>
+                        <p>In this function we use the <code>self.vertexDeclaration</code> and the <code>self.fragmentDeclaration</code> dictionary. For each key/value pair of the dico, we get the name of the declaration (understand: the generated name of the variable) as key, and the declaration itself as value, wich is a tuple of the <code>modifier</code>(<code>uniform</code> or <code>varying</code>, may be <code>None</code>) and the <code>type</code> of the variable.</p>
+                        <p>The only thing the function do is getting all the declarations, and write in the correct way (according to the language the printer is developped for) at the right place in the right buffer.</p>
+                        <h4>Putting it in a nutshell: the compute function</h4>
+                        <p>All the work have already been done ! The code of the <code>compute</code> function is very simple:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            def compute(self, project) :
+                                print 'GLSL Printer Compute: ', self.projName
+                                self.applyCompute(self.vertexNodeList + self.pixelNodeList)
+                                self.applyDeclaration()
+                                self.finishCompute()
+                        </pre>
+                        <p>We start by calling the generators' compute of all the nodes of the <code>vertexNodeList</code> and the <code>pixelNodeList</code> using the <code>applyCompute</code> function, then the declarations are added at the beginning of the buffer using the <code>applyDeclaration</code> function. At the end of the process, the <code>finishCompute</code> function is called. This function is only creating the output file and flushing the buffer in that file.</p>
                     </section>
-                    <section id="nav-implementation" data-target="#nav_menu" data-spy="true">
+                    <section id="nav-more-work" data-target="#nav_menu" data-spy="true">
                         <h2>Some more work...</h2>
+                        <p>You should now be able to create your own <span class="ink-label success invert">Printer</span>! In a platform plugin, this is not the only work you have to do. Now, you have to create a generator for each shader tu API is currently implementing. This can be tedious, I can imagine, but think about what you will be able to do, and what you will allow the comunity to do if you help us in this task!</p>
+                        <p>The knowledge needed for the implementation of the generator is well detailed in the <a href="tuto 1 - create your own shader">previous part of the user tutorial</a>. Fell free to read again if you think that you missed anything /</p>
                     </section>
-                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                    <section id="nav-recap" data-target="#nav_menu" data-spy="true">
                         <h2>Recap</h2>
+                        <p>This is the end of the programmer part of the ShaderComp API tutorial. If you read the entire tutorial, you should now be able to:</p>
+                        <ul>
+                            <li>Build complex networks of shaders, using recursivity to avoid unecessary duplication work, and generate the source code for any platform the API allows</li>
+                            <li>Create new shader plugins to extend the possibilities of library</li>
+                            <li>Create new language plugins to extend the platform target available in the library</li>
+                        </ul>
+                        <p>This project was made by a group of three student from the EPITA ingeneer school in Paris, in collaboration with Ubisoft France. If you think that this project could have a good potential, have any suggestion, or would like to help us extend the possibilities of the library by being added to the allowed contributors, do <span class="ink-label success invert">NOT</span> hesitate to contact us !</p>
                     </section>
                 </div>
             </div>

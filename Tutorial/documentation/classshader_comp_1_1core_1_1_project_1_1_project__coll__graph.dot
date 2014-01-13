@@ -1,0 +1,6 @@
+digraph "shaderComp.core.Project.Project"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.Project.\lProject\n|+ name\l+ linkManager\l+ vertexBox\l+ pixelBox\l|+ __init__()\l+ getVertexBox()\l+ getPixelBox()\l+ getBox()\l+ getLinkList()\l+ clearBox()\l+ clear()\l+ addNode()\l+ appendNode()\l+ removeNode()\land 32 more...\l+ load()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+}

@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Printer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shaderComp.printers.GLSLPrinter.\lPrinters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1printers_1_1_g_l_s_l_printer_1_1_printers.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shaderComp.printers.JSONPrinter.\lPrinters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1printers_1_1_j_s_o_n_printer_1_1_printers.html"];
+}

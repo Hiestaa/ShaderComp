@@ -1,0 +1,6 @@
+digraph "shaderComp.core.Node.Node"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.Node.Node\n|+ type\l+ name\l+ linkList\l+ linkManager\l+ shaderType\l+ inVars\l+ outVars\l|+ __init__()\l+ getName()\l+ setName()\l+ getType()\l+ getShaderType()\l+ setLinkManager()\l+ getLinkList()\l+ setLinkList()\l+ getInVar()\l+ getOutVar()\l+ getInVarList()\l+ getOutVarList()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+}

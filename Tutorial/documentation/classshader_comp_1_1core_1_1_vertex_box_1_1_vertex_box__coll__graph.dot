@@ -1,0 +1,10 @@
+digraph "shaderComp.core.VertexBox.VertexBox"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.VertexBox.\lVertexBox\n||+ __init__()\l+ getShaderType()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{shaderComp.core.Box.Box\n|+ nodeList\l+ name\l+ linkList\l+ linkManager\l+ uniforms\l+ pipeline\l|+ __init__()\l+ getNodeList()\l+ getUniforms()\l+ clear()\l+ addNode()\l+ appendNode()\l+ removeNode()\l+ removeNodeAt()\l+ addInVar()\l+ addOutVar()\land 6 more...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_box_1_1_box.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{shaderComp.core.Node.Node\n|+ type\l+ name\l+ linkList\l+ linkManager\l+ shaderType\l+ inVars\l+ outVars\l|+ __init__()\l+ getName()\l+ setName()\l+ getType()\l+ getShaderType()\l+ setLinkManager()\l+ getLinkList()\l+ setLinkList()\l+ getInVar()\l+ getOutVar()\l+ getInVarList()\l+ getOutVarList()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_node_1_1_node.html"];
+}

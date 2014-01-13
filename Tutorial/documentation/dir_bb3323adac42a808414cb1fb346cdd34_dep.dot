@@ -1,0 +1,9 @@
+digraph "shaderComp/printers/CelShadingVertex" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a47a5d8024a38fa8c6b3c4779bbadced {
+    graph [ bgcolor="#ddddee", pencolor="black", label="printers" fontname="Helvetica", fontsize="10", URL="dir_a47a5d8024a38fa8c6b3c4779bbadced.html"]
+  dir_bb3323adac42a808414cb1fb346cdd34 [shape=box, label="CelShadingVertex", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_bb3323adac42a808414cb1fb346cdd34.html"];
+  }
+}
