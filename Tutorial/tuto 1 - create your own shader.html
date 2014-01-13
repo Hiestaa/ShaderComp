@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>
+            Programmer Tutorial Part 1
+        </title>
+        <meta name="description" content=""/>
+        <meta name="author" content="ink, cookbook, recipes"/>
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <link rel="shortcut icon" href="ink-2.2.1/img/ink-favicon.ico"/>
+        <link rel="apple-touch-icon-precomposed" href="ink-2.2.1/img/touch-icon.57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ink-2.2.1/img/touch-icon.72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ink-2.2.1/img/touch-icon.114.png"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.320x460.png"
+        media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.768x1004.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.1024x748.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"/>
+
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/ink.css"/>
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/docs.css"/>
+        <link rel="stylesheet" type="text/css" href="treeview/jquery.treeview.css"/>
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+
+        <!--[if IE 7 ]>
+            <link rel="stylesheet" href="ink-2.2.1/css/ink-ie7.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <script type="text/javascript" src="jquery.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/holder.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink-ui.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/autoload.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/html5shiv.js">
+        </script>
+        <script type="text/javascript" src="treeview/jquery.treeview.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js">
+        </script>
+
+        <style type="text/css">
+            header {
+                padding: 2em 0;
+                margin-bottom: 2em;
+                text-align: left;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            header .ink-navigation {
+                margin-top: 2em;
+            }
+            footer {
+                background: #ccc;
+                color: #0003;
+            }
+            footer p {
+                padding: 0.5em 1em 0.5em 0;
+                margin: 0;
+            }
+
+            .unstyled li {
+                padding: 0.4em 0;
+                text-align: right;
+            }
+            .content {
+                padding-top: 2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="topbar">
+            <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
+                <ul class="menu horizontal flat black shadowed">
+                    <li>
+                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
+                <ul class="menu vertical flat black">
+                    <li class="title">
+                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
+                    </li>
+                </ul>
+                <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutouser">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutoprog">
+                            <li>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="ink-grid" style="margin-top: 45px;">
+            <div class="whatIs">
+                <h1>Programmer Tutorial <small>Part 1: Create your own shader!</small></h1>
+                <p>If you previously read the three parts of the <a href="tuto 1 - simple.html">User Tutorial</a>, you may think that the API allows to build some complex networks using built-in shader nodes, but the amount of different nodes may be quite poor for your needs. Don't worry, leave you alone with that. In this tutorial, you will learn how to create plug-ins to extend the features of the library !</p>
+            </div>
+            <div class="column-group gutters">
+                <div class="large-25 medium-33 small-100">
+
+                    <nav class="ink-navigation sticky" data-offset-top="70px" data-offset-bottom="350px" id="nav_menu">
+                        <ul class="menu vertical rounded black">
+                            <li><a class="scrollableLink" href="#topbar"><span class="icon-chevron-up"></span> Back to Top</a></li>
+                            <li class="active"><a class="scrollableLink" href="#nav-overview">Overview</a></li>
+                            <li><a class="scrollableLink" href="#nav-case-study">Cases study</a></li>
+                            <li><a class="scrollableLink" href="#nav-fog">The fog, again !</a></li>
+                            <li><a class="scrollableLink" href="#nav-recap">Recap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="large-75 medium-66 small-100">
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Overview of the tutorial</h2>
+                        <p>There is two types of plug-in that can be added to extend the features of the library : <span class="ink-label info invert">Shader plug-ins</span> and <span class="ink-label info invert">Language plug-ins</span>. In this part of the tutorial, we are going to see the first one. The second will be the main subject of the second part.</p>
+                        <p>To teach you the basics of building shader plug-ins, We are going to study some simple cases. As all the built-in nodes are seen as shader plug-ins, you can take anyone of them to see how they are implemented. Then, we will build our own shader from scratch, so that you can be sure that you did not miss anything. Let's begin !</p>
+                    </section>
+                    <section id="nav-case-study" data-target="#nav_menu" data-spy="true">
+                        <h2>Case study</h2>
+                        <h3>Plug-in structure</h3>
+                        <p>Every plug-in, as you may know, is independant from the core of the library and from the other plug-in. That means that every plug-in has it's own dedicated files that will be lazy-loaded when creating it. To understant how all of this internally work, let's take a deeper look at the internal structure of the API:</p>
+                        <div class="box">
+                            <ul id="browser" class="filetree treeview">
+                                <li><span class="folder">shaderComp</span>
+                                    <ul>
+                                        <li><span class="folder">core</span></li>
+                                        <li><span class="folder">examples</span></li>
+                                        <li><span class="folder">printer</span>
+                                            <ul>
+                                                <li><span class="file">GLSLPrinter.py</span></li>
+                                                <li><span class="file">JSONPrinter.py</span></li>
+                                                <li><span class="folder">CelShadingFragment</span>
+                                                    <ul>
+                                                        <li><span class="file">CelShadingFragmentGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">CelShadingVertex</span>
+                                                    <ul>
+                                                        <li><span class="file">CelShadingVertexGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">ChangeColor</span>
+                                                    <ul>
+                                                        <li><span class="file">ChangeColorGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">Color</span>
+                                                    <ul>
+                                                        <li><span class="file">ColorGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">DefaultVertexShader</span>
+                                                    <ul>
+                                                        <li><span class="file">DefaultVertexShaderGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">Fog</span>
+                                                    <ul>
+                                                        <li><span class="file">FogGLSLPrinter.py</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li><span class="folder">math</span>
+                                                    <ul>
+                                                        <li><span class="folder">Clamp</span>
+                                                            <ul>
+                                                                <li><span class="file">ClampGLSLPrinter.py</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><span class="folder">DispatchVect4</span>
+                                                            <ul>
+                                                                <li><span class="file">DispatchVect4GLSLPrinter.py</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><span class="folder">FloatDiv</span>
+                                                            <ul>
+                                                                <li><span class="file">FloatDivGLSLPrinter.py</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><span class="folder">Log</span>
+                                                            <ul>
+                                                                <li><span class="file">LogGLSLPrinter.py</span></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><span class="folder">Mix</span>
+                                                            <ul>
+                                                                <li><span class="file">MixGLSLPrinter.py</span></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="folder">shaders</span>
+                                        <ul>
+                                            <li><span class="file">CelShadingFragment.py</span></li>
+                                            <li><span class="file">CelShadingVertex.py</span></li>
+                                            <li><span class="file">ChangeColor.py</span></li>
+                                            <li><span class="file">Color.py</span></li>
+                                            <li><span class="file">DefaultVertexShader.py</span></li>
+                                            <li><span class="file">Fog.py</span></li>
+                                            <li><span class="folder">math</span>
+                                                <ul>
+                                                    <li><span class="file">Clamp.py</span></li>
+                                                    <li><span class="file">DispatchVect4.py</span></li>
+                                                    <li><span class="file">FloatDiv.py</span></li>
+                                                    <li><span class="file">Log.py</span></li>
+                                                    <li><span class="file">Mix.py</span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>As you can see here, each plug-in shader is divided in two separate files, located in two different folders. Each part has is used for one thing: the description of the interface of the shader (similary to the header files of the C/C++ languages) and the actual code generation for this shader. We will explain this in details by using an exemple.</p>
+                        <h3>An exemple: the Color shader</h3>
+                        <h4>Understanding the interface description</h4>
+                        <p>All the shaders interface are written in a class file located in the folder <code>shaderComp/shaders</code>. Here is the code written in the file <code>shaderComp/shaders/Color.py</code>:
+                        </p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                        from ..core.Shader import *
+                        from ..core.ShaderType import *
+
+                        ##
+                        # @authors Romain GUYOT de la HARDROUYERE
+                        # @authors Matthieu BOURNAT
+                        # @authors Antoine CHESNEAU
+                        # @class Color
+                        # @brief This shader can be used to create a new color
+                        # @version 0.1
+                        # @date 2013-11-07
+                        # @shadertype Fragment Shader
+                        # @details __Input variables:__
+                        # - `r: float` is the r component of the mixing color
+                        # - `g: float` is the g component of the mixing color
+                        # - `b: float` is the b component of the mixing color
+                        # - `a: float` is the a component of the mixing color
+                        # @details __Output variables:__
+                        # - `normal: vec4` is the resulting color
+                        # @example first_project_example.py
+                        # @example shader_link_example.py
+                        # Here is an example of how to link two shaders in a project.
+                        # @see first_project_example.py
+                        # @see shader_link_example.py
+                        # @todo take a vec4 as input instead of 4 float
+
+                        class Color(Shader):
+
+                            ## @fn __init__(self)
+                            # @brief Initialize this shader
+                            def __init__(self):
+                                Shader.__init__(self, ShaderType.PIXEL_SHADER)
+                                self.name = 'Color'
+                                self.inVars["r"] = Var("r", self, VarType.IN,'float')
+                                self.inVars["g"] = Var("g", self, VarType.IN,'float')
+                                self.inVars["b"] = Var("b", self, VarType.IN,'float')
+                                self.inVars["a"] = Var("a", self, VarType.IN,'float')
+                                self.outVars["color"] = Var("color", self, VarType.OUT,'vec4')
+
+                            ## @fn setR(self,r)
+                            # @brief Allows to link the `r` input variable to a constant
+                            # @details This function will build the valuedLink needed for you.
+                            # @param r The constant value of this input variable
+                            def setR(self, r) :
+                                if self.linkManager == None :
+                                    print 'Add Node on Project Before'
+                                else :
+                                    self.linkManager.addValuedLink(self.inVars["r"], r)
+
+                            ## @fn setG(self,g)
+                            # @brief Allows to link the `g` input variable to a constant
+                            # @details This function will build the valuedLink needed for you.
+                            # @param g The constant value of this input variable
+                            def setG(self, g) :
+                                if self.linkManager == None :
+                                    print 'Add Node on Project Before'
+                                else :
+                                    self.linkManager.addValuedLink(self.inVars["g"], g)
+
+                            ## @fn setB(self,b)
+                            # @brief Allows to link the `b` input variable to a constant
+                            # @details This function will build the valuedLink needed for you.
+                            # @param b The constant value of this input variable
+                            def setB(self, b) :
+                                if self.linkManager == None :
+                                    print 'Add Node on Project Before'
+                                else :
+                                    self.linkManager.addValuedLink(self.inVars["b"], b)
+
+                            ## @fn setA(self,a)
+                            # @brief Allows to link the `a` input variable to a constant
+                            # @details This function will build the valuedLink needed for you.
+                            # @param a The constant value of this input variable
+                            def setA(self, a) :
+                                if self.linkManager == None :
+                                    print 'Add Node on Project Before'
+                                else :
+                                    self.linkManager.addValuedLink(self.inVars["a"], a)
+
+                            ## @fn setParams(self,r, g, b, a)
+                            # @brief Allows to link the `r`, `g`, `b` and `a` input variables to constants
+                            # @details This function will build the valuedLinks needed for you.
+                            # @param r The constant value of this input variable
+                            # @param g The constant value of this input variable
+                            # @param b The constant value of this input variable
+                            # @param a The constant value of this input variable
+                            def setParams(self, r, g, b, a) :
+                                if self.linkManager == None :
+                                    print 'Add Node on Project Before'
+                                else :
+                                    self.linkManager.addValuedLink(self.inVars["r"], r)
+                                    self.linkManager.addValuedLink(self.inVars["g"], g)
+                                    self.linkManager.addValuedLink(self.inVars["b"], b)
+                                    self.linkManager.addValuedLink(self.inVars["a"], a)
+                        </pre>
+                        <p>Here are the main points that needs to be well understood in the code above:</p>
+                        <ul>
+                            <li>
+                                <span class="ink-label error">l. 1</span> <span class="ink-label info invert">from ..core.Shader import *</span>:
+                                The shader inferface class needs to inherit from the class <span class="ink-label success invert">Shader</code>. To do so, it is needed to import it.
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 1</span> <span class="ink-label info invert">from ..core.ShaderType import *</span>:
+                                Then, the <span class="ink-label success invert">ShaderType</span> enumeration is needed to specify the type of the shader.
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 26</span> <span class="ink-label info invert">class Color(Shader):</span>:
+                                Now, the class can be created.
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 30-37</span> <span class="ink-label info invert">class constructor</span>:
+                                Here is where the interface is declared. First, the call to the parent constructor (using the keywork <code>super</code>) is needed. The type of the shader is specified here. Then, this only is a matter of variables instanciation. Two dictionary should be filled: the <code>self.inputVars</code> and the <code>self.outputVars</code>. For each variable interface needed for your shader, a <span class="ink-label success invert">Var</span> class needs to be instanciated given the name, the owner node (<code>self</code>), the type of the variable (<code>VarType.IN</code> or <code>VarType.OUT</code>) and the type of the variable. This variable is then added to the dictionary at the index corresponding to its name.
+                                <div class="ink-alert basic info">
+                                    <p><b>Note:</b> The variables types used here are the same as the one defined in the GLSL language. However, if computing the project in another language, the types will be converting into the corresponding ones in the other language.</p>
+                                </div>
+                                Then, the name of the shader has to be filled. Be sure that the name of your shader is the same than the name of the class that describe its interface !
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 43-93</span> <span class="ink-label info invert">setters</span>:
+                                As you may remember if you read <a href="tuto 2 - advanced.html">the second part of the user tutorial</a>, setting a constant value to a variable needs to be done using <span class="ink-label success invert">ValuedLinks</span>. As this can be quite obfuscating, it is possible to encapsulate this in the shader interface class using the linkManager as done for the r, g, b and a variables in the code above.
+                            </li>
+                        </ul>
+                        <p>The interface represent the object that can be instanciated in the user's script and added to a project. That is the object that you were used to use in the user-side part of the tutorial. Now, let's go in the hidden part of the project: the generation</p>
+                        <h4>Understanding the code generator</h4>
+                        <p>For each shader plug in and for each language, a generator class has to be be created in the folder <code>printers/&lt;shader_name&gt;/</code> under the name <code>&lt;shader_name&gt;&lt;target_language&gt;Printer.py</code>. The purpose of this generator is to hold the code that write the real shader source code corresponding to this shader. It is included in the generation process, it needs so to follow some guidlines presented below. First, let's have a look on the source code of the generator of the Color node:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                        class Gen:
+
+                            def __init__(self, params):
+                                self.inVars, self.outVars = params
+
+                            def compute(self, printer) :
+                                buffer = '\t' + self.outVars["color"].val + ' = vec4(' + self.inVars["r"].val + ', ' + self.inVars["g"].val + ', ' + self.inVars["b"].val + ', ' + self.inVars["a"].val + ');'
+                                buffer = buffer + '\n'
+                                return buffer
+                        </pre>
+                        <p>Here are the main points that needs to be well understood in the code above:</p>
+                        <ul>
+                            <li>
+                                <span class="ink-label error">l. 1</span> <span class="ink-label info invert">class Gen:</span>:
+                                For the lazy importation of the generators, every generator class has to be named <code>Gen</code>. The shader and the target language that correspond to this generator are only specifyied in the name of the file holding this class.
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 3-4</span> <span class="ink-label info invert">Gen's constructor</span>:
+                                The interface is given to the generator's constructor as a parameter. The generator keeps a reference on the input and the output variables dictionary. Both are given as a tuple to the constructor.
+                            </li>
+                            <li>
+                                <span class="ink-label error">l. 6-10</span> <span class="ink-label info invert">computing function</span>:
+                                Here is the function that holds the actual implementation. This function is the only one of the plug-in that is really target-specific. It fills in a buffer and then return it so that it can be inserted at the right place in the global buffer that holds the generated source code. <br>
+                                Before the generation, the name of the variables are computed taking account of the links between them. The computed value can be found is the <code>val</code> field of the <span class="ink-label success invert">Val</span> class, stored in the veriables dictionary at the index corresponding to its original name.
+                            </li>
+                        </ul>
+                        <p>That's it. Know that you have a better understanding of a shader plug-in, let's have some practice !</p>
+                    </section>
+                    <section id="nav-fog" data-target="#nav_menu" data-spy="true">
+                    <h2>The fog, again !</h2>
+                    <p>The goal of this section is to give you a practical exercise to be sure that you did well understant all that is needed to create many more shader plug-in. Tu subject is: creating the same fog shader that we created in the second part of the tutorial, but this time as a plug-in of the API.</p>
+                    <p>Remind that two files are needed. Let's begin with the interface:</p>
+                    <h3>Fog interface</h3>
+                    <p>Start by creating the <code>Fog.py</code> file located in the <code>shaderComp/shaders</code> folder. In this file, import the <span class="ink-label success invert">Shader</span> class from the core, and create the <span class="ink-label info invert">Fog</span> class, inheriting from the <span class="ink-label success invert">Shader</span> class.</p>
+                    <pre class="brush: python; toolbar: false; first-line: 1">
+                    from ..core.Shader import *
+                    from ..core.ShaderType import *
+
+                    class Fog(Shader):
+                    </pre>
+                    <p>For this shader (we are going to use a quite simpler interface), we are going to need two input variables: <code>color</code> and <code>fragCoord</code>. The first is the input color of the pixel shader and the second is the coordinates of the current pixel. Both are of the <code>vec4</code> type. Then, an output variable <code>color </code>is needed to output the computed color.</p>
+                    <p>In your code, create the constructor of the shader. Don not forget to call the parent constructor giving the type of this shader. You can now set its name and define its interface.</p>
+                    <pre class="brush: python; toolbar: false; first-line: 5">
+                        def __init__(self):
+                            Shader.__init__(self, ShaderType.PIXEL_SHADER)
+                            self.name = 'Fog'
+                            self.inVars['color'] = Var('color', self, VarType.IN,'vec4')
+                            self.inVars['fragCoord'] = Var('fragCoord', self, VarType.IN,'vec4')
+                            self.outVars['color'] = Var('color', self, VarType.OUT,'vec4')
+                    </pre>
+                    <p>That's it ! The interface is always pretty simple to define. Don't forget to give the current node (<code>self</code>) when creating the variables, and to specify the type (<code>IN</code> or <code>OUT</code>) of the variable.</p>
+                    <div class="ink-alert block warning">
+                        <h4>Do not forget</h4>
+                        <p>To be able to import easily your shader, open the <code>shaderComp/shaders/__init__.py</code> file, and append to the <code>__all__</code> tab the name of the class of your shader</p>
+                    </div>
+                    <h3>Fog generator</h3>
+                    <p>The fog generator will be quite more complicated than its interface, but if you understood well the second part of the user tutorial, you will see that we are just going to write by hand the code that we generated before using the <span class="ink-label success invert">math</span> module.</p>
+                    <p>First, create the <code>FogGLSLPrinter.py</code> file located in the <code>shaderComp/printers/Fog/</code> folder. In this file, create the <code>Gen</code> class and the constructor of the class. Then, add the <code>compute</code> function. Remember that the constructor takes a tuple of variables dictionary as parameters and the compute function takes the printer.</p>
+                    <pre class="brush: python; toolbar: false; first-line: 1">
+                    class Gen:
+                        """Generateur du pixel shader GLSL Fog"""
+                        def __init__(self, params):
+                            self.inVars, self.outVars = params
+
+                        def compute(self, printer):
+                    </pre>
+                    <p>Now let's move to the content of the compute function. If you remember the <a href="img/fog.png">drawing</a> of the fog, we need to chain the following operations : two <code>divisions</code>, a <code>log</code>, a <code>clamp</code> and a <code>mix</code>. To store the result of the theses operations, we will need two local variables. You cannot name theses local variables by yourself in the generated code to avoid conflict: here is the way to do that:</p>
+                    <pre class="brush: python; toolbar: false; first-line: 7">
+                            z = printer.getRandomName('z')
+                            fogFactor = printer.getRandomName('fogFactor')
+                    </pre>
+                    <p>That's what the printer is used for. He knows the generated name of all the variables, and can insure that another variable in another shader (or box, sub-box and so one) does not have the same name.</p>
+                    <p>We have all that is needed, we can now write in the buffer and return it.</p>
+                    <pre class="brush: python; toolbar: false; first-line: 10">
+                    buffer = '''
+                float ''' + z + ''' = (''' + self.inVars['fragCoord'].val + '''.z / ''' + self.inVars['fragCoord'].val + '''.w);
+
+                float ''' + fogFactor + ''' = log(''' + z + ''' / 25.0);
+                ''' + fogFactor + ''' = clamp(''' + fogFactor + ''', 0.0, 1.0);
+
+                ''' + self.outVars['color'].val + ''' = mix(''' + self.inVars['color'].val + ''', gl_Fog.color, ''' + fogFactor + ''');
+            '''
+                    return buffer
+                    </pre>
+                    <div class="ink-alert block info">
+                        <h4>Beware of the strange indentation</h4>
+                        <p>This is not mandatory as indentation does not matter in the compilation process of a shader source code. But using the right tabulation at the right place, the generation will produce a code easier to read and debug.</p>
+                    </div>
+                    <div class="ink-alert block error">
+                        <h4>This will not work !</h4>
+                        <p>Because of the lazy-way the class are loaded, you need to add an <code>__init__.py</code> file in the folder <code>shaderComp/printers/Fog/</code> you created. In this file, write the following line:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 0">
+                        __all__ = ["FogGLSLPrinter"]
+                        </pre>
+                    </div>
+                    <p>Well done ! You can now test your shader by creating a simple project and link the input variables of the fog shader to the right pipeline variables (remind that it is a better use to link a pipeline variable to box input variable, and then link the box input variable to the shader input variable). You know enough to do this by your own, go back to the <a href="tuto 1 - simple.html">first</a> and the <a href="tuto 2 - advanced.html">second</a> part of the user tutorial if you miss anything. </p>
+
+                    </section>
+                    <section id="nav-recap" data-target="#nav_menu" data-spy="true">
+                    <h2>Recap</h2>
+                    <p>You now have learnt enough to create many and many more built-in shaders for our API ! The purpose of the library is to allow people that do not have a complete understanding of the shader languages to create their own shader by only creating networks of nodes. The time is missing to add as many built-in shaders as we could wish. Your help is welomed !</p>
+                    <p>If you miss anything from this part of the tutorial, here is the complete code of the fog shader we created in the previous section. Hoping it will help you understand your errors if you have some.</p>
+                    <h4>Class shaderComp.shaders.Fog.Fog</h4>
+                    <pre class="brush: python; toolbar: false; first-line: 1">
+                    from ..core.Shader import *
+                    from ..core.ShaderType import *
+
+                    class Fog(Shader):
+
+                        def __init__(self):
+                            Shader.__init__(self, ShaderType.PIXEL_SHADER)
+                            self.inVars['color'] = Var('color', self, VarType.IN,'vec4')
+                            self.inVars['fragCoord'] = Var('fragCoord', self, VarType.IN,'vec4')
+                            self.outVars['color'] = Var('color', self, VarType.OUT,'vec4')
+                            self.name = 'Fog'
+
+                    </pre>
+                    <h4>Class shaderComp.printers.Fog.FogGLSLPrinter.Gen</h4>
+                    <pre class="brush: python; toolbar: false; first-line: 1">
+                    class Gen:
+                        def __init__(self, params):
+                            self.inVars, self.outVars = params
+
+                        def compute(self, printer):
+                            z = printer.getRandomName('z')
+                            fogFactor = printer.getRandomName('fogFactor')
+
+                            buffer = '''
+                        float ''' + z + ''' = (''' + self.inVars['fragCoord'].val + '''.z / ''' + self.inVars['fragCoord'].val + '''.w);
+
+                        float ''' + fogFactor + ''' = log(''' + z + ''' / 25.0);
+                        ''' + fogFactor + ''' = clamp(''' + fogFactor + ''', 0.0, 1.0);
+
+                        ''' + self.outVars['color'].val + ''' = mix(''' + self.inVars['color'].val + ''', gl_Fog.color, ''' + fogFactor + ''');
+                    '''
+                            return buffer
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    $(function () {
+        $(".treeview").treeview({
+            animated: "fast",
+        });
+    });
+    </script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</html>

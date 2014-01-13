@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>
+            Programmer Tutorial Part 2
+        </title>
+        <meta name="description" content=""/>
+        <meta name="author" content="ink, cookbook, recipes"/>
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <link rel="shortcut icon" href="ink-2.2.1/img/ink-favicon.ico"/>
+        <link rel="apple-touch-icon-precomposed" href="ink-2.2.1/img/touch-icon.57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ink-2.2.1/img/touch-icon.72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ink-2.2.1/img/touch-icon.114.png"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.320x460.png"
+        media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.768x1004.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"/>
+        <link rel="apple-touch-startup-image" href="ink-2.2.1/img/splash.1024x748.png"
+        media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"/>
+
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/ink.css"/>
+        <link rel="stylesheet" type="text/css" href="ink-2.2.1/css/docs.css"/>
+        <link rel="stylesheet" type="text/css" href="treeview/jquery.treeview.css"/>
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+
+        <!--[if IE 7 ]>
+            <link rel="stylesheet" href="ink-2.2.1/css/ink-ie7.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <script type="text/javascript" src="jquery.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/holder.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/ink-ui.min.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/autoload.js">
+        </script>
+        <script type="text/javascript" src="ink-2.2.1/js/html5shiv.js">
+        </script>
+        <script type="text/javascript" src="treeview/jquery.treeview.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js">
+        </script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js">
+        </script>
+
+        <style type="text/css">
+            header {
+                padding: 2em 0;
+                margin-bottom: 2em;
+                text-align: left;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            header .ink-navigation {
+                margin-top: 2em;
+            }
+            footer {
+                background: #ccc;
+                color: #0003;
+            }
+            footer p {
+                padding: 0.5em 1em 0.5em 0;
+                margin: 0;
+            }
+
+            .unstyled li {
+                padding: 0.4em 0;
+                text-align: right;
+            }
+            .content {
+                padding-top: 2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="topbar">
+            <nav class="ink-navigation ink-grid hide-small hide-medium ie7">
+                <ul class="menu horizontal flat black shadowed">
+                    <li>
+                        <a class="logoPlaceholder" href="#" title="Shadercomp - tutorials">ShaderComp</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new platform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <nav class="ink-navigation ink-grid hide-all show-medium show-small">
+                <ul class="menu vertical flat black">
+                    <li class="title">
+                        <a class="logoPlaceholder push-left" href="#" title="Site Title">ShaderComp</a>
+                        <button class="toggle" data-target="#topbar_menu"><span class="icon-reorder"></span></button>
+                    </li>
+                </ul>
+                <ul style="display: none;" class="menu vertical flat black hide-all" id="topbar_menu">
+                    <li>
+                        <a href="#">Getting started</a>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutouser" href="#">User tutorial&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutouser">
+                            <li>
+                                <a href="tuto 1 - simple.html">Part 1: Your first project</a>
+                            </li>
+                            <li>
+                                <a href="tuto 2 - advanced.html">Part 2: Advanded nodes linking</a>
+                            </li>
+                            <li>
+                                <a href="tuto 3 - recursivity.html">Part 3: The power of recursivity</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
+                        <ul class="submenu hide" id="tutoprog">
+                            <li>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
+                            </li>
+                            <li>
+                                <a href="#">Tuto 2: What about a new platform ?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="border"></div>
+        </div>
+        <div class="ink-grid" style="margin-top: 45px;">
+            <div class="whatIs">
+                <h1>Programmer Tutorial <small>Part 2: What about a new platform ?!</small></h1>
+                <p>The ShaderComp API is created to allow shaders programmer to create their shaders independently of the platform the shader will be executed on. That's why, when computing a project, you need to specify the printer to use. In this part of the tutorial, you will see how to create new printers, wich is the second way to exend the features of the library.</p>
+            </div>
+            <div class="column-group gutters">
+                <div class="large-25 medium-33 small-100">
+
+                    <nav class="ink-navigation sticky" data-offset-top="70px" data-offset-bottom="350px" id="nav_menu">
+                        <ul class="menu vertical rounded black">
+                            <li><a class="scrollableLink" href="#topbar"><span class="icon-chevron-up"></span> Back to Top</a></li>
+                            <li class="active"><a class="scrollableLink" href="#nav-overview">Overview</a></li>
+                            <li><a class="scrollableLink" href="#nav-prototypes">Prototypes</a></li>
+                            <li><a class="scrollableLink" href="#nav-implementation">Implementation</a></li>
+                            <li><a class="scrollableLink" href="#nav-more-work">Some more work...</a></li>
+                            <li><a class="scrollableLink" href="#nav-recap">Recap</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="large-75 medium-66 small-100">
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Project Overview</h2>
+                        <p>The goal of this part of the tutorial is to teach you enough of the generation process so that you can extend the features of the API to other platforms. We would like that ShaderComp has the ability to generate optimized code on android specific devices, xbox, or any other device supporting shader programs.</p>
+                        <p>To teach you that, we will take a deeper look at the GLSLPrinter, explain the use of each of the functions declared here, and the datas available to manage.</p>
+                    </section>
+                    <section id="nav-prototypes" data-target="#nav_menu" data-spy="true">
+                        <h2>Prototype</h2>
+                        <p>The code of this class can be found in <code>shaderComp/printers/GLSLPrinter.py</code>. For the readability, it will not be copied here in integrality, but you are advised to have it opened so that you can read it in the same time you read the tutorial.</p>
+                        <h3>The GLSLPrinter class</h3>
+                        <p>Let's start with the prototype of this class:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            class Printers(Printer):
+
+                            def __init__(self, projName, vertexNodeList, pixelNodeList):
+                                Printer.__init__(self, projName, vertexNodeList, pixelNodeList)
+                                self.name = 'GLSLPrinter'
+
+                                self.language_types = {
+                                    'float':    'float',
+                                    'vec3':     'vec3',
+                                    'vec4':     'vec4'
+                                }
+
+                            def compute(self, project) :
+
+                        </pre>
+                        <p>Yes, there is no more than that but theses two functions may be quite hard to implement. First, let's explain theses lines in details.</p>
+                        <p>First, the definition of the GLSLPrinter class: it's inherited from <span class="ink-label success invert">Printer</span> which will be the parent class of all other printers. </p>
+                        <p>Then, the constructor function. It takes as parameters the name of the project we are generating <code>projName</code>, the list of nodes contained in the <span class="ink-label success invert">VertexBox</span> of the project <code>vertexNodeList</code> and the list of nodes contained in the <span class="ink-label success invert">PixelBox</span> of the project <code>pixelNodeList</code>. This constructor needs to:</p>
+                        <ul>
+                            <li><code>l. 4</code> Call the constructor of the parent class</li>
+                            <li><code>l. 5</code> Fill in the <code>name</code> field with the name of the printer</li>
+                            <li><code>l. 7-11</code> Fill in the <code>language_types</code> dictionary field with values corresponding to the language the Printer is developped for. The key of the dictionary is the type name in GLSL (wich is the reference we are using for the library), and the value is the type name in the language the Printer is developped for. In the exemple, as the GLSLPrinter is developped for GLSL, both have the same value in each line.</li>
+                        </ul>
+                        <p>At the end comes the main function: <code>compute</code>. This is where all the code should be written in the output shader source file. We will explain later how this function work</p>4
+                        <div class="ink-alert block info">
+                            <h4>The render function</h4>
+                            <p>You may have notice that another function looks quite the same as the compute function in the GLSLPrinter.py file. The render function is used for the preview. As the preview renderer is using GLSL source code, the GLSLPrinter is used for the rendering. You should not need to implement a render function in your printer</p>
+                            <p>All the other functions are some intermediate function that are not relevent in the Prototype.</p>
+                        </div>
+                        <p>To well understand what can be done in the <code>compute</code> function, let's open the hood of the core and see how the <span class="ink-label success invert">Printer</span> class, parent of the <span class="ink-label success invert">GLSLPrinter</span> and all other printers is working.</p>
+                        <h3>The Printer class</h3>
+                        <p>The code of this class can be found in <code>shaderComp/core/Printer.py</code>. For the readability again, it will not be copied here in integrality, but you are advised to have it opened so that you can read it in the same time you read the tutorial. Here is the relevant part of the prototype of this class:</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                            class Printer:
+
+                                def __init__(self, projName, vertexNodeList, pixelNodeList):
+
+                                def compute(self, project) :
+
+                                def getRandomName(self, seed) :
+
+                                def applyVarNameSelection(self, project) :
+                                def addDeclaration(self, shaderType, declaration, name) :
+
+                                def removeAllVarName(self, project) :
+
+                        </pre>
+                        <p>First, the constructor is the one that needs to be called in every child. It bind the <code>vertexNodeList</code> and the <code>pixelNodeList</code> to a field of the object. It will also initialize some many things that will make your life easier.</p>
+                        <p>The <code>compute</code> function is not implemented in the <span class="ink-label success invert">Printer</span> class: that's your job to do it in the platform-specialized printer.</p>
+                        <p>You already know the <code>getRandomName</code> function: it is the one we used to avoid conflict between pseudo-local variables in the fog generator. This is where it is implemented (note that is pretty simple)</p>
+                        <p>The function <code>applyVarNameSelection</code> is called <span class="ink-label info invert">before</span> the compute function when computing the project. Its purpose is to create the generated names takin into account the links between them. It use the <code>addDeclaration</code> function to fill in a list of variables declarations needed at the beginning of the generated code. Note that this is where the dictionary <code>language_types</code> is used for the language types name correspondence.</p>
+                        <p>At the end of the generation process, the <code>removeAllVarName</code> function is called to erase what were computed during the <code>applyVarNameSelection</code> process.</p>
+                    </section>
+                    <section id="nav-implementation" data-target="#nav_menu" data-spy="true">
+                        <h2>GLSLPrinter implementation</h2>
+                        <p>In this part, we are trying to explain the way the GLSLPrinter is implementing its compute function.</p>
+                        <p>From the <span class="ink-label success inter">Printer</span> class, we get an access to the <code>self.vertexNodeList</code> and the <code>self.pixelNodeList</code>, wich is a list of node that will be to printed. we also have an access to the <code>self.vertexDeclaration</code> and the <code>self.pixelDeclaration</code> dictionary, holding all the declarations of the generated variables that will be used in the shader generator.</p>
+                        <p>With theses informations, we are going to visit every node of the graph and call the generator's compute function corresponding to the node we are visiting. We need to be careful when visiting a node: int can be a shader node as well as a box ! If so, we recursively call the compute function on the list of nodes of the box.</p>
+                        <pre class="brush: python; toolbar: false; first-line: 1">
+                        def applyCompute(self, nodeList) :
+                            for node in nodeList :
+                                # if project
+                                if node.getType() == 0 :
+                                    self.applyCompute(node.getNodeList())
+                                #if shader
+                                else:
+                                    # if vextex shader
+                                    if node.getShaderType() == 0 :
+                                        if self.vertexShaderBuffer == '' :
+                                            self.vertexShaderBuffer = self.writeHead(self.vertexShaderBuffer)
+                                        try:
+                                            name = node.__class__.__name__ + self.name
+                                            # importation dynamique des printers
+                                            mod = imp.load_source(name, 'shaderComp/printers/' + node.__class__.__module__.replace('shaderComp.shaders.', '').replace('.', '/')  + '/' + name + '.py')
+                                            obj = mod.Gen(node.getParams())
+                                            tmp = obj.compute(self)
+                                            self.vertexShaderBuffer = self.vertexShaderBuffer + tmp + '\n'
+                                        except IOError:
+                                            print "fichier manquant: " + name
+
+                                    # if fragment shader
+                                    else :
+                                        if self.fragmentShaderBuffer == '' :
+                                            self.fragmentShaderBuffer = self.writeHead(self.fragmentShaderBuffer)
+                                        try:
+                                            name = node.__class__.__name__ + self.name
+                                            # importation dynamique des printers
+                                            mod = imp.load_source(name, 'shaderComp/printers/' + node.__class__.__module__.replace('shaderComp.shaders.', '').replace('.', '/') + '/' + name + '.py')
+                                            obj = mod.Gen(node.getParams())
+                                            tmp = obj.compute(self)
+                                            self.fragmentShaderBuffer = self.fragmentShaderBuffer + tmp + '\n'
+                                        except IOError:
+                                            print "fichier manquant: " + name
+                        </pre>
+                    </section>
+                    <section id="nav-implementation" data-target="#nav_menu" data-spy="true">
+                        <h2>Some more work...</h2>
+                    </section>
+                    <section id="nav-overview" data-target="#nav_menu" data-spy="true">
+                        <h2>Recap</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</html>

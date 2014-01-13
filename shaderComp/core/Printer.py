@@ -24,6 +24,8 @@ class Printer:
 		self.vertexDeclaration = {}
 		self.fragmentDeclaration = {}
 
+		self.language_types = {}
+
 	def compute(self, project) :
 		pass
 
@@ -67,16 +69,16 @@ class Printer:
 
 				if link.nodeFrom.getType() == 0 : # le lien vient d'une entree de la box
 					if link.varFrom.varType == VarType.UNI : # si uniform
-						self.addDeclaration(0, ('uniform', link.varFrom.type), link.varFrom.val)
+						self.addDeclaration(0, ('uniform', self.language_types[link.varFrom.type]), link.varFrom.val)
 					else : # non
-						self.addDeclaration(0, ('varying', link.varFrom.type), link.varFrom.val)
+						self.addDeclaration(0, ('varying', self.language_types[link.varFrom.type]), link.varFrom.val)
 				elif link.nodeTo.getType() == 0 : # le lien va vers une sortie de la box
 					if link.varTo.varType == VarType.UNI : # si uniform
-						self.addDeclaration(0, ('uniform', link.varTo.type), link.varTo.val)
+						self.addDeclaration(0, ('uniform', self.language_types[link.varTo.type]), link.varTo.val)
 					else : #non
-						self.addDeclaration(0, ('varying', link.varTo.type), link.varTo.val)
+						self.addDeclaration(0, ('varying', self.language_types[link.varTo.type]), link.varTo.val)
 				else :
-					self.addDeclaration(0, (None , link.varTo.type), link.varTo.val)
+					self.addDeclaration(0, (None , self.language_types[link.varTo.type]), link.varTo.val)
 
 
 		for link in pixelLinks :
@@ -112,16 +114,16 @@ class Printer:
 
 				if link.nodeFrom.getType() == 0 :
 					if link.varFrom.varType == VarType.UNI : # si uniform :
-						self.addDeclaration(1, ('uniform', link.varFrom.type), link.varFrom.val)
+						self.addDeclaration(1, ('uniform', self.language_types[link.varFrom.type]), link.varFrom.val)
 					else :
-						self.addDeclaration(1, ('varying', link.varFrom.type), link.varFrom.val)
+						self.addDeclaration(1, ('varying', self.language_types[link.varFrom.type]), link.varFrom.val)
 				elif link.nodeTo.getType() == 0 :
 					if link.varTo.varType == VarType.UNI : # si uniform :
-						self.addDeclaration(1, ('uniform', link.varTo.type), link.varTo.val)
+						self.addDeclaration(1, ('uniform', self.language_types[link.varTo.type]), link.varTo.val)
 					else :
-						self.addDeclaration(1, ('varying', link.varTo.type), link.varTo.val)
+						self.addDeclaration(1, ('varying', self.language_types[link.varTo.type]), link.varTo.val)
 				else :
-					self.addDeclaration(1, (None , link.varTo.type), link.varTo.val)
+					self.addDeclaration(1, (None , self.language_types[link.varTo.type]), link.varTo.val)
 
 	def removeAllVarName(self, project) :
 		vertexLinks = project.getLinkList('vertex')

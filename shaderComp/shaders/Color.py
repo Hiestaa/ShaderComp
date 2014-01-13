@@ -1,4 +1,5 @@
 from ..core.Shader import *
+from ..core.ShaderType import *
 
 ##
 # @authors Romain GUYOT de la HARDROUYERE
@@ -28,7 +29,7 @@ class Color(Shader):
 	## @fn __init__(self)
 	# @brief Initialize this shader
 	def __init__(self):
-		Shader.__init__(self, 1)
+		Shader.__init__(self, ShaderType.PIXEL_SHADER)
 		self.name = 'Color'
 		self.inVars["r"] = Var("r", self, VarType.IN,'float')
 		self.inVars["g"] = Var("g", self, VarType.IN,'float')

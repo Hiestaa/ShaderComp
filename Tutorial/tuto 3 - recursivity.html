@@ -118,10 +118,10 @@
                         <a href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu">
                             <li>
-                                <a href="#">Tuto 1: Create your own shader!</a>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
                             </li>
                             <li>
-                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
                             </li>
                         </ul>
                     </li>
@@ -158,10 +158,10 @@
                         <a class="toggle" data-target="#tutoprog" href="#">Programmer tutorials&nbsp;<i class="icon-caret-down"></i></a>
                         <ul class="submenu hide" id="tutoprog">
                             <li>
-                                <a href="#">Tuto 1: Create your own shader!</a>
+                                <a href="tuto 1 - create your own shader.html">Tuto 1: Create your own shader!</a>
                             </li>
                             <li>
-                                <a href="#">Tuto 2: What about a new plateform ?</a>
+                                <a href="tuto 2 - platform.html">Tuto 2: What about a new platform ?</a>
                             </li>
                         </ul>
                     </li>
@@ -380,7 +380,7 @@
                         <h2>Recap</h2>
                         <p>This part of the tutorial is reaching its end. To remind you everything in one block, here is the complete code of the third part of the user tutorial. The first block corresponds to the way were you put everything in one block, the two next block are an exemple of using the export/import function when organizing your project into multiple files.</p>
                         <p>Make sure to really well understand every line of the following codes:</p>
-                        <p>All in one file (tutorial_3.py)</p>
+                        <h4>All in one file (tutorial_3.py)</h4>
                         <pre class="brush: python; toolbar: false; first-line: 0">
                                                     from shaderComp.core import *
                             from shaderComp.shaders import *
@@ -534,7 +534,7 @@
                             myProj.compute('GLSLPrinter')
                             myProj.render()
                         </pre>
-                        <p>Two distinct files: fog_gen.py</p>
+                        <h4>Two distinct files: fog_gen.py</h4>
                         <pre class="brush: python; toolbar: false; first-line: 0">
                             from shaderComp.core import *
                             from shaderComp.shaders import *
@@ -611,7 +611,7 @@
                             myFogProject.saveBox('fog', 'pixel')
 
                         </pre>
-                        <p>fog_load.py</p>
+                        <h4>fog_load.py</h4>
                         <pre class="brush: python; toolbar: false; first-line: 0">
                             from shaderComp.core import *
                             from shaderComp.shaders import *

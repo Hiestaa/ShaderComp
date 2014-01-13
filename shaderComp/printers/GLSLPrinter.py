@@ -21,6 +21,12 @@ class Printers(Printer):
 		Printer.__init__(self, projName, vertexNodeList, pixelNodeList)
 		self.name = 'GLSLPrinter'
 
+		self.language_types = {
+			'float':	'float',
+			'vec3':		'vec3',
+			'vec4':		'vec4'
+		}
+
 
 	def compute(self, project) :
 		print 'GLSL Printer Compute: ', self.projName
@@ -85,26 +91,6 @@ class Printers(Printer):
 				self.fragmentShaderBuffer = declaration[1] + ' '  + name + ';' + '\n' + self.fragmentShaderBuffer
 			else :
 				self.fragmentShaderBuffer = declaration[0] + ' '  + declaration[1] + ' '  + name + ';' + '\n' + self.fragmentShaderBuffer
-
-	# def addDeclaration(self, shaderType, declaration) :
-		# name = ' dec' + str(self.nbDec) + '_' + str(int(time.time()))
-		# self.nbDec += 1
-		# if shaderType == 0 :
-			# if self.vertexDeclaration.count(name) == 0 :
-				# self.vertexShaderBuffer = declaration + name + ';' + '\n' + self.vertexShaderBuffer
-				# self.vertexDeclaration.append(name)
-		# elif shaderType == 1 :
-			# if self.fragmentDeclaration.count(name) == 0 :
-				# self.fragmentShaderBuffer = declaration + name + ';' + '\n' + self.fragmentShaderBuffer
-				# self.fragmentDeclaration.append(name)
-		# return name
-
-	# def addDeclaration(self, shaderType, declaration, name) :
-		# if shaderType == 0 :
-			# self.vertexShaderBuffer = declaration + ' ' + name + ';' + '\n' + self.vertexShaderBuffer
-		# elif shaderType == 1 :
-			# self.fragmentShaderBuffer = declaration + ' ' + name + ';' + '\n' + self.fragmentShaderBuffer
-		# return name
 
 	def finishCompute(self) :
 		if not os.path.exists(self.projName):
