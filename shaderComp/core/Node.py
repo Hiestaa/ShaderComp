@@ -41,9 +41,17 @@ class Node:
 	def setLinkList(self, value) :
 		self.linkList = value
 	
+	## @fn getInVar(name)
+	# @brief Retrieve an input variable of the node using its name
+	# @param name A string giving the name of the variable
+	# @return A reference on the corresponding variable
 	def getInVar(self, name) :
 		return self.inVars[name]
 		
+	## @fn getOutVar(name)
+	# @brief Retrieve an output variable of the node using its name
+	# @param name A string giving the name of the variable
+	# @return A reference on the corresponding variable
 	def getOutVar(self, name) :
 		return self.outVars[name]
 	
