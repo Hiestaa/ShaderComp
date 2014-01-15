@@ -17,7 +17,7 @@ import imp
 class Project():
 	## @fn __init__(name)
 	# @brief Instanciate an new project
-	# @param name Gve a name to this project
+	# @param name Give a name to this project
 	def __init__(self, name) :
 		self.name = name
 		self.linkManager = LinkManager(self)
@@ -34,7 +34,7 @@ class Project():
 
 	## @fn getPixelBox()
 	# @brief Give an access to the PixelBox specific features
-	# @details The PixelBox is the box wich stores the nodes of type _vertex shader_.
+	# @details The PixelBox is the box wich stores the nodes of type _pixel shader_.
 	# @return The PixelBox used in this project
 	# @see class shaderComp.core.Box, class shaderComp.core.PixelBox
 	def getPixelBox(self) :
@@ -56,7 +56,7 @@ class Project():
 		elif box == 'Pixel' or box == 'pixel' :
 			return self.pixelBox
 		else :
-			print 'Error: Box No Exist'
+			print 'Error: Box does not Exist'
 
 	## @fn getLinkList(box)
 	# @brief Give an access to the list of links of the specified box
@@ -145,7 +145,7 @@ class Project():
 	## @fn addVertexInVar(name, type)
 	# @brief Create a new input variable for the vertex box
 	# @details Adding an input variable to a box allows to link this variable to the input variable of one of the node that the box contains
-	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
+	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoiding conflict between nodes.
 	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same input variable name.
 	# There can even not be any conflict between the input variable names and the output variable names of the same node.
@@ -158,10 +158,10 @@ class Project():
 	## @fn addVertexOutVar(name, type)
 	# @brief Create a new output variable for the vertex box
 	# @details Adding an output variable to a box allows to link this variable to the output variable of one of the node that the box contains
-	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
+	# The links between nodes will then be used for the generation of random unique variable names in the shader, avoiding conflict between nodes.
 	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same output variable name.
-	# There can even not be any conflict between the output variable names and the output variable names of the same node.
+	# There can even not be any conflict between the output variable names and the input variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
 	# @return A reference on the created variable.
 	# @see shaderComp.core.Var
@@ -181,12 +181,12 @@ class Project():
 		return self.vertexBox.addUniform(name, value, type)
 
 	## @fn addPixelInVar(name, type)
-	# @brief Create a new output variable for the pixel box
-	# @details Adding an output variable to a box allows to link this variable to the output variable of one of the node that the box contains
-	# The links between nodes will then be used for the generation of random unique variables names in the shader, avoind conflict between nodes.
+	# @brief Create a new input variable for the pixel box
+	# @details Adding an input variable to a box allows to link this variable to the input variable of one of the node that the box contains
+	# The links between nodes will then be used for the generation of random unique variable names in the shader, avoiding conflict between nodes.
 	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
-	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same output variable name.
-	# There can even not be any conflict between the output variable names and the output variable names of the same node.
+	# Note that the namepaces are local to a node, so there cannot be any conflict between two node with the same input variable name.
+	# There can even not be any conflict between the input variable names and the input variable names of the same node.
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
 	# @return A reference on the created variable.
 	# @see shaderComp.core.Var
@@ -227,7 +227,6 @@ class Project():
 
 	## @fn getVertexOutVar(name)
 	# @brief Retrieve an output variable of the vertex box using its name
-	# @details nothing
 	# @param name A string giving the name of the variable
 	# @return A reference on the corresponding variable
 	def getVertexOutVar(self, name) :
