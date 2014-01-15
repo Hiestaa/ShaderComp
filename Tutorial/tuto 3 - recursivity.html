@@ -349,7 +349,7 @@
                     </section>
                     <section id="nav-export" data-target="#nav_menu" data-spy="true">
                         <h2>Exporting</h2>
-                        <h3>Export to use</h3>
+                        <!-- <h3>Export to use</h3> -->
                         <p>As you may think when reading the previous section, when using recusivity, it could be very tedious to write the script of all your project in the same file. Thanks to the recursivity allowing encapsulation, this is very easy to organize your project in nodes and subnodes.</p>
                         <p>Let's take our previous exemple, when mixing <span class="ink-label info invert">fog</span> and <span class="ink-label success invert">Celshading</span>. You can easily imagine subcontract the work of creating the fog shader to another person. What this person could do is giving you a script that, instead of rendering a beautiful fog that you will need to edit to be able to reuse, could serialize the fog pixel box in a single binary file. Then, you could load this box as a node and add it to your project !</p>
                         <p>The API allows you to do that on this way. First, your subcontract should use this function at the end of his script:</p>
@@ -363,12 +363,12 @@
                             myProj.appendNode(myFog) # add the fog to the project
                         </pre>
                         <p>As you can see, when the fog is imported as a node, it ca be used exactly the same as if it was a builtin shader ! Isn't it powerful ?</p>
-                        <h3>Human readable export</h3>
+                       <!--  <h3>Human readable export</h3>
                         <p>There is another way of exporting a whole project: The JSONPrinter. Usually, printers are used to compute shader language source code. But the ShaderComp API implements a printer that will create a <code>.json</code> file containing the internal architecture of the Project object, the boxes it contains, the interface of theses boxes, the nodes added to theses boxes and the links between all the variables of the project. All of this can be done using one single line of code written below:</p>
                         <pre class="brush: python; toolbar: false; first-line: 0">
                             myProj.compute('JSONPrinter')
                         </pre>
-                        <p>A file named <code>&lt;projname&gt;.json</code> will be created in the folder named <code>&lt;projname&gt;</code>. This is the same folder of the one where the shader source code would be generated when using another printer.</p>
+                        <p>A file named <code>&lt;projname&gt;.json</code> will be created in the folder named <code>&lt;projname&gt;</code>. This is the same folder of the one where the shader source code would be generated when using another printer.</p> -->
                     </section>
                     <section id="nav-recap" data-target="#nav_menu" data-spy="true">
                         <h2>Recap</h2>
@@ -521,9 +521,6 @@
 
                             # creating a link between the vertex box and the pixel box
                             myProj.addLink(vertexOutNormalVar, pixelInNormalVar)
-
-
-                            myProj.compute('JSONPrinter') # export to the human readable format
 
                             myProj.compute('GLSLPrinter')
                             myProj.render()
