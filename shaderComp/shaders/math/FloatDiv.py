@@ -3,6 +3,22 @@ from ...core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.shaders.math.FloatDiv
+# @brief This shader can be used to divide an input ba another
+# @version 0.1
+# @date 2013-11-08
+# @shadertype Fragment Shader
+# @details __Input variables:__
+# - `dividend: float` is the first input, that will be divided
+# - `divider: float` is the second input, that will divide dividend
+# @details __Output variables:__
+# - `result: float` is the result of the division
+
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class FloatDiv
 # @brief This shader can be used to divide an input ba another
 # @version 0.1

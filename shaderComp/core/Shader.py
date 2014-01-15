@@ -4,10 +4,21 @@ from Node import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.core.Shader
+# @brief Subclass of Node
+# @version 1.0
+# @date 2014-01-13
+# @details All shader plugins have to inherit from this class
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class Shader
 # @brief Subclass of Node
-# @version 0.1
+# @version 1.0
 # @date 2014-01-13
+# @details All shader plugins have to inherit from this class
 class Shader(Node):
 
 	## @fn __init__(name, shaderType)

@@ -1,5 +1,40 @@
 from Var import *
 
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @package shaderComp.core.Pipeline
+# @brief This class represent the graphics pipeline and holds all te corresponding variables
+# @version 1.0
+# @date 2014-01-13
+# @details Here is the list of pipeline variables available:
+# 		- 'Vertex': 	equivalent to gl_Vertex in glsl
+#		- 'Normal': 	equivalent to gl_Normal in glsl
+#		- 'Position': 	equivalent to gl_Position in glsl
+#		- 'Color': 		equivalent to gl_Color in glsl
+#		- 'FragColor': 	equivalent to gl_FragColor in glsl
+#		- 'FragCoord': 	equivalent to gl_FragCoord in glsl
+#		- 'FogColor':	equivalent to gl_Fog.color in glsl
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class Pipeline
+# @brief This class represent the graphics pipeline and holds all te corresponding variables
+# @version 1.0
+# @date 2014-01-13
+# @details Here is the list of pipeline variables available:
+# 		- 'Vertex': 	equivalent to gl_Vertex in glsl
+#		- 'Normal': 	equivalent to gl_Normal in glsl
+#		- 'Position': 	equivalent to gl_Position in glsl
+#		- 'Color': 		equivalent to gl_Color in glsl
+#		- 'FragColor': 	equivalent to gl_FragColor in glsl
+#		- 'FragCoord': 	equivalent to gl_FragCoord in glsl
+#		- 'FogColor':	equivalent to gl_Fog.color in glsl
+
+
 class Pipeline :
 	@staticmethod
 	def getPipelineVars(node) :

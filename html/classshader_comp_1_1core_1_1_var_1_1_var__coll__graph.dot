@@ -1,0 +1,6 @@
+digraph "shaderComp.core.Var.Var"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.Var.Var\n|+ val\l+ type\l+ varType\l+ node\l+ name\l|+ __init__()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+}

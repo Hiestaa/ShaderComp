@@ -5,10 +5,10 @@ from ..core import ShaderType
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
-# @class Color
+# @package shaderComp.shaders.Color
 # @brief This shader can be used to create a new color
-# @version 0.1
-# @date 2013-11-07
+# @version 1.0
+# @date 2014-01-07
 # @shadertype Fragment Shader
 # @details __Input variables:__
 # - `r: float` is the r component of the mixing color
@@ -16,13 +16,35 @@ from ..core import ShaderType
 # - `b: float` is the b component of the mixing color
 # - `a: float` is the a component of the mixing color
 # @details __Output variables:__
-# - `normal: vec4` is the resulting color
+# - `color: vec4` is the resulting color
 # @example first_project_example.py
 # @example shader_link_example.py
 # Here is an example of how to link two shaders in a project.
 # @see first_project_example.py
 # @see shader_link_example.py
-# @todo take a vec4 as input instead of 4 float
+
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class Color
+# @brief This shader can be used to create a new color
+# @version 1.0
+# @date 2014-01-07
+# @shadertype Fragment Shader
+# @details __Input variables:__
+# - `r: float` is the r component of the mixing color
+# - `g: float` is the g component of the mixing color
+# - `b: float` is the b component of the mixing color
+# - `a: float` is the a component of the mixing color
+# @details __Output variables:__
+# - `color: vec4` is the resulting color
+# @example first_project_example.py
+# @example shader_link_example.py
+# Here is an example of how to link two shaders in a project.
+# @see first_project_example.py
+# @see shader_link_example.py
 
 class Color(Shader):
 

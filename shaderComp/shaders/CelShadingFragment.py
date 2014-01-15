@@ -3,15 +3,32 @@ from ..core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
-# @class CelShadingFragment
+# @package shaderComp.shaders.CelShadingFragment
 # @brief This shader is the fragment part of the celshading
-# @version 0.1
-# @date 2013-11-07
+# @version 1.0
+# @date 2014-01-07
 # @shadertype Fragment Shader
 # @details __Input variables:__
 # - `normal: vec3` is the interpolated normal of the surface displayed by the current pixel
 # - `color: vec4` is the color of the pixel that will be modified
-# @details __Output variables:__ 
+# @details __Output variables:__
+# - `color: vec4` is the resulting color of the pixel after the cel shading is processed
+# @example first_project_example.py
+# @see first_project_example.py
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class CelShadingFragment
+# @brief This shader is the fragment part of the celshading
+# @version 1.0
+# @date 2014-01-07
+# @shadertype Fragment Shader
+# @details __Input variables:__
+# - `normal: vec3` is the interpolated normal of the surface displayed by the current pixel
+# - `color: vec4` is the color of the pixel that will be modified
+# @details __Output variables:__
 # - `color: vec4` is the resulting color of the pixel after the cel shading is processed
 # @example first_project_example.py
 # @see first_project_example.py

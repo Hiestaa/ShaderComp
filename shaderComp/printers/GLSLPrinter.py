@@ -2,7 +2,9 @@
 # \authors Romain GUYOT de la HARDROUYERE
 # \authors Matthieu BOURNAT
 # \authors Antoine CHESNEAU
-# \package shaderComp.printers
+# \package shaderComp.printers.GLSLPrinter
+# \brief The GLSLPrinter is use to compute the GLSL Code of a project
+# \class shaderComp.printers.GLSLPrinter.Printers
 # \brief The GLSLPrinter is use to compute the GLSL Code of a project
 # \version 0.1
 # \date 2013-01-10

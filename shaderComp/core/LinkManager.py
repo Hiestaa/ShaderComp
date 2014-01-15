@@ -6,9 +6,19 @@ from Var import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.core.LinkManager
+# @brief This class handles the links of a project
+# @version 1.0
+# @date 2014-01-13
+# @details Class used to manage the links between nodes in a project
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class LinkManager
 # @brief This class handles the links of a project
-# @version 0.1
+# @version 1.0
 # @date 2014-01-13
 # @details Class used to manage the links between nodes in a project
 class LinkManager :

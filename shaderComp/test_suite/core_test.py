@@ -2,10 +2,10 @@
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
-# @module core_test
-# @brief This module provides interface with all the units testings of the test suite
-# @version 0.1
-# @date 2013-01-07
+# @package shaderComp.test_suite.core_test
+# @brief This package provides interface with all the unit tests of the test suite
+# @version 1.0
+# @date 2014-01-07
 # @details to run the test suite from the command line, change current directory to the parent of shaderComp folder and type:
 # python -m shaderComp.test_suite.core_test [--help: list of available options]
 

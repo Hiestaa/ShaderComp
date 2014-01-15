@@ -1,20 +1,35 @@
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @package shaderComp.core.Render
+# @brief This package provides rendered overview of the generated shader
+# @version 1.0
+# @date 2014-01-07
+
+
 from ctypes import *
 import sys
- 
+
 import pygame
 from pygame.locals import *
- 
+
 import OpenGL.GL as gl
- 
+
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 from OpenGL.GL.shaders import *
- 
+
+
+
+
+
 glCompileShader = gl.glCompileShader
 glUseProgram = gl.glUseProgram
 
- 
+
 GL_FRAGMENT_SHADER = 0x8B30
 GL_VERTEX_SHADER = 0x8B31
 
@@ -42,9 +57,9 @@ def mod_var2(val):
 			glUniform1f(var2, var2Value)
 			print "var2=", var2Value
 
-# The function called whenever a key is pressed. Note the use of Python tuples to pass in: (key, x, y)  
+# The function called whenever a key is pressed. Note the use of Python tuples to pass in: (key, x, y)
 def keyPressed(*args):
- 
+
 	# If escape is pressed, kill everything.
 	if args[0] == '\x1b':
 		sys.exit()
@@ -64,18 +79,18 @@ def keyPressed(*args):
 
 def compile_shader(source, shader_type):
 	shader = glCompileShader(source, shader_type)
-	
+
 	return shader
- 
+
 def compile_program(vertex_source, fragment_source):
 	vertex_shader = None
 	fragment_shader = None
 
 	program = compileProgram(
-		compileShader(vertex_source,GL_VERTEX_SHADER), 
+		compileShader(vertex_source,GL_VERTEX_SHADER),
 		compileShader(fragment_source,GL_FRAGMENT_SHADER))
 	return program
- 
+
 def load_shader(filename):
 	f = open(filename, 'r')
 	return f.read()
@@ -87,7 +102,7 @@ def main(progs):
 	width, height = 1024, 768
 	pygame.init()
 	pygame.display.set_mode((width, height), OPENGL | DOUBLEBUF)
- 
+
 	program = compile_program(progs[0], progs[1])
 	glUseProgram(program)
 	glMatrixMode(GL_PROJECTION)
@@ -95,9 +110,9 @@ def main(progs):
 	gluPerspective(90.0, width/float(height), 1.0, 1000.0)
 	glMatrixMode(GL_MODELVIEW)
 	glEnable(GL_DEPTH_TEST)
-	# Register the function called when the keyboard is pressed.  
+	# Register the function called when the keyboard is pressed.
 	#glutKeyboardFunc(keyPressed)
-	
+
 	quit = False
 	angle = 0
 
@@ -128,10 +143,9 @@ def main(progs):
 class Render :
 	def __init__(self):
 		pass
-		
+
 	def execute(self, progs) :
 		print "Hit ESC key to quit."
 		print "x - increase Rotate"
 		print "c - decrease Rotate"
 		main(progs)
-		

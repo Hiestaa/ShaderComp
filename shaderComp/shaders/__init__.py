@@ -16,5 +16,4 @@
 # \see first_project_example.py
 # \see shader_link_example.py
 # \example shader_link_example.py
-# \example shader_link_example.py
 __all__ = ["CelShadingFragment", "CelShadingVertex", "ChangeColor", "Color", "DefaultVertexShader","Fog", "VertexTestShader", "FragmenTestShader"]

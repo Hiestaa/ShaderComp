@@ -7,9 +7,20 @@ import imp
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.core.Project
+# @brief This class is the main entry point of the library
+# @version 0.0
+# @date 2013-11-07
+# @details Instanciation of a Project object will give an access to
+# all the core features of the library, like adding nodes and variables and creating links between the variables
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class Project
 # @brief This class is the main entry point of the library
-# @version 0.1
+# @version 1.0
 # @date 2013-11-07
 # @details Instanciation of a Project object will give an access to
 # all the core features of the library, like adding nodes and variables and creating links between the variables

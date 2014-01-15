@@ -19,12 +19,28 @@ class VarType :
 	PIPE = 4
 	VALUED = 5
 
-	
+
 ##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @package shaderComp.core.Var
+# @brief This class represent a variable
+# @version 1.0
+# @date 2014-01-13
+# @details It can be a Uniform, a Varying as well as an input or output variable, depending on the specified type
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class Var
-# @brief This class represents a variable
+# @brief This class represent a variable
+# @version 1.0
+# @date 2014-01-13
+# @details It can be a Uniform, a Varying as well as an input or output variable, depending on the specified type
 class Var :
-	
+
 	## @fn __init__(name, node, varType, type, val)
 	# @brief Instanciate an new Var
 	# @param name Give a name to this variable.
@@ -43,4 +59,3 @@ class Var :
 		self.varType = varType
 		self.node = node
 		self.name = name
-		

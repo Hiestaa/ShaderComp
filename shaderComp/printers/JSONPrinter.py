@@ -2,8 +2,11 @@
 # \authors Romain GUYOT de la HARDROUYERE
 # \authors Matthieu BOURNAT
 # \authors Antoine CHESNEAU
-# \package shaderComp.printers
+# \package shaderComp.printers.JSONPrinter
 # \brief The JSONPrinter is use to export or import a project from a JSON file
+# \class shaderComp.printers.JSONPrinter.Printers
+# \brief The JSONPrinter is use to export or import a project from a JSON file
+# \todo The compute links still needs to be implemented
 # \version 0.1
 # \date 2013-01-10
 

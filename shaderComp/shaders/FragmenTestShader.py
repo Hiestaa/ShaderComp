@@ -4,6 +4,16 @@ from ..core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.shaders.FragmenTestShader
+# @brief This shader is a test of opacity
+# @version 0.1
+# @date 2013-11-07
+# @shadertype Fragment Shader
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class FragmenTestShader
 # @brief This shader is a test of opacity
 # @version 0.1

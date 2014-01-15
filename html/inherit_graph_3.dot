@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shaderComp.core.Pipeline.\lPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_pipeline_1_1_pipeline.html",tooltip="This class represent the graphics pipeline and holds all te corresponding variables. "];
+}

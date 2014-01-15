@@ -1,0 +1,6 @@
+digraph "shaderComp.core.LinkManager.LinkManager"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{shaderComp.core.LinkManager.\lLinkManager\n|+ project\l|+ __init__()\l+ addLink()\l+ addLinkNode()\l+ addValuedLink()\l+ addValuedLinkNode()\l+ addValuedLinkByName()\l+ deleteLink()\l+ deleteLink()\l+ deleteValuedLink()\l+ deleteAllLinkBetwinBox()\l+ popOneBoxLinkBetwinBox()\l+ addLinkListOnBox()\l+ containLinkTo()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+}

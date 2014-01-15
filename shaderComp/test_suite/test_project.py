@@ -2,10 +2,10 @@
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
-# @module test_project
+# @package shaderComp.test_suite.test_project
 # @brief This module provides unit testing of the class Project
-# @version 0.1
-# @date 2013-01-07
+# @version 1.0
+# @date 2014-01-07
 
 import unittest
 
@@ -14,6 +14,14 @@ from ..shaders.math import *
 from ..shaders import *
 from ..core import ShaderType
 
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class TestProjectCreation
+# @brief This class provides unit tests related to the creation of a new empty project
+# @version 1.0
+# @date 2014-01-07
 class TestProjectCreation(unittest.TestCase):
 
     def setUp(self):
@@ -41,6 +49,15 @@ class TestProjectCreation(unittest.TestCase):
         self.assertEqual(self.project.getBox("pixel"), self.project.pixelBox,
             "Getter getBox does not return expected datas")
 
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class TestProjectLinking
+# @brief This class provides unit tests related to the edition of the links inside a project
+# @version 1.0
+# @date 2014-01-07
 class TestProjectLinking(unittest.TestCase):
 
     def setUp(self):
@@ -105,6 +122,14 @@ class TestProjectLinking(unittest.TestCase):
 
 
 
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class TestProjectNodeEdition
+# @brief This class provides unit tests related to the the edition of the node a project is holding
+# @version 1.0
+# @date 2014-01-07
 class TestProjectNodeEdition(unittest.TestCase):
 
     def setUp(self):
@@ -283,6 +308,14 @@ class TestProjectNodeEdition(unittest.TestCase):
         self.assertIsNotNone(self.project.getPixelPipelineVar('FogColor'),
             "The 'FogColor' variable does not exists in the pixel pipeline")
 
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
+# @class TestProjectManagement
+# @brief This class provides unit tests related to the saving/loading of the project and the box of this project
+# @version 1.0
+# @date 2014-01-07
 class TestProjectManagement(unittest.TestCase):
 
     def setUp(self):

@@ -3,6 +3,16 @@ from ..core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.shaders.VertexTestShader
+# @brief This shader is a test of opacity
+# @version 0.1
+# @date 2013-11-07
+# @shadertype Vertex Shader
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class VertexTestShader
 # @brief This shader is a test of opacity
 # @version 0.1

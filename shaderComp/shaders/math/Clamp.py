@@ -3,9 +3,25 @@ from ...core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.shaders.math.Clamp
+# @brief This shader can be used to limit a value with a maximum and a minimum
+# @version 1.0
+# @date 2013-11-08
+# @shadertype Fragment Shader
+# @details __Input variables:__
+# - `value: float` is the input value that will be limited
+# - `min: float` is the minimum the value can take
+# - `max: float` is the maximum the value can take
+# @details __Output variables:__
+# - `result: float` is the result of the operation
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class Clamp
 # @brief This shader can be used to limit a value with a maximum and a minimum
-# @version 0.1
+# @version 1.0
 # @date 2013-11-08
 # @shadertype Fragment Shader
 # @details __Input variables:__

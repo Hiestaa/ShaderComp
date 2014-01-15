@@ -1,0 +1,17 @@
+digraph "shaderComp/printers/math" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a47a5d8024a38fa8c6b3c4779bbadced {
+    graph [ bgcolor="#ddddee", pencolor="black", label="printers" fontname="Helvetica", fontsize="10", URL="dir_a47a5d8024a38fa8c6b3c4779bbadced.html"]
+  subgraph clusterdir_39eb4419e4bca65043109219ed7b6dd1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_39eb4419e4bca65043109219ed7b6dd1.html"];
+    dir_39eb4419e4bca65043109219ed7b6dd1 [shape=plaintext label="math"];
+    dir_0b8f45c0d8d9076c6149cc537896e71b [shape=box label="Clamp" color="black" fillcolor="white" style="filled" URL="dir_0b8f45c0d8d9076c6149cc537896e71b.html"];
+    dir_6004827881ff567026a8a88fbe4f93c7 [shape=box label="DispatchVect4" color="black" fillcolor="white" style="filled" URL="dir_6004827881ff567026a8a88fbe4f93c7.html"];
+    dir_907f2f7c9ee85814fe85f37f92c58064 [shape=box label="FloatDiv" color="black" fillcolor="white" style="filled" URL="dir_907f2f7c9ee85814fe85f37f92c58064.html"];
+    dir_5dad74b3191eb13403f84e2ec7836d44 [shape=box label="Log" color="black" fillcolor="white" style="filled" URL="dir_5dad74b3191eb13403f84e2ec7836d44.html"];
+    dir_d9a6d2fbf4c62c604873191b34d2af95 [shape=box label="Mix" color="black" fillcolor="white" style="filled" URL="dir_d9a6d2fbf4c62c604873191b34d2af95.html"];
+  }
+  }
+}

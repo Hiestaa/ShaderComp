@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shaderComp.core.LinkManager.\lLinkManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html",tooltip="This class handles the links of a project. "];
+}

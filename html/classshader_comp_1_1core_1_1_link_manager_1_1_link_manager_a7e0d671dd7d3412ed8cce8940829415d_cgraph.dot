@@ -1,0 +1,11 @@
+digraph "shaderComp.core.LinkManager.LinkManager.addLink"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shaderComp.core.LinkManager.\lLinkManager.addLink",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shaderComp.core.LinkManager.\lLinkManager.addLinkNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a38202b73a64b39afebc643bcb0f75f11",tooltip="Create a link between two variables. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shaderComp.core.LinkManager.\lLinkManager.containLinkTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ae30652cc9a10edafbad428439b3eb300"];
+}

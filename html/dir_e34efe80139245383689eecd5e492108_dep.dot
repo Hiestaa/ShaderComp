@@ -1,0 +1,13 @@
+digraph "shaderComp/shaders" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8fa961d1968e2121267882b511ca7dd2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="shaderComp" fontname="Helvetica", fontsize="10", URL="dir_8fa961d1968e2121267882b511ca7dd2.html"]
+  subgraph clusterdir_e34efe80139245383689eecd5e492108 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e34efe80139245383689eecd5e492108.html"];
+    dir_e34efe80139245383689eecd5e492108 [shape=plaintext label="shaders"];
+    dir_e8110aece1b98e31035fd7b4308f18f4 [shape=box label="math" color="black" fillcolor="white" style="filled" URL="dir_e8110aece1b98e31035fd7b4308f18f4.html"];
+  }
+  }
+}

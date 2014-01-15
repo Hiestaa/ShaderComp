@@ -3,9 +3,27 @@ from ...core.Shader import *
 # @authors Romain GUYOT de la HARDROUYERE
 # @authors Matthieu BOURNAT
 # @authors Antoine CHESNEAU
+# @package shaderComp.shaders.math.DispatchVect4
+# @brief This shader can be used to get the component of a vector
+# @version 1.0
+# @date 2013-11-08
+# @shadertype Fragment Shader
+# @details __Input variables:__
+# - `myVec4: vec4` is the vector to dispatch
+# @details __Output variables:__
+# - `x: float` is the x component of the vector
+# - `y: float` is the y component of the vector
+# - `z: float` is the z component of the vector
+# - `w: float` is the w component of the vector
+
+
+##
+# @authors Romain GUYOT de la HARDROUYERE
+# @authors Matthieu BOURNAT
+# @authors Antoine CHESNEAU
 # @class DispatchVect4
 # @brief This shader can be used to get the component of a vector
-# @version 0.1
+# @version 1.0
 # @date 2013-11-08
 # @shadertype Fragment Shader
 # @details __Input variables:__
