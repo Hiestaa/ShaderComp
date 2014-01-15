@@ -145,7 +145,7 @@ myProj.addLink(myFog.getOutVar('color'), pixelOutFinalColor)
 myProj.addLink(vertexOutNormalVar, pixelInNormalVar)
 
 
-myProj.compute('JSONPrinter') # export to the human readable format
+# myProj.compute('JSONPrinter') # export to the human readable format
 
 myProj.compute('GLSLPrinter')
 myProj.render()
