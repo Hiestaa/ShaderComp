@@ -1,5 +1,5 @@
 from ..core.Shader import *
-from ..core.ShaderType import *
+from ..core import ShaderType
 
 ##
 # @authors Romain GUYOT de la HARDROUYERE

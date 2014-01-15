@@ -29,7 +29,7 @@ class Printers(Printer):
 
 
 	def compute(self, project) :
-		print 'GLSL Printer Compute: ', self.projName
+		#print 'GLSL Printer Compute: ', self.projName
 		self.applyCompute(self.vertexNodeList + self.pixelNodeList)
 		self.applyDeclaration()
 		self.finishCompute()

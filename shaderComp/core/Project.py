@@ -82,7 +82,7 @@ class Project():
 	def clearBox(self, box) :
 		if box == 'Vertex' or box == 'vertex' :
 			self.vertexBox.clear()
-		elif box == 'Pixel' or box == 'Pixel' :
+		elif box == 'Pixel' or box == 'pixel' :
 			self.pixelBox.clear()
 		elif box == 'All' or box == 'all' :
 			self.vertexBox.clear()
@@ -137,7 +137,7 @@ class Project():
 	def removeNodeAt(self, pos, box) :
 		if box == 'Vertex' or box == 'vertex' :
 			self.vertexBox.removeNodeAt(pos)
-		elif box == 'Pixel' or box == 'Pixel' :
+		elif box == 'Pixel' or box == 'pixel' :
 			self.pixelBox.removeNodeAt(pos)
 		else :
 			print 'Error: Box No Exist'
@@ -173,7 +173,7 @@ class Project():
 	# @details Adding a uniform to a box can be needed to allow dynamic configuration of the resulting shader from the program that will execute it.
 	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the uniform created will be available in all the shaders of the box
-	# @param value The value to give to this uniform.
+	# @param value The real name to give to this uniform as it will be written in the generated file
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
 	# @return A reference on the created variable.
 	# @see shaderComp.core.Var
@@ -211,7 +211,7 @@ class Project():
 	# @details Adding a uniform to a box can be needed to allow dynamic configuration of the resulting shader from the program that will execute it.
 	# @param name A string representing the name of the variable, will be used to retrieve the variable if the reference returned is lost.
 	# Note that the uniform created will be available in all the shaders of the box
-	# @param value The value to give to this uniform.
+	# @param value The real name to give to this uniform as it will be written in the generated file
 	# @param type A string specifying the type of the variable. Supported valued are all the GLSL commonly used variable types.
 	# @return A reference on the created variable.
 	# @see shaderComp.core.Var
@@ -363,13 +363,18 @@ class Project():
 	# - `"GLSLPrinter"`: Generate the source code for an OpenGL program using GLSL. Extension of the generated files will be `.glsl`.
 	def compute(self, printerName) :
 		try:
+			import shaderComp.printers
 			mod = imp.load_source(printerName, 'shaderComp/printers/' +printerName + '.py')
 			printer = mod.Printers(self.name, self.vertexBox.getNodeList(), self.pixelBox.getNodeList())
+
+		except IOError:
+			print "Error: Printer " + printerName + " Not Found ",
+		try:
 			printer.applyVarNameSelection(self)
 			printer.compute(self)
 			printer.removeAllVarName(self)
-		except IOError:
-			print "Error: Printer " + printerName + " Not Found "
+		except IOError as e:
+			print "Error: ", e
 
 	## @fn render()
 	# @brief Display an overview of the result of the shader built in this project.
@@ -380,11 +385,14 @@ class Project():
 		try:
 			mod = imp.load_source(printerName, 'shaderComp/printers/' +printerName + '.py')
 			printer = mod.Printers(self.name, self.vertexBox.getNodeList(), self.pixelBox.getNodeList())
+		except IOError:
+			print "Error: Printer " + printerName + " Not Found "
+		try:
 			printer.applyVarNameSelection(self)
 			printer.render()
 			printer.removeAllVarName(self)
-		except IOError:
-			print "Error: Printer " + printerName + " Not Found "
+		except IOError as e:
+			print "Error: ", e
 
 	## @fn save(name)
 	# @brief Save the project to the given file

@@ -292,7 +292,7 @@
                         </p>
                         <pre class="brush: python; toolbar: false; first-line: 1">
                         from ..core.Shader import *
-                        from ..core.ShaderType import *
+                        from ..core import ShaderType
 
                         ##
                         # @authors Romain GUYOT de la HARDROUYERE
@@ -393,7 +393,7 @@
                                 The shader inferface class needs to inherit from the class <span class="ink-label success invert">Shader</code>. To do so, it is needed to import it.
                             </li>
                             <li>
-                                <span class="ink-label error">l. 1</span> <span class="ink-label info invert">from ..core.ShaderType import *</span>:
+                                <span class="ink-label error">l. 1</span> <span class="ink-label info invert">from ..core import ShaderType </span>:
                                 Then, the <span class="ink-label success invert">ShaderType</span> enumeration is needed to specify the type of the shader.
                             </li>
                             <li>
@@ -453,7 +453,7 @@
                     <p>Start by creating the <code>Fog.py</code> file located in the <code>shaderComp/shaders</code> folder. In this file, import the <span class="ink-label success invert">Shader</span> class from the core, and create the <span class="ink-label info invert">Fog</span> class, inheriting from the <span class="ink-label success invert">Shader</span> class.</p>
                     <pre class="brush: python; toolbar: false; first-line: 1">
                     from ..core.Shader import *
-                    from ..core.ShaderType import *
+                    from ..core import ShaderType
 
                     class Fog(Shader):
                     </pre>
@@ -522,7 +522,7 @@
                     <h4>Class shaderComp.shaders.Fog.Fog</h4>
                     <pre class="brush: python; toolbar: false; first-line: 1">
                     from ..core.Shader import *
-                    from ..core.ShaderType import *
+                    from ..core import ShaderType
 
                     class Fog(Shader):
 
