@@ -26,7 +26,8 @@ class Printers(Printer):
 		self.language_types = {
 			'float':	'float',
 			'vec3':		'vec3',
-			'vec4':		'vec4'
+			'vec4':		'vec4',
+			'sampler2D': 'sampler2D'
 		}
 
 
