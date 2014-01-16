@@ -95,3 +95,4 @@ newProj.compute('GLSLPrinter')
 
 # rendu du resultat
 newProj.render()
+# newProj.render('model', [1, 1, 1], 0.2, 'weapon.obj')

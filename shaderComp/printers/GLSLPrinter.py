@@ -31,16 +31,16 @@ class Printers(Printer):
 
 
 	def compute(self, project) :
-		#print 'GLSL Printer Compute: ', self.projName
+		print 'GLSL Printer Compute: ', self.projName
 		self.applyCompute(self.vertexNodeList + self.pixelNodeList)
 		self.applyDeclaration()
 		self.finishCompute()
 
-	def render(self) :
-		print 'GLSL Printer Render: ', self.projName
+	def render(self, type, size, rot, modelName) :
+		# print 'GLSL Printer Render: ', self.projName
 		self.applyCompute(self.vertexNodeList + self.pixelNodeList)
 		self.applyDeclaration()
-		self.finishRender()
+		self.finishRender(type, size, rot, modelName)
 
 	def applyCompute(self, nodeList) :
 		for node in nodeList :
@@ -108,7 +108,7 @@ class Printers(Printer):
 			file.write(self.fragmentShaderBuffer)
 			file.close()
 
-	def finishRender(self) :
+	def finishRender(self, type, size, rot, modelName) :
 		if self.vertexShaderBuffer != '' :
 			self.vertexShaderBuffer = self.vertexShaderBuffer + '}\n'
 		if self.fragmentShaderBuffer != '' :
@@ -118,5 +118,5 @@ class Printers(Printer):
 		progs.append(self.vertexShaderBuffer)
 		progs.append(self.fragmentShaderBuffer)
 		render = Render()
-		render.execute(progs)
+		render.execute(progs, type, size, rot, modelName)
 

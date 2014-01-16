@@ -390,7 +390,7 @@ class Project():
 	# @brief Display an overview of the result of the shader built in this project.
 	# @details This will generate a GLSL version of the shader, compile it and display it in
 	#  a window with some models spinning with the use of the library OpenGL.
-	def render(self) :
+	def render(self, type='demo', size=[1.0, 1.0, 1.0], rot=0.2, modelName=None) :
 		printerName = 'GLSLPrinter'
 		try:
 			mod = imp.load_source(printerName, 'shaderComp/printers/' +printerName + '.py')
@@ -399,7 +399,7 @@ class Project():
 			print "Error: Printer " + printerName + " Not Found "
 		try:
 			printer.applyVarNameSelection(self)
-			printer.render()
+			printer.render(type, size, rot, modelName)
 			printer.removeAllVarName(self)
 		except IOError as e:
 			print "Error: ", e

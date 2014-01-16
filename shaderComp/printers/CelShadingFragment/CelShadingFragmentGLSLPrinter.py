@@ -4,8 +4,6 @@ class Gen:
 		self.inVars, self.outVars = params
 
 	def compute(self, printer):
-		print self.outVars['color'].val
-		print self.inVars['color'].val
 		intensity = printer.getRandomName('intensity')
 		buffer = '''
 	float ''' + intensity + ''';
