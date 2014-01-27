@@ -7,8 +7,8 @@ digraph "shaderComp" {
     dir_8fa961d1968e2121267882b511ca7dd2 [shape=plaintext label="shaderComp"];
     dir_8d62f97bde478e46de9335255cebf700 [shape=box label="core" color="black" fillcolor="white" style="filled" URL="dir_8d62f97bde478e46de9335255cebf700.html"];
     dir_0cf2b7835e8294e3f243e46be9ba847c [shape=box label="examples" color="black" fillcolor="white" style="filled" URL="dir_0cf2b7835e8294e3f243e46be9ba847c.html"];
-    dir_e8e4517ed63812c848f2039b5722c9ce [shape=box label="gui" color="black" fillcolor="white" style="filled" URL="dir_e8e4517ed63812c848f2039b5722c9ce.html"];
     dir_a47a5d8024a38fa8c6b3c4779bbadced [shape=box label="printers" color="red" fillcolor="white" style="filled" URL="dir_a47a5d8024a38fa8c6b3c4779bbadced.html"];
     dir_e34efe80139245383689eecd5e492108 [shape=box label="shaders" color="red" fillcolor="white" style="filled" URL="dir_e34efe80139245383689eecd5e492108.html"];
+    dir_b6b5dbfbbd9036ee773dbe37588a8390 [shape=box label="test_suite" color="black" fillcolor="white" style="filled" URL="dir_b6b5dbfbbd9036ee773dbe37588a8390.html"];
   }
 }

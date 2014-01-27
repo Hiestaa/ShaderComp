@@ -188,7 +188,7 @@
                         <img src="img/tuto_3_schema.png">
                         <p>As you can see here, we are using in our project a node called <span class="ink-label info invert">Fog</span>, wich is not a builtin node but the pixel box of the shader we created before. Moreover, we are going to present a new builtin shader (a couple of vertex/pixel node): the <span class="ink-label success invert">CelShading</span>. Its aim is to provide a cartoon-looking of the colors of the rendered scene. Thanks to the encapsulation of the shaders provided by the shaderComp API, you don't need to understant how this shader is working, only what is its interface. Let's move on !</p>
                         <h2>Modifications of the code</h2>
-                        <p>Remember that, for the rendering of our fog shader, we needed to set the input color to a constant with a valued links. If you do not want to render the fog shader alone, you need to remove theses links as the shader will take this color as an input variable. Here is the complete code of the fog shader, wich is the starting point of this project and quite the same code givent at the end of the previous part: </p>
+                        <p>Remember that, for the rendering of our fog shader, we needed to set the input color to a constant with a valued links. If you do not want to render the fog shader alone, you need to remove theses links as the shader will take this color as an input variable. Moreover, there is no need to build he vertex box anymore as the pixel shader is the only one interesting us in this example. Here is the complete code of the fog shader, wich is the starting point of this project and quite the same code givent at the end of the previous part: </p>
                         <pre class="brush: python; toolbar: false; first-line: 1">
                             from shaderComp.core import *
                             from shaderComp.shaders import *
@@ -223,7 +223,7 @@
 
                             # creating input and output variables of the vertex box
                             vertexOutFinalPositionVar = myFogProject.addVertexOutVar('final_position', 'vec4')
-                            vertexInVertVar = myFogProject.addVertexInVar('vertex', 'vec4')
+                            #vertexInVertVar = myFogProject.addVertexInVar('vertex', 'vec4') # we are not interested in the verte box anymore
 
                             # creating input and output variables of the pixel box
                             pixelInFragCoordVar = myFogProject.addPixelInVar('fragCoord', 'vec4')
@@ -233,17 +233,17 @@
                             pixelOutFinalColor = myFogProject.addPixelOutVar('color', 'vec4')
 
                             #creating links between the pipeline and the input of the boxes
-                            myFogProject.addLink(myFogProject.getVertexPipelineVar('Vertex'), vertexInVertVar)
-                            myFogProject.addLink(myFogProject.getPixelPipelineVar('FragCoord'), pixelInFragCoordVar)
+                            #myFogProject.addLink(myFogProject.getVertexPipelineVar('Vertex'), vertexInVertVar)  # we are not interested in the verte box anymore
+                            # myFogProject.addLink(myFogProject.getPixelPipelineVar('FragCoord'), pixelInFragCoordVar) # the fragcoord will be linked later
                             myFogProject.addLink(myFogProject.getPixelPipelineVar('FogColor'), pixelInFogColorVar)
 
                             # creating links between the output of the boxes and the pipeline
-                            myFogProject.addLink(vertexOutFinalPositionVar, myFogProject.getVertexPipelineVar('Position'))
+                            #myFogProject.addLink(vertexOutFinalPositionVar, myFogProject.getVertexPipelineVar('Position'))  # we are not interested in the verte box anymore
                             myFogProject.addLink(pixelOutFinalColor, myFogProject.getPixelPipelineVar('FragColor'))
 
                             # creating links between input/output variables of the vertex box and the nodes it contains
-                            myFogProject.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))
-                            myFogProject.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)
+                            #myFogProject.addLink(vertexInVertVar, myDefaultVertexShader.getInVar('vertex'))  # we are not interested in the verte box anymore
+                            #myFogProject.addLink(myDefaultVertexShader.getOutVar('position'), vertexOutFinalPositionVar)  # we are not interested in the verte box anymore
 
                             # creating links between input/output variables of the pixel box and the nodes it contains
                             myFogProject.addLink(pixelInFragCoordVar, myDispatchVect4.getInVar('myVec4'))
@@ -267,8 +267,9 @@
                             #   We will not compute anything for now.
                             #myFogProject.compute('GLSLPrinter')
                             #myFogProject.render()
+
                         </pre>
-                        <p>Our fog shader is build. As said above, this is exactly the same as the shader built in the previous tutorial, only the line 71, 76 and 77 has been commented. Let's learn now how this fog shader can be used in another shader.</p>
+                        <p>Our fog shader is build. As said above, this is exactly the same as the shader built in the previous tutorial, only the line 71, 76 and 77 has been commented as we do not create valued links and we do not compute the fog project. The lines 34, 44, 49, 53 and 54 are commented because the vertex box is not interesting here. The line 45 is also commented because this link o the pipeline will be done in the next part. Let's learn now how this fog shader can be used in another shader.</p>
                     </section>
                     <section id="nav-box-is-node" data-target="#nav_menu" data-spy="true">
                         <h2>A box is a node !</h2>

@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>shaderComp</b></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core.html">core</a></li><li class="navelem"><b>LinkManager</b></li><li class="navelem"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html">LinkManager</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceshader_comp.html">shaderComp</a></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core.html">core</a></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core_1_1_link_manager.html">LinkManager</a></li><li class="navelem"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html">LinkManager</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,6 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">shaderComp.core.LinkManager.LinkManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class handles the links of a project.  
+ <a href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for shaderComp.core.LinkManager.LinkManager:</div>
 <div class="dyncontent">
@@ -104,42 +108,43 @@ Collaboration diagram for shaderComp.core.LinkManager.LinkManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aac2aaef54671de1de2e60ab2dbc21488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac2aaef54671de1de2e60ab2dbc21488"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b></td></tr>
-<tr class="separator:aac2aaef54671de1de2e60ab2dbc21488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efff32e69d00b703ea05cc46eb6b731"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5efff32e69d00b703ea05cc46eb6b731"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addLink</b></td></tr>
-<tr class="separator:a5efff32e69d00b703ea05cc46eb6b731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafbeaf21f6fa92498871e19a61c7380f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafbeaf21f6fa92498871e19a61c7380f"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addLinkNode</b></td></tr>
-<tr class="separator:aafbeaf21f6fa92498871e19a61c7380f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb9135608d741cd8ad2b95bb25707bcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb9135608d741cd8ad2b95bb25707bcf"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addValuedLink</b></td></tr>
-<tr class="separator:aeb9135608d741cd8ad2b95bb25707bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63bea505cf8eeb6da302a0159bb41211"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63bea505cf8eeb6da302a0159bb41211"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addValuedLinkNode</b></td></tr>
-<tr class="separator:a63bea505cf8eeb6da302a0159bb41211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a971bd8abae0e9a0f5e229d92aaab5e49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a971bd8abae0e9a0f5e229d92aaab5e49"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addValuedLinkByName</b></td></tr>
-<tr class="separator:a971bd8abae0e9a0f5e229d92aaab5e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed98925fe08faab24ae42501bd8961af"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#aed98925fe08faab24ae42501bd8961af">__init__</a></td></tr>
+<tr class="memdesc:aed98925fe08faab24ae42501bd8961af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanciate an new <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html" title="This class handles the links of a project. ">LinkManager</a>.  <a href="#aed98925fe08faab24ae42501bd8961af">More...</a><br/></td></tr>
+<tr class="separator:aed98925fe08faab24ae42501bd8961af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0d671dd7d3412ed8cce8940829415d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a7e0d671dd7d3412ed8cce8940829415d">addLink</a></td></tr>
+<tr class="memdesc:a7e0d671dd7d3412ed8cce8940829415d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link between two variables.  <a href="#a7e0d671dd7d3412ed8cce8940829415d">More...</a><br/></td></tr>
+<tr class="separator:a7e0d671dd7d3412ed8cce8940829415d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38202b73a64b39afebc643bcb0f75f11"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a38202b73a64b39afebc643bcb0f75f11">addLinkNode</a></td></tr>
+<tr class="memdesc:a38202b73a64b39afebc643bcb0f75f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link between two variables.  <a href="#a38202b73a64b39afebc643bcb0f75f11">More...</a><br/></td></tr>
+<tr class="separator:a38202b73a64b39afebc643bcb0f75f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d69886520c777e51b394ae03a0abbb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ac8d69886520c777e51b394ae03a0abbb">addValuedLink</a></td></tr>
+<tr class="memdesc:ac8d69886520c777e51b394ae03a0abbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link between a constant (a value) and an input variable.  <a href="#ac8d69886520c777e51b394ae03a0abbb">More...</a><br/></td></tr>
+<tr class="separator:ac8d69886520c777e51b394ae03a0abbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47851a515d0bd7590a49f82b8eb33d42"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a47851a515d0bd7590a49f82b8eb33d42">addValuedLinkNode</a></td></tr>
+<tr class="memdesc:a47851a515d0bd7590a49f82b8eb33d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link between a constant (a value) and an input variable.  <a href="#a47851a515d0bd7590a49f82b8eb33d42">More...</a><br/></td></tr>
+<tr class="separator:a47851a515d0bd7590a49f82b8eb33d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02d68226fac5411c445d9de4025b80d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ab02d68226fac5411c445d9de4025b80d">addValuedLinkByName</a></td></tr>
+<tr class="memdesc:ab02d68226fac5411c445d9de4025b80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link between a constant (a value) and an input variable.  <a href="#ab02d68226fac5411c445d9de4025b80d">More...</a><br/></td></tr>
+<tr class="separator:ab02d68226fac5411c445d9de4025b80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a503ff6918d96ba5ecde3f5421e58ca00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a503ff6918d96ba5ecde3f5421e58ca00"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>deleteLink</b></td></tr>
 <tr class="separator:a503ff6918d96ba5ecde3f5421e58ca00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a503ff6918d96ba5ecde3f5421e58ca00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a503ff6918d96ba5ecde3f5421e58ca00"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>deleteLink</b></td></tr>
 <tr class="separator:a503ff6918d96ba5ecde3f5421e58ca00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73722ced16a10c952569bf57df7c2093"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73722ced16a10c952569bf57df7c2093"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>deleteValuedLink</b></td></tr>
-<tr class="separator:a73722ced16a10c952569bf57df7c2093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f96d887b0a9c011c60055e9e7964bc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f96d887b0a9c011c60055e9e7964bc9"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>deleteAllLinkBetwinBox</b></td></tr>
-<tr class="separator:a4f96d887b0a9c011c60055e9e7964bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93c57e353251f51ca9526ca0dc19412"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ab93c57e353251f51ca9526ca0dc19412">deleteValuedLink</a></td></tr>
+<tr class="memdesc:ab93c57e353251f51ca9526ca0dc19412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a link between a constant and a variable.  <a href="#ab93c57e353251f51ca9526ca0dc19412">More...</a><br/></td></tr>
+<tr class="separator:ab93c57e353251f51ca9526ca0dc19412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417661800e049faf1fa19e60dfa8e2a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a417661800e049faf1fa19e60dfa8e2a1"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a417661800e049faf1fa19e60dfa8e2a1">deleteAllLinkBetwinBox</a></td></tr>
+<tr class="memdesc:a417661800e049faf1fa19e60dfa8e2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete all link between the <a class="el" href="namespaceshader_comp_1_1core_1_1_vertex_box.html" title="This class is a Box of vertex nodes. ">VertexBox</a> and the <a class="el" href="namespaceshader_comp_1_1core_1_1_pixel_box.html" title="This class is a Box of pixel nodes. ">PixelBox</a> of a project. <br/></td></tr>
+<tr class="separator:a417661800e049faf1fa19e60dfa8e2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d9547851d9aaf8aae3edde204a71f54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d9547851d9aaf8aae3edde204a71f54"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>popOneBoxLinkBetwinBox</b></td></tr>
 <tr class="separator:a9d9547851d9aaf8aae3edde204a71f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfe6b2a89c59f43b53c8817e4743a694"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfe6b2a89c59f43b53c8817e4743a694"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addLinkListOnBox</b></td></tr>
-<tr class="separator:abfe6b2a89c59f43b53c8817e4743a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d1d4e1776a01b1a6106501ad4f3b98"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#af1d1d4e1776a01b1a6106501ad4f3b98">addLinkListOnBox</a></td></tr>
+<tr class="memdesc:af1d1d4e1776a01b1a6106501ad4f3b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates a new list of links to the list of links of the box given on param.  <a href="#af1d1d4e1776a01b1a6106501ad4f3b98">More...</a><br/></td></tr>
+<tr class="separator:af1d1d4e1776a01b1a6106501ad4f3b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30652cc9a10edafbad428439b3eb300"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae30652cc9a10edafbad428439b3eb300"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>containLinkTo</b></td></tr>
 <tr class="separator:ae30652cc9a10edafbad428439b3eb300"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,13 +155,442 @@ Public Attributes</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>project</b></td></tr>
 <tr class="separator:a0ea71e923904b22a35427f4ce9d8f0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class handles the links of a project. </p>
+<dl class="section author"><dt>Authors</dt><dd>Romain GUYOT de la HARDROUYERE </dd>
+<dd>
+Matthieu BOURNAT </dd>
+<dd>
+Antoine CHESNEAU</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2014-01-13</dd></dl>
+<p>Class used to manage the links between nodes in a project </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aed98925fe08faab24ae42501bd8961af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>project</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instanciate an new <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html" title="This class handles the links of a project. ">LinkManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Set a project to this <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html" title="This class handles the links of a project. ">LinkManager</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7e0d671dd7d3412ed8cce8940829415d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addLink </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a link between two variables. </p>
+<p>Creating a link between two variables will result in the copying the resulting value of the varFrom output to the varTo input. It is possible to create multiple links going from the same output variable: the value will be copied in each of the destinations of the link. However, it is not possible to create multiple links going to the same input variable as this input cannot take more than one value, this could bring unexpected results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varFrom</td><td>A reference on the output variable where the link comes from </td></tr>
+    <tr><td class="paramname">varTo</td><td>A reference on the output variable where the link goes to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a7e0d671dd7d3412ed8cce8940829415d_cgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a7e0d671dd7d3412ed8cce8940829415d_cgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a7e0d671dd7d3412ed8cce8940829415d_cgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a7e0d671dd7d3412ed8cce8940829415d_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af1d1d4e1776a01b1a6106501ad4f3b98"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addLinkListOnBox </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>linkList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatenates a new list of links to the list of links of the box given on param. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">box</td><td><a class="el" href="namespaceshader_comp_1_1core_1_1_box.html" title="This class is a Box of nodes. ">Box</a> which contains the list. </td></tr>
+    <tr><td class="paramname">box</td><td>The list wich will be concatenate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a38202b73a64b39afebc643bcb0f75f11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addLinkNode </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nodeFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nodeTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a link between two variables. </p>
+<p>Creating a link between two variables of two node will result in the copying the resulting value of the varFrom output to the varTo input. It is possible to create multiple links going from the same output variable: the value will be copied in each of the destinations of the link. However, it is not possible to create multiple links going to the same input variable as this input cannot take more than one value, this could bring unexpected results. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeFrom</td><td>A reference on the node where to find the output variable that will be linked </td></tr>
+    <tr><td class="paramname">nodeTo</td><td>A reference on the node where to find the input variable that will be linked to this output </td></tr>
+    <tr><td class="paramname">varFrom</td><td>A reference on the output variable where the link comes from </td></tr>
+    <tr><td class="paramname">varTo</td><td>A reference on the output variable where the link goes to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_cgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_cgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_cgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_icgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_icgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_icgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a38202b73a64b39afebc643bcb0f75f11_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8d69886520c777e51b394ae03a0abbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addValuedLink </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a link between a constant (a value) and an input variable. </p>
+<p>Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant. The same restriction applies on the variable destination of the link: it cannot be uses multiplie times, as a variable cannot have multiple values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varTo</td><td>A reference on the output variable where the link goes to </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ac8d69886520c777e51b394ae03a0abbb_cgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ac8d69886520c777e51b394ae03a0abbb_cgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ac8d69886520c777e51b394ae03a0abbb_cgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ac8d69886520c777e51b394ae03a0abbb_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab02d68226fac5411c445d9de4025b80d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addValuedLinkByName </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nodeTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nameVarTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a link between a constant (a value) and an input variable. </p>
+<p>Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant. The same restriction applies on the variable destination of the link: it cannot be uses multiplie times, as a variable cannot have multiple values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeTo</td><td>A reference on the node where to find the input variable that will be set to the given value </td></tr>
+    <tr><td class="paramname">nameVarTo</td><td>The name of a reference on the output variable where the link goes to </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ab02d68226fac5411c445d9de4025b80d_cgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ab02d68226fac5411c445d9de4025b80d_cgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ab02d68226fac5411c445d9de4025b80d_cgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_ab02d68226fac5411c445d9de4025b80d_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a47851a515d0bd7590a49f82b8eb33d42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.addValuedLinkNode </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nodeTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a link between a constant (a value) and an input variable. </p>
+<p>Creating a valuedLink allows to set an input variable as a constant, giving the value of the constant. The same restriction applies on the variable destination of the link: it cannot be uses multiplie times, as a variable cannot have multiple values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeTo</td><td>A reference on the node where to find the input variable that will be set to the given value </td></tr>
+    <tr><td class="paramname">varTo</td><td>A reference on the output variable where the link goes to </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_cgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_cgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_cgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_icgraph.png" border="0" usemap="#classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_icgraph" alt=""/></div>
+<map name="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_icgraph" id="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager_a47851a515d0bd7590a49f82b8eb33d42_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab93c57e353251f51ca9526ca0dc19412"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shaderComp.core.LinkManager.LinkManager.deleteValuedLink </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nodeTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>varTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete a link between a constant and a variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeTo</td><td>A reference on the node where to find the input variable </td></tr>
+    <tr><td class="paramname">varTo</td><td>A reference on the output variable where the link goes to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>shaderComp/core/LinkManager.py</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2014 19:06:17 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 15 2014 19:48:45 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

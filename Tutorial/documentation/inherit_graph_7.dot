@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="shaderComp.core.Project.\lProject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_project_1_1_project.html",tooltip="This class is the main entry point of the library. "];
+  Node1 [label="shaderComp.core.Render\l_bck.Render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_render__bck_1_1_render.html"];
 }

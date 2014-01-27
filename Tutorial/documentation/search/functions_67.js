@@ -1,12 +1,18 @@
 var searchData=
 [
   ['getbox',['getBox',['../classshader_comp_1_1core_1_1_project_1_1_project.html#adff1b23644f9fdc93564ce126577a685',1,'shaderComp::core::Project::Project']]],
+  ['getinvar',['getInVar',['../classshader_comp_1_1core_1_1_node_1_1_node.html#a0dab9531ccb3eafd8e1678c83fece3e1',1,'shaderComp::core::Node::Node']]],
   ['getlinklist',['getLinkList',['../classshader_comp_1_1core_1_1_project_1_1_project.html#ad8299e9cb58533ec19f8d0bbaf7d164d',1,'shaderComp::core::Project::Project']]],
+  ['getnodelist',['getNodeList',['../classshader_comp_1_1core_1_1_box_1_1_box.html#acceadae60d0104e08682965004021da9',1,'shaderComp::core::Box::Box']]],
+  ['getoutvar',['getOutVar',['../classshader_comp_1_1core_1_1_node_1_1_node.html#a1fe92d18cd71b3805a97cdbae2298c5c',1,'shaderComp::core::Node::Node']]],
+  ['getpipelinevar',['getPipelineVar',['../classshader_comp_1_1core_1_1_box_1_1_box.html#a19cff2692db2e6ddc1015a1f52ba91d6',1,'shaderComp::core::Box::Box']]],
   ['getpixelbox',['getPixelBox',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a429068f0ea84a61dae189575fec6d1ee',1,'shaderComp::core::Project::Project']]],
   ['getpixelinvar',['getPixelInVar',['../classshader_comp_1_1core_1_1_project_1_1_project.html#afde61705769aa2d7dbc4ef2fdcad0440',1,'shaderComp::core::Project::Project']]],
   ['getpixeloutvar',['getPixelOutVar',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a5f66bf89d57e8a2a88f6de7a4a991a68',1,'shaderComp::core::Project::Project']]],
   ['getpixelpipelinevar',['getPixelPipelineVar',['../classshader_comp_1_1core_1_1_project_1_1_project.html#aa359ef725de8bbe946ff35639a03ede9',1,'shaderComp::core::Project::Project']]],
   ['getpixeluniform',['getPixelUniform',['../classshader_comp_1_1core_1_1_project_1_1_project.html#ae2e0e31631b18454e130004e16941da0',1,'shaderComp::core::Project::Project']]],
+  ['getuniform',['getUniform',['../classshader_comp_1_1core_1_1_box_1_1_box.html#a5e96ae9112c7630310644e717d83c1f0',1,'shaderComp::core::Box::Box']]],
+  ['getuniforms',['getUniforms',['../classshader_comp_1_1core_1_1_box_1_1_box.html#a0edd8db376f542a5f8f8bc75c6cea573',1,'shaderComp::core::Box::Box']]],
   ['getvertexbox',['getVertexBox',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a1fe9458e7f8b46381b97209af585828f',1,'shaderComp::core::Project::Project']]],
   ['getvertexinvar',['getVertexInVar',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a6c064a600b244db33856b05e564ad42d',1,'shaderComp::core::Project::Project']]],
   ['getvertexoutvar',['getVertexOutVar',['../classshader_comp_1_1core_1_1_project_1_1_project.html#afe3d6dfda98951960caefc19029bea52',1,'shaderComp::core::Project::Project']]],

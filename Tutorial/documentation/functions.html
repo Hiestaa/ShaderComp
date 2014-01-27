@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -91,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
 <li>__init__()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#accd33a12e707a68b08beaecebb218459">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a9bb69308ff6bf24b0beb8038f4b9e6eb">shaderComp.core.Box.Box</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1_vertex_test_shader_1_1_vertex_test_shader.html#afe11200564206d6629f6477e93b47979">shaderComp.shaders.VertexTestShader.VertexTestShader</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1math_1_1_mix_1_1_mix.html#a2349979ab56ae7e1687139fe797fa1aa">shaderComp.shaders.math.Mix.Mix</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1math_1_1_log_1_1_log.html#ad0a5420bcd837bcd60cd14121f241007">shaderComp.shaders.math.Log.Log</a>
@@ -119,19 +120,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a1ec6179905545ad5db045669051032a1">shaderComp.shaders.ChangeColor.ChangeColor</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1_cel_shading_vertex_1_1_cel_shading_vertex.html#a7d808b10b9cdde73217c9c06f715b605">shaderComp.shaders.CelShadingVertex.CelShadingVertex</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1_cel_shading_fragment_1_1_cel_shading_fragment.html#a56fd9b69cb07644c622003f0f3c15e84">shaderComp.shaders.CelShadingFragment.CelShadingFragment</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_var_1_1_var.html#a555b83cd77e8346e7e036bc1f53c66cb">shaderComp.core.Var.Var</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_shader_1_1_shader.html#a49d0f8f90b44c49daa30a31629a81661">shaderComp.core.Shader.Shader</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#accd33a12e707a68b08beaecebb218459">shaderComp.core.Project.Project</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#aed98925fe08faab24ae42501bd8961af">shaderComp.core.LinkManager.LinkManager</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addInVar()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a798f8cdd225b68744e65af261f7d5bb2">shaderComp.core.Box.Box</a>
+</li>
 <li>addLink()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a184e61028500592c612dc184ca6cb278">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a7e0d671dd7d3412ed8cce8940829415d">shaderComp.core.LinkManager.LinkManager</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a184e61028500592c612dc184ca6cb278">shaderComp.core.Project.Project</a>
+</li>
+<li>addLinkListOnBox()
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#af1d1d4e1776a01b1a6106501ad4f3b98">shaderComp.core.LinkManager.LinkManager</a>
 </li>
 <li>addLinkNode()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#afc7eacf4d2005cbd09af39b06ca1a46e">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a38202b73a64b39afebc643bcb0f75f11">shaderComp.core.LinkManager.LinkManager</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#afc7eacf4d2005cbd09af39b06ca1a46e">shaderComp.core.Project.Project</a>
 </li>
 <li>addNode()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a030a38157c9b0d78b67e3dea7b800831">shaderComp.core.Project.Project</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a80190740e2ae07121b8b0a1189f04e00">shaderComp.core.Box.Box</a>
+</li>
+<li>addOutVar()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#ace7f5df46a71ac3de09c245ce66ff955">shaderComp.core.Box.Box</a>
 </li>
 <li>addPixelInVar()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a9b44b19fce737bd1f84e1f3d4a27ba81">shaderComp.core.Project.Project</a>
@@ -142,14 +159,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>addPixelUniform()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a04b61bf1c9dc8bfd9d0abfdafaefec73">shaderComp.core.Project.Project</a>
 </li>
+<li>addUniform()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a5a5df33f4e7eb90ffd5d71e9c947988d">shaderComp.core.Box.Box</a>
+</li>
 <li>addValuedLink()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a5ce8bb837a50214146c98332f5c3e431">shaderComp.core.Project.Project</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ac8d69886520c777e51b394ae03a0abbb">shaderComp.core.LinkManager.LinkManager</a>
 </li>
 <li>addValuedLinkByName()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a23471eff6dc74ff071d09ed51c9c1390">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ab02d68226fac5411c445d9de4025b80d">shaderComp.core.LinkManager.LinkManager</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a23471eff6dc74ff071d09ed51c9c1390">shaderComp.core.Project.Project</a>
 </li>
 <li>addValuedLinkNode()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a28a33e918b230672100a268459072dec">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a47851a515d0bd7590a49f82b8eb33d42">shaderComp.core.LinkManager.LinkManager</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a28a33e918b230672100a268459072dec">shaderComp.core.Project.Project</a>
 </li>
 <li>addVertexInVar()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a57727c92678b2f7383109f4d7d50ac9f">shaderComp.core.Project.Project</a>
@@ -161,14 +184,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a30e30b02b840869c4f9b68c740e07462">shaderComp.core.Project.Project</a>
 </li>
 <li>appendNode()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#adb15e33748ebe4f1d9357da0aaedaefa">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a14c8daafa7610f78d0d6a419c187d7c0">shaderComp.core.Box.Box</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#adb15e33748ebe4f1d9357da0aaedaefa">shaderComp.core.Project.Project</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>clear()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a95a2f8fa0fa05356c25a1ab75183cd89">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#afbcc9fe44774d6397172804b7813f8ad">shaderComp.core.Box.Box</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a95a2f8fa0fa05356c25a1ab75183cd89">shaderComp.core.Project.Project</a>
 </li>
 <li>clearBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#ac125693b24da2b9535ddbd8968e7dca0">shaderComp.core.Project.Project</a>
@@ -180,8 +205,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>deleteAllLinkBetwinBox()
+: <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#a417661800e049faf1fa19e60dfa8e2a1">shaderComp.core.LinkManager.LinkManager</a>
+</li>
 <li>deleteValuedLink()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#aee89e81d2ac36d33075fce7751d475c9">shaderComp.core.Project.Project</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_link_manager_1_1_link_manager.html#ab93c57e353251f51ca9526ca0dc19412">shaderComp.core.LinkManager.LinkManager</a>
 </li>
 </ul>
 
@@ -190,8 +219,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#adff1b23644f9fdc93564ce126577a685">shaderComp.core.Project.Project</a>
 </li>
+<li>getInVar()
+: <a class="el" href="classshader_comp_1_1core_1_1_node_1_1_node.html#a0dab9531ccb3eafd8e1678c83fece3e1">shaderComp.core.Node.Node</a>
+</li>
 <li>getLinkList()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#ad8299e9cb58533ec19f8d0bbaf7d164d">shaderComp.core.Project.Project</a>
+</li>
+<li>getNodeList()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#acceadae60d0104e08682965004021da9">shaderComp.core.Box.Box</a>
+</li>
+<li>getOutVar()
+: <a class="el" href="classshader_comp_1_1core_1_1_node_1_1_node.html#a1fe92d18cd71b3805a97cdbae2298c5c">shaderComp.core.Node.Node</a>
+</li>
+<li>getPipelineVar()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a19cff2692db2e6ddc1015a1f52ba91d6">shaderComp.core.Box.Box</a>
 </li>
 <li>getPixelBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a429068f0ea84a61dae189575fec6d1ee">shaderComp.core.Project.Project</a>
@@ -207,6 +248,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getPixelUniform()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#ae2e0e31631b18454e130004e16941da0">shaderComp.core.Project.Project</a>
+</li>
+<li>getUniform()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a5e96ae9112c7630310644e717d83c1f0">shaderComp.core.Box.Box</a>
+</li>
+<li>getUniforms()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a0edd8db376f542a5f8f8bc75c6cea573">shaderComp.core.Box.Box</a>
 </li>
 <li>getVertexBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a1fe9458e7f8b46381b97209af585828f">shaderComp.core.Project.Project</a>
@@ -228,7 +275,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>load()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a63623843b3cae8fb50e00b63ba23af1d">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a295b4bcdcaae9539c916903a42fc1ea8">shaderComp.core.Box.Box</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a63623843b3cae8fb50e00b63ba23af1d">shaderComp.core.Project.Project</a>
 </li>
 <li>loadBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a25c21f25a6e75ac10056b3825475ef0e">shaderComp.core.Project.Project</a>
@@ -240,6 +288,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>printListName()
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#ac6c097c75139cf643f419066379a5235">shaderComp.core.Box.Box</a>
+</li>
 <li>printPixelNodeListName()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a7ba422c295dd1dd08017316ee934cce5">shaderComp.core.Project.Project</a>
 </li>
@@ -254,10 +305,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>removeNode()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#ab58969aabee812703ad31b22a7e00ed8">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a1a068fce242280785b286ad6fe6f3c13">shaderComp.core.Box.Box</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#ab58969aabee812703ad31b22a7e00ed8">shaderComp.core.Project.Project</a>
 </li>
 <li>removeNodeAt()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a4585ab32cb29833dd1b302bada734505">shaderComp.core.Project.Project</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#ae05c9b59626536d85b012bb34fc2c522">shaderComp.core.Box.Box</a>
 </li>
 <li>render()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a3f2e11e915dbde4c462d5eaaf7c95c0a">shaderComp.core.Project.Project</a>
@@ -267,29 +320,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>save()
-: <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a5b4438bd25cb035fc27171d4effcb93f">shaderComp.core.Project.Project</a>
+: <a class="el" href="classshader_comp_1_1core_1_1_box_1_1_box.html#a5a37428da91c012669dff807b229a05d">shaderComp.core.Box.Box</a>
+, <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a5b4438bd25cb035fc27171d4effcb93f">shaderComp.core.Project.Project</a>
 </li>
 <li>saveBox()
 : <a class="el" href="classshader_comp_1_1core_1_1_project_1_1_project.html#a9cee3c1db5e9d09269f08009db779ead">shaderComp.core.Project.Project</a>
 </li>
 <li>setA()
-: <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ab5f7b28b5267d551f70c484b0742215c">shaderComp.shaders.Color.Color</a>
-, <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a8f1ca71af52685ea45648d0470204b67">shaderComp.shaders.ChangeColor.ChangeColor</a>
+: <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a8f1ca71af52685ea45648d0470204b67">shaderComp.shaders.ChangeColor.ChangeColor</a>
+, <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ab5f7b28b5267d551f70c484b0742215c">shaderComp.shaders.Color.Color</a>
 </li>
 <li>setB()
 : <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a9a6b83a817db78491745a7d9c327e750">shaderComp.shaders.ChangeColor.ChangeColor</a>
 , <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#a84e613bc95d3fb98218ef6f68452ab47">shaderComp.shaders.Color.Color</a>
 </li>
 <li>setG()
-: <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ab52d72b9524f1e1bda9702b807479bae">shaderComp.shaders.Color.Color</a>
-, <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a7494e4fd909e566a22e0569b1ba536dd">shaderComp.shaders.ChangeColor.ChangeColor</a>
+: <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a7494e4fd909e566a22e0569b1ba536dd">shaderComp.shaders.ChangeColor.ChangeColor</a>
+, <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ab52d72b9524f1e1bda9702b807479bae">shaderComp.shaders.Color.Color</a>
 </li>
 <li>setMin()
 : <a class="el" href="classshader_comp_1_1shaders_1_1math_1_1_clamp_1_1_clamp.html#afe2bcfb91b54d6b3bd3b5e4d08e027bb">shaderComp.shaders.math.Clamp.Clamp</a>
 </li>
 <li>setParams()
-: <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a8ccd4c68566e6ff93fa7795b3313000f">shaderComp.shaders.ChangeColor.ChangeColor</a>
-, <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ad0c5a1d2a17815b19cf5a523aef21dfd">shaderComp.shaders.Color.Color</a>
+: <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#ad0c5a1d2a17815b19cf5a523aef21dfd">shaderComp.shaders.Color.Color</a>
+, <a class="el" href="classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a8ccd4c68566e6ff93fa7795b3313000f">shaderComp.shaders.ChangeColor.ChangeColor</a>
 </li>
 <li>setR()
 : <a class="el" href="classshader_comp_1_1shaders_1_1_color_1_1_color.html#a1d4215e0cfee5e3ce97e3b2d43f3ed20">shaderComp.shaders.Color.Color</a>
@@ -299,7 +353,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2014 19:06:19 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 15 2014 19:48:46 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

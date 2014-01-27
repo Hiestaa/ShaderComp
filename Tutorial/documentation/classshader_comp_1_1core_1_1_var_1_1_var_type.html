@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>shaderComp</b></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core.html">core</a></li><li class="navelem"><b>Var</b></li><li class="navelem"><a class="el" href="classshader_comp_1_1core_1_1_var_1_1_var_type.html">VarType</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceshader_comp.html">shaderComp</a></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core.html">core</a></li><li class="navelem"><a class="el" href="namespaceshader_comp_1_1core_1_1_var.html">Var</a></li><li class="navelem"><a class="el" href="classshader_comp_1_1core_1_1_var_1_1_var_type.html">VarType</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,6 +94,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">shaderComp.core.Var.VarType Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This shader can be used to create a new color.  
+ <a href="classshader_comp_1_1core_1_1_var_1_1_var_type.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for shaderComp.core.Var.VarType:</div>
 <div class="dyncontent">
@@ -119,13 +123,28 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>PIPE</b> = 4</td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUED</b> = 5</td></tr>
 <tr class="separator:a6a72312a7968d6f6d5c2ec45ea53be9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This shader can be used to create a new color. </p>
+<dl class="section author"><dt>Authors</dt><dd>Romain GUYOT de la HARDROUYERE </dd>
+<dd>
+Matthieu BOURNAT </dd>
+<dd>
+Antoine CHESNEAU</dd></dl>
+<p><b>Variables:</b></p>
+<ul>
+<li><code>IN: int</code> is the value for an invar (0)</li>
+<li><code>OUT: int</code> is the value for an invar (1)</li>
+<li><code>UNI: int</code> is the value for an invar (2)</li>
+<li><code>PIPE: int</code> is the value for an invar (4)</li>
+<li><code>VALUED: int</code> is the value for an invar (5) </li>
+</ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>shaderComp/core/Var.py</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2014 19:06:18 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 15 2014 19:48:45 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

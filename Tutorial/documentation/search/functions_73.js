@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['save',['save',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a5b4438bd25cb035fc27171d4effcb93f',1,'shaderComp::core::Project::Project']]],
+  ['save',['save',['../classshader_comp_1_1core_1_1_box_1_1_box.html#a5a37428da91c012669dff807b229a05d',1,'shaderComp.core.Box.Box.save()'],['../classshader_comp_1_1core_1_1_project_1_1_project.html#a5b4438bd25cb035fc27171d4effcb93f',1,'shaderComp.core.Project.Project.save()']]],
   ['savebox',['saveBox',['../classshader_comp_1_1core_1_1_project_1_1_project.html#a9cee3c1db5e9d09269f08009db779ead',1,'shaderComp::core::Project::Project']]],
   ['seta',['setA',['../classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a8f1ca71af52685ea45648d0470204b67',1,'shaderComp.shaders.ChangeColor.ChangeColor.setA()'],['../classshader_comp_1_1shaders_1_1_color_1_1_color.html#ab5f7b28b5267d551f70c484b0742215c',1,'shaderComp.shaders.Color.Color.setA()']]],
   ['setb',['setB',['../classshader_comp_1_1shaders_1_1_change_color_1_1_change_color.html#a9a6b83a817db78491745a7d9c327e750',1,'shaderComp.shaders.ChangeColor.ChangeColor.setB()'],['../classshader_comp_1_1shaders_1_1_color_1_1_color.html#a84e613bc95d3fb98218ef6f68452ab47',1,'shaderComp.shaders.Color.Color.setB()']]],

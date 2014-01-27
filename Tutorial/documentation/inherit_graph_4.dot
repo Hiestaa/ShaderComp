@@ -3,13 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="shaderComp.core.Node.Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_node_1_1_node.html"];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="shaderComp.core.Box.Box",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_box_1_1_box.html"];
-  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="shaderComp.core.PixelBox.\lPixelBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_pixel_box_1_1_pixel_box.html"];
-  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="shaderComp.core.VertexBox.\lVertexBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_vertex_box_1_1_vertex_box.html"];
-  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="shaderComp.core.Shader.Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_shader_1_1_shader.html"];
+  Node1 [label="shaderComp.core.Printer.\lPrinter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1core_1_1_printer_1_1_printer.html",tooltip="This class is the parent class of all the Printers. "];
 }

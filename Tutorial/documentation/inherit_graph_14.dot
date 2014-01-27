@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="shaderComp.printers.CelShading\lVertex.CelShadingVertexGLSLPrinter.Gen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1printers_1_1_cel_shading_vertex_1_1_cel_shading_vertex_g_l_s_l_printer_1_1_gen.html"];
+  Node1 [label="shaderComp.printers.Color.\lColorGLSLPrinter.Gen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshader_comp_1_1printers_1_1_color_1_1_color_g_l_s_l_printer_1_1_gen.html"];
 }
